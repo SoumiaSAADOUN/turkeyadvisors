@@ -10,6 +10,11 @@ export default {
         enquireNow:'Enquire Now',
         moreInfos:'More information',
     },
+    home:{
+        dreamHome:'Find Your Dream Home',
+        city:'City',
+        search:'Search',
+    },
     footer:{
         copyrights:'Copyrights'
 

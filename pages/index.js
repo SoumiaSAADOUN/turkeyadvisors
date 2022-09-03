@@ -5,6 +5,7 @@ import en from "../locales/en";
 import fr from "../locales/fr";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
+import HomeContent from "../components/Home/Content";
 
 export default function Home() {
   const router = useRouter();
@@ -67,6 +68,8 @@ export default function Home() {
           </Col>
         </Row>
       </div>
+
+      <HomeContent/>
     </>
   );
 }
