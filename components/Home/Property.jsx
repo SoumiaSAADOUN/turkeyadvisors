@@ -3,7 +3,7 @@ import React from "react";
 const Property = (props) => {
   return (
     <>
-      <div className="relative flex flex-col border border-solid rounded-md ">
+      <div className="relative flex flex-col border border-solid rounded-md basis-1/4 grow">
         <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -5,16 +5,23 @@ const Articles = () => {
   const articles = [
     {
       title: "What Do We Know About International Marmara Road",
-      summery: "",
+      summary: "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
       image: "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
-      date: " 13 Jul 2022",
+      date: "13 Jul 2022",
       views: "292",
     },
     {
       title: "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
-      summery: "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      summary: "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
       image: "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
-      date: "  20 Jul 2022",
+      date: "20 Jul 2022",
+      views: "162",
+    },
+    {
+      title: "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
+      summary: "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image: "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
+      date: "20 Jul 2022",
       views: "162",
     },
   ];
@@ -39,7 +46,7 @@ const Articles = () => {
           </svg>
         </button>
       </div>
-      <div className="flex gap-8 my-10">
+      <div className="flex flex-wrap gap-6 my-10">
     {articles.map((article,index)=>(
         <Article  data={article} key={`article-${index}`}/>
       ))}
