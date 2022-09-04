@@ -3,15 +3,15 @@ import React from "react";
 const Property = (props) => {
   return (
     <>
-      <div className="relative rounded-md flex flex-col border-solid border ">
-        <button className="absolute top-5 right-5 rounded-full bg-PRIMARY_COLOR/50 w-12 h-12">
+      <div className="relative flex flex-col border border-solid rounded-md ">
+        <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="w-8 h-8 text-center m-2 text-BACKGROUND_COLOR"
+            className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR"
           >
             <path
               strokeLinecap="round"
@@ -20,14 +20,15 @@ const Property = (props) => {
             />
           </svg>
         </button>
-        <img className="h-60" src={props.data.img} />
+        <img className="h-60" alt={props.data.title} src={props.data.img} />
 
-        <h1 className="mt-8 mx-4 text-xl font-bold text-PRIMARY_COLOR">
+        <h1 className="mx-4 mt-8 text-xl font-bold text-PRIMARY_COLOR">
           {props.data.title}
         </h1>
-        <div className="flex justify-start m-4 gap-4 ">
+        <div className="flex justify-start gap-4 m-4 ">
           <div className="flex">
             <img
+              alt={props.data.title}
               src="https://www.turkeyadvisors.com/sites/img/project/map.svg"
               className="w-6 h-6 mr-2"
             />
@@ -42,6 +43,7 @@ const Property = (props) => {
           </div>
           <div className="flex">
             <img
+              alt={props.data.title}
               className="w-6 h-6 mr-2"
               src="https://www.turkeyadvisors.com/sites/img/project/bathrooms.svg"
             />
@@ -49,16 +51,16 @@ const Property = (props) => {
           </div>
           <div className="flex">{props.data.surface}</div>
         </div>
-        <h4 className="text-PRIMARY_COLOR my-8 mx-4 font-semibold text-lg">
+        <h4 className="mx-4 my-8 text-lg font-semibold text-PRIMARY_COLOR">
           Overview:
         </h4>
-        <p className="text-TEXT_COLOR mx-4  text-md ">{props.data.overview}</p>
+        <p className="mx-4 text-TEXT_COLOR text-md ">{props.data.overview}</p>
         <div className="flex justify-between m-4">
-          <h1 className=" text-2xl font-bold text-PRIMARY_COLOR">
+          <h1 className="text-2xl font-bold text-PRIMARY_COLOR">
             {props.data.price}
           </h1>
-          {/* <button type="button" className=" text-white bg-PRIMARY_COLOR rounded px-8 hover:bg-SECONDARY_COLOR  font-bold">Quick Enquire</button> */}
-          <button className="text-center px-10 font-bold rounded text-BACKGROUND_COLOR bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR hover:text-PRIMARY_COLOR">
+          {/* <button type="button" className="px-8 font-bold text-white rounded bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR">Quick Enquire</button> */}
+          <button className="px-10 font-bold text-center rounded text-BACKGROUND_COLOR bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR hover:text-PRIMARY_COLOR">
             Quick Enquire
           </button>
         </div>
