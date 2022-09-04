@@ -12,7 +12,7 @@ export default function Home() {
   const { locale } = router;
   const t = locale === "en" ? en : fr;
   return (
-    <>
+    <div className="flex flex-col justify-center items-center">
       <Head>
         <meta charset="utf-8" />
         <link
@@ -27,29 +27,31 @@ export default function Home() {
         </title>
       </Head>
       <Header />
-      <div className={styles.carouselContainer}>
-        <Carousel autoplay style={{ width: "100vw" }}>
-          <Image
-            preview={false}
-            src={"/assets/images/u7HPicVLZyPaYyq6V3bK.jpg"}
-          />
-          <Image
-            preview={false}
-            src={"/assets/images/B6nLqD0UV2gmsDk5y2eM.jpg"}
-          />
-          <Image
-            preview={false}
-            src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
-          />
-          <Image
-            preview={false}
-            src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
-          />
-          <Image
-            preview={false}
-            src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
-          />
-        </Carousel>
+
+      
+      <div>
+        <div class="carousel-inner relative w-full overflow-hidden">
+          <div class="carousel-item active relative float-left w-full">
+            <img
+              class="block w-full"
+              src={"/assets/images/u7HPicVLZyPaYyq6V3bK.jpg"}
+            />
+          </div>
+
+          <div class="carousel-item active relative float-left w-full">
+            <img
+              class="block w-full"
+              src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
+            />
+          </div>
+          <div class="carousel-item active relative float-left w-full">
+            {" "}
+            <img
+              class="block w-full"
+              src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
+            />
+          </div>
+        </div>
 
         <Row
           className={styles.buttonsCarousel}
@@ -69,7 +71,7 @@ export default function Home() {
         </Row>
       </div>
 
-      <HomeContent/>
-    </>
+      <HomeContent />
+    </div>
   );
 }

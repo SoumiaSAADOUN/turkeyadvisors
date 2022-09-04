@@ -12,18 +12,18 @@ const Filter =()=>{
     <div className="flex justify-between">
           <h1 className="text-2xl font-semibold">{t.home.dreamHome}</h1>
           <div className="flex w-3/5 justify-evenly">
-            <select className="w-1/5 rounded-lg shadow-md caret-yellow-100">
-              <option selected="selected" value={t.home.city}>
+            <select className="w-1/5 rounded-lg shadow-md caret-yellow-100" defaultValue= {t.home.city}>
+              <option value={t.home.city}>
                 {t.home.city}
               </option>
             </select>
             <select className="w-1/5 px-1 rounded-lg shadow-md caret-yellow-100">
-              <option selected="selected" value={t.home.city}>
+              <option  value={t.home.city}>
                 {t.home.city}
               </option>
             </select>
             <select className="w-1/5 px-1 rounded-lg shadow-md caret-yellow-100">
-              <option selected="selected" value={t.home.city}>
+              <option  value={t.home.city}>
                 {t.home.city}
               </option>
             </select>
