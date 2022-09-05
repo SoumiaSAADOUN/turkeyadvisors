@@ -5,6 +5,7 @@ import en from "../locales/en";
 import fr from "../locales/fr";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import HomeContent from "../components/Home/Content";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
     "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"
   ]
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col items-center justify-center">
       <Head>
         <meta charset="utf-8" />
         <link
@@ -88,6 +89,7 @@ export default function Home() {
       </div> */}
 
       <HomeContent />
+      <Footer/>
     </div>
   );
 }
