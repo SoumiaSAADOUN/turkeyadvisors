@@ -1,6 +1,6 @@
 import React from "react";
 import Property from "./Property";
-const Properties = () => {
+const Properties = (props) => {
   const data = [
     {
       img:
@@ -46,7 +46,7 @@ const Properties = () => {
     <>
       <div className="flex justify-between mt-20">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
-          Recently added properties.
+         {props.title}
         </h1>
         <button className="flex items-center justify-between w-1/6 px-4 text-lg font-bold rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR">
           See more

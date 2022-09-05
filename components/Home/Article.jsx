@@ -5,8 +5,8 @@ const Article = (props) => {
     <>
       <div className="flex flex-col border border-solid rounded-md grow basis-1/4 hover:cursor-pointer ">
         <img className="h-60" alt={props.data.title} src={props.data.image} />
-        <div className="relative mt-20">
-          <div className="absolute bottom-0 transition transform border border-0 rounded-md group hover:text-PRIMARY_COLOR text-PRIMARY_COLOR">
+        <div className="relative mt-20 border-y-2  rounded-md border-transparent hover:border-SECONDARY_COLOR">
+          <div className="absolute bottom-0 transition transform  group text-PRIMARY_COLOR">
             <div className="flex justify-between px-4 bg-transparent top-2 text-BACKGROUND_COLOR">
               <div className="flex gap-2">
                 <svg
@@ -50,7 +50,7 @@ const Article = (props) => {
               </div>
             </div>
             <div className="p-2 bg-BACKGROUND_COLOR text-PRIMARY_COLOR hover:bg-SECONDARY_COLOR">
-              <h3 className="text-SECONDARY_COLOR group-hover:text-PRIMARY_COLOR ">
+              <h3 className="text-SECONDARY_COLOR group-hover:text-PRIMARY_COLOR text-lg ">
                 Articles
               </h3>
               <h1 className="text-xl">{props.data.title}</h1>

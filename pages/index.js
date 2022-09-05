@@ -11,6 +11,12 @@ export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : fr;
+  const imagesCarousel=[
+    "/assets/images/u7HPicVLZyPaYyq6V3bK.jpg",
+    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
+    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
+    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"
+  ]
   return (
     <div className="flex flex-col justify-center items-center">
       <Head>
@@ -21,15 +27,25 @@ export default function Home() {
           type="image/png"
           href="https://www.turkeyadvisors.com/favicon-192x192.ico"
         ></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
           Turkey Advisors | Real estate & Investment advisors In Turkey
         </title>
       </Head>
       <Header />
+     
 
-      
-      <div>
+      {/* <div>
         <div class="carousel-inner relative w-full overflow-hidden">
           <div class="carousel-item active relative float-left w-full">
             <img
@@ -69,7 +85,7 @@ export default function Home() {
             </Button>
           </Col>
         </Row>
-      </div>
+      </div> */}
 
       <HomeContent />
     </div>
