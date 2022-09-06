@@ -143,11 +143,11 @@ const Footer = () => {
             .
           </p>
         </div>
-        <div className="px-20 py-4 border-t-4 bg-BACKGROUND_COLOR text-PRIMARY_COLOR border-PRIMARY_COLOR">
+        <div className="px-20 py-1 border-t-4 bg-BACKGROUND_COLOR text-PRIMARY_COLOR border-PRIMARY_COLOR">
           <p>
             Your experience on this site will be improved by allowing cookies.
             <a
-              className="px-2 py-2 mx-2 rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR"
+              className="px-2 mx-2 m-t-2 rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR"
               href="javascript:void(0)"
             >
               Allow cookies

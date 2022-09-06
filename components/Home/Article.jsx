@@ -3,10 +3,10 @@ import React from "react";
 const Article = (props) => {
   return (
     <>
-      <div className="flex flex-col border border-solid rounded-md grow basis-1/4 hover:cursor-pointer ">
+      <article className="flex flex-col border border-solid rounded-md grow basis-1/4 group hover:cursor-pointer hover:bg-SECONDARY_COLOR ">
         <img className="h-60" alt={props.data.title} src={props.data.image} />
-        <div className="relative mt-20 border-transparent rounded-md border-y-2 hover:border-SECONDARY_COLOR">
-          <div className="absolute bottom-0 transition transform group text-PRIMARY_COLOR">
+        <div className="relative mt-20 border-transparent rounded-md border-y-2 hover:border-SECONDARY_COLOR ">
+          <div className="absolute bottom-0 transition transform  text-PRIMARY_COLOR">
             <div className="flex justify-between px-4 bg-transparent top-2 text-BACKGROUND_COLOR">
               <div className="flex gap-2">
                 <svg
@@ -49,20 +49,20 @@ const Article = (props) => {
                 <span> {props.data.views} Views</span>
               </div>
             </div>
-            <div className="p-2 bg-BACKGROUND_COLOR text-PRIMARY_COLOR hover:bg-SECONDARY_COLOR">
-              <h3 className="text-lg text-SECONDARY_COLOR group-hover:text-PRIMARY_COLOR ">
+            <div className="p-2 bg-BACKGROUND_COLOR text-PRIMARY_COLOR group-hover:bg-SECONDARY_COLOR group-hover:-translate-y-1  group-hover:ease-in transition duration-200 ">
+              <h3 className="text-lg text-SECONDARY_COLOR group-hover:text-PRIMARY_COLOR  ">
                 Articles
               </h3>
               <h1 className="text-xl">{props.data.title}</h1>
               <div>
-                <p className="hidden text-xs group-hover:flex">
+                <p className="hidden text-xs group-hover:flex ">
                   {props.data.summary}
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </>
   );
 };

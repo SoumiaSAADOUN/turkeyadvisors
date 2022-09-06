@@ -44,7 +44,7 @@ const Properties = (props) => {
   ];
   return (
     <>
-      <div className="flex justify-between mt-20">
+      <section className="flex justify-between mt-20">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
          {props.title}
         </h1>
@@ -65,12 +65,12 @@ const Properties = (props) => {
             />
           </svg>
         </button>
-      </div>
-      <div className="flex flex-wrap gap-6 my-10">
+      </section>
+      <section className="flex flex-wrap gap-6 my-10">
         {data.map((property, index) => (
           <Property data={property} key={`property-${index}`} />
         ))}
-      </div>
+      </section>
     </>
   );
 };
