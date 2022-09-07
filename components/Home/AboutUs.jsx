@@ -22,12 +22,10 @@ const AboutUs = () => {
           <img
             className=""
             src={"https://www.turkeyadvisors.com/sites/img/about.jpg"}
-            
           />
           <img
-            className="absolute -left-36 bottom-12 w-80 grow"
+            className="invisible absolute -left-36 bottom-12 grow max-w-[20vw] 2xl:visible"
             src={"https://www.turkeyadvisors.com/sites/img/about2.png"}
-            
           />
         </div>
       </div>

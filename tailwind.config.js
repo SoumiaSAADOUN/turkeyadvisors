@@ -14,9 +14,9 @@ module.exports = {
       SECONDARY_COLOR: "#E3BA32",
       TEXT_COLOR: "#333333",
       BACKGROUND_COLOR: "#FFFFFF",
-      LIGHT_GREY: "#00000029",
+      LIGHT_GREY: "#eeeeee",
       DARK_GREY: "#474B66",
-      GREY: "#00000066",
+      GREY: "#000066",
       RED:"#D32F2F",
       transparent: 'transparent',
       PURPLE:'#1F2B50',
@@ -38,7 +38,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     fontFamily: {
-      "sans": ['"Merriweather"', ...defaultTheme.fontFamily.sans],
+      "sans": ["'Merriweather'", ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [

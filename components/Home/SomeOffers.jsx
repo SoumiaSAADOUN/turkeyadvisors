@@ -1,17 +1,17 @@
 import React from "react";
 const SomeOffers = () => {
   return (
-    <section className="bg-PRIMARY_COLOR/70 px-40 py-4 w-full my-10 relative">
+    <section className="bg-PRIMARY_COLOR/70 px-40 py-4 w-full my-10 relative  min-h-[200px]">
       <img
         src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
-        className="absolute top-0 left-0 w-full object-cover mix-blend-overlay "
+        className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "
       />
-      <div className="relative w-full">
+      <div className="relative">
         <p className="text-SECONDARY_COLOR font-semibold">Who we are !</p>
         <h1 className="text-4xl text-BACKGROUND_COLOR  font-bold">
           Turkey Advisors
         </h1>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <h3 className="text-xl font-bold text-SECONDARY_COLOR">
             Some Offers
           </h3>

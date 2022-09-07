@@ -8,6 +8,7 @@ import Filter from "./Filter.jsx";
 import NewsLetter from "./NewsLetter.jsx";
 import Properties from "./Properties.jsx";
 import SomeOffers from "./SomeOffers.jsx";
+import WhyUs from "./WhyUs.jsx";
 const HomeContent = () => {
   return (
     <>
@@ -32,6 +33,7 @@ const HomeContent = () => {
       <div className="w-10/12 pl-6 h-4/5">
         <Properties title="Hot properties | Own What you deserve." />
         <NewsLetter/>
+        <WhyUs/>
       </div>
     </>
   );

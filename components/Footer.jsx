@@ -60,9 +60,9 @@ const Footer = () => {
   );
   return (
     <>
-      <div className="flex flex-col w-full">
-        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-36 w-full h-full bg-cover flex items-center py-12 gap-20">
-          <div className="flex flex-col basis-1/3 grow">
+      <div className="flex flex-col w-full min-h-[400px] wrap">
+        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-36 w-full h-full bg-cover flex items-center py-12 gap-20 flex-wrap">
+          <div className="flex flex-col basis-1/4 grow">
             {SectionTitle("Turkey Advisors".toUpperCase())}
 
             <p className="text-BACKGROUND_COLOR">
@@ -78,7 +78,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col basis-1/3 grow">
+          <div className="flex flex-col basis-1/4 grow">
             {SectionTitle("Latest Articles")}
             {lastArticles.map((item, index) => (
               <p key={`article-link-${index}`} className="m-1">
