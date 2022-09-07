@@ -5,6 +5,7 @@ import Articles from "./Articles.jsx";
 import Citizenship from "./Citizenship.jsx";
 
 import Filter from "./Filter.jsx";
+import NewsLetter from "./NewsLetter.jsx";
 import Properties from "./Properties.jsx";
 import SomeOffers from "./SomeOffers.jsx";
 const HomeContent = () => {
@@ -30,6 +31,7 @@ const HomeContent = () => {
       <SomeOffers /> 
       <div className="w-10/12 pl-6 h-4/5">
         <Properties title="Hot properties | Own What you deserve." />
+        <NewsLetter/>
       </div>
     </>
   );

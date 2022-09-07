@@ -19,6 +19,7 @@ module.exports = {
       GREY: "#00000066",
       RED:"#D32F2F",
       transparent: 'transparent',
+      PURPLE:'#1F2B50',
     },
     screens: {
       'sm': '640px',

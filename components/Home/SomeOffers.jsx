@@ -18,7 +18,7 @@ const SomeOffers = () => {
 
           <a
             href="https://www.turkeyadvisors.com/citizenship-by-investment"
-            class="bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR px-5 py-2 rounded"
+            className="bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR px-5 py-2 rounded"
           >
             Enquire Now
           </a>

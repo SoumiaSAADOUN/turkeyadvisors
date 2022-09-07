@@ -4,23 +4,19 @@ const Footer = () => {
   const lastArticles = [
     {
       title: "Turkish Citizenship",
-      href:
-        "https://www.turkeyadvisors.com/blog/the-new-law-of-obtaining-turkish-citizenship-for-foreign-investors",
+      href: "https://www.turkeyadvisors.com/blog/the-new-law-of-obtaining-turkish-citizenship-for-foreign-investors",
     },
     {
       title: "Life in Turkey",
-      href:
-        "https://www.turkeyadvisors.com/blog/the-new-law-of-obtaining-turkish-citizenship-for-foreign-investors",
+      href: "https://www.turkeyadvisors.com/blog/the-new-law-of-obtaining-turkish-citizenship-for-foreign-investors",
     },
     {
       title: "Investment in Turkey",
-      href:
-        "https://www.turkeyadvisors.com/blog/how-do-we-know-that-a-country-s-economy-is-structurally-robust-what-about-turkey",
+      href: "https://www.turkeyadvisors.com/blog/how-do-we-know-that-a-country-s-economy-is-structurally-robust-what-about-turkey",
     },
     {
       title: "Cryptocurrency in Turkey",
-      href:
-        "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
+      href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
   ];
   const links = [
@@ -29,36 +25,31 @@ const Footer = () => {
     { title: "Contact Us", href: "https://www.turkeyadvisors.com/contact" },
     {
       title: "Review us on Trustpilot",
-      href:
-        "https://www.trustpilot.com/evaluate/turkeyadvisors.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector",
+      href: "https://www.trustpilot.com/evaluate/turkeyadvisors.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector",
     },
   ];
   const socialIcons = [
     {
       img: "https://www.turkeyadvisors.com/sites/img/btc.svg",
-      href:
-        "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
+      href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
     {
       img: "https://www.turkeyadvisors.com/sites/img/ethereum.svg",
-      href:
-        "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
+      href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
     {
       img: "https://www.turkeyadvisors.com/sites/img/litecoin.svg",
-      href:
-        "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
+      href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
     {
       img: "https://www.turkeyadvisors.com/sites/img/binanceCoin.svg",
-      href:
-        "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
+      href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
   ];
   const socialMedia = [
     { href: "https://www.facebook.com/turkeyadvisors/", icon: "" },
     { href: "https://www.instagram.com/turkey__advisors/", icon: "" },
-    { href: "", icon: "" },
+    { href: "#", icon: "" },
     { href: "https://www.youtube.com/", icon: "" },
     { href: "https://www.linkedin.com/company/turkey-advisors", icon: "" },
   ];
@@ -148,7 +139,7 @@ const Footer = () => {
             Your experience on this site will be improved by allowing cookies.
             <a
               className="px-2 mx-2 m-t-2 rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR"
-              href="javascript:void(0)"
+              href="#"
             >
               Allow cookies
             </a>

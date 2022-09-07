@@ -40,11 +40,11 @@ const Header = () => {
           />
         </div>
         <div className="basis-4/5 grow  pt-8 pl-5">
-          <ul class="flex items-center gap-8 text-base font-semibold ">
+          <ul className="flex items-center gap-8 text-base font-semibold ">
             {navs.map((nav, index) => (
-              <li class="mr-2" key={`nav-${index}`}>
+              <li className="mr-2" key={`nav-${index}`}>
                 <a
-                  class="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR"
+                  className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR"
                   href={nav.href}
                 >
                   {nav.text}
