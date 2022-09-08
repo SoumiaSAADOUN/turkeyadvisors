@@ -1,10 +1,10 @@
 import React from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Property from "./Property";
 const Properties = (props) => {
   const data = [
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -16,8 +16,7 @@ const Properties = (props) => {
       surface: "53 Sq. m",
     },
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -29,8 +28,7 @@ const Properties = (props) => {
       surface: "83 Sq. m",
     },
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -45,25 +43,10 @@ const Properties = (props) => {
   return (
     <>
       <section className="flex justify-between mt-20">
-        <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
-         {props.title}
-        </h1>
+        <h1 className="text-3xl font-bold text-PRIMARY_COLOR">{props.title}</h1>
         <button className="flex items-center justify-between w-1/6 px-4 text-lg font-bold rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR">
           See more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 mx-4 text-xl font-bold"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
+          <HiOutlineArrowNarrowRight className="w-6 h-6 mx-4 text-xl font-bold" />
         </button>
       </section>
       <section className="flex flex-wrap gap-6 my-10">

@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const WhyUs = () => {
   const values = [
@@ -25,8 +26,10 @@ const WhyUs = () => {
         <h1 className="font-bold text-3xl text-PRIMARY_COLOR">
           Why Turkey Advisors?!
         </h1>
-        <button className="flex items-center w-fit py-1 justify-between w-1/6 px-12 font-md rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR ">
+        
+        <button className="flex items-center gap-8 w-fit py-1 justify-between w-1/6 px-4 font-medium rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR ">
           Services
+          <HiOutlineArrowNarrowRight className="w-6 h-6 mx-2 text-xl font-bold" />
         </button>
       </div>
 

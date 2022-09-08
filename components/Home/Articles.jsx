@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import Article from "./Article";
 
 const Articles = () => {
@@ -41,20 +42,8 @@ const Articles = () => {
         </h1>
         <button className="flex items-center justify-between w-1/6 px-4 text-lg font-bold rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR">
           Articles
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 mx-4 text-xl font-bold"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
+          <HiOutlineArrowNarrowRight className="w-6 h-6 mx-4 text-xl font-bold" />
+        
         </button>
       </section>
       <section className="flex flex-wrap gap-6 my-10">
