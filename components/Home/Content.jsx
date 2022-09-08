@@ -3,7 +3,6 @@ import Divider from "../Divider.jsx";
 import AboutUs from "./AboutUs.jsx";
 import Articles from "./Articles.jsx";
 import Citizenship from "./Citizenship.jsx";
-
 import Filter from "./Filter.jsx";
 import NewsLetter from "./NewsLetter.jsx";
 import Properties from "./Properties.jsx";
@@ -34,6 +33,8 @@ const HomeContent = () => {
         <Properties title="Hot properties | Own What you deserve." />
         <NewsLetter/>
         <WhyUs/>
+       
+     
       </div>
     </>
   );

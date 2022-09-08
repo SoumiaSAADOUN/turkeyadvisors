@@ -5,8 +5,8 @@ import fr from "../locales/fr";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { HiOutlineChat, HiOutlineChevronUp } from "react-icons/hi";
 import HomeContent from "../components/Home/Content";
-
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
@@ -43,10 +43,8 @@ export default function Home() {
         </title>
       </Head>
       <Header />
-      
-      
-     
-      {/* <div>
+
+      <div>
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">
             <img
@@ -54,7 +52,6 @@ export default function Home() {
               src={"/assets/images/u7HPicVLZyPaYyq6V3bK.jpg"}
             />
           </div>
-
           <div className="carousel-item active relative float-left w-full">
             <img
               className="block w-full"
@@ -62,7 +59,6 @@ export default function Home() {
             />
           </div>
           <div className="carousel-item active relative float-left w-full">
-            {" "}
             <img
               className="block w-full"
               src={"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"}
@@ -70,7 +66,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Row
+        {/* <Row
           className={styles.buttonsCarousel}
           justify="space-between"
           align="middle"
@@ -85,43 +81,24 @@ export default function Home() {
               {t.carousel.moreInfos}
             </Button>
           </Col>
-        </Row>
-      </div> */}
+        </Row> */}
+      </div>
 
       <HomeContent />
-      <button className="animate-bounce rounded-full bg-SECONDARY_COLOR fixed bottom-5 left-10 group hover:bg-PRIMARY_COLOR">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 m-2 group-hover:text-BACKGROUND_COLOR"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"
-          />
-        </svg>
-      </button>
+      <a
+        href={`mailto:${"soum.saadoun@gmail.com"}`}
+        className="animate-bounce rounded-full text-PRIMARY_COLOR bg-SECONDARY_COLOR fixed bottom-5 left-10 group hover:bg-PRIMARY_COLOR"
+      >
+        
+        <HiOutlineChat className="w-6 h-6 m-2 group-hover:text-BACKGROUND_COLOR text-PRIMARY_COLOR" />
+      </a>
 
-      <button className="bg-SECONDARY_COLOR rounded fixed -bottom-1 right-2 group hover:bg-PRIMARY_COLOR">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-6 h-6 m-3 group-hover:text-BACKGROUND_COLOR"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4.5 15.75l7.5-7.5 7.5 7.5"
-          />
-        </svg>
-      </button>
+      <a
+        href="#"
+        className="bg-SECONDARY_COLOR rounded fixed -bottom-1 text-PRIMARY_COLOR right-2 group hover:bg-PRIMARY_COLOR"
+      >
+        <HiOutlineChevronUp className="w-6 h-6 m-4 group-hover:text-BACKGROUND_COLOR text-PRIMARY_COLOR" />
+      </a>
       <Footer />
     </div>
   );
