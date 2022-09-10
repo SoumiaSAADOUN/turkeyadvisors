@@ -7,6 +7,7 @@ import Filter from "./Filter.jsx";
 import NewsLetter from "./NewsLetter.jsx";
 import Properties from "./Properties.jsx";
 import SomeOffers from "./SomeOffers.jsx";
+import Testimonials from "./Testimonials.jsx";
 import WhyUs from "./WhyUs.jsx";
 const HomeContent = () => {
   return (
@@ -34,7 +35,7 @@ const HomeContent = () => {
         <NewsLetter/>
         <WhyUs/>
        
-     
+     <Testimonials/>
       </div>
     </>
   );

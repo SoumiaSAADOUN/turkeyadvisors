@@ -49,7 +49,7 @@ const Property = (props) => {
             {props.data.price}
           </h1>
           {/* <button type="button" className="px-8 font-bold text-white rounded bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR">Quick Enquire</button> */}
-          <button className="px-10 font-bold text-center rounded text-BACKGROUND_COLOR bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR hover:text-PRIMARY_COLOR">
+          <button className="px-8 font-bold text-center rounded text-BACKGROUND_COLOR bg-PRIMARY_COLOR hover:bg-SECONDARY_COLOR hover:text-PRIMARY_COLOR">
             Quick Enquire
           </button>
         </div>

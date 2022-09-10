@@ -1,18 +1,14 @@
 import React from "react";
-import { Menu, Row, Col, Button } from "antd";
 import styles from "../styles/Header.module.css";
 import {
-  SearchOutlined,
-  GlobalOutlined,
   WhatsAppOutlined,
-  MoneyCollectOutlined,
 } from "@ant-design/icons";
-
 import { useRouter } from "next/router";
 import en from "../locales/en";
 import fr from "../locales/fr";
 import LangageSettings from "./Languages.jsx";
 import Image from "next/image";
+import { HiGlobeAlt, HiSearch } from "react-icons/hi";
 
 const Header = () => {
   const router = useRouter();
@@ -30,7 +26,7 @@ const Header = () => {
   ];
   return (
     <>
-      <div className="flex justify-around items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-24">
+      <div className="flex justify-around items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-12">
         <div className="basis-1/5 grow">
           <Image
             src="/assets/images/logo.png"
@@ -40,9 +36,9 @@ const Header = () => {
           />
         </div>
         <div className="basis-4/5 grow  pt-8 pl-5">
-          <ul className="flex items-center gap-8 text-base font-semibold ">
+          <ul className="flex items-center gap-8 text-base ">
             {navs.map((nav, index) => (
-              <li className="mr-2" key={`nav-${index}`}>
+              <li key={`nav-${index}`}>
                 <a
                   className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR"
                   href={nav.href}
@@ -53,42 +49,36 @@ const Header = () => {
             ))}
           </ul>
         </div>
-        <div className="basis-1/5 grow">
-          <div className={styles.params}>
-            <Button
-              className={styles.buttonTrans}
-              icon={
-                <WhatsAppOutlined
-                  style={{ fontSize: "16px", fontWeight: 900 }}
-                />
-              }
-              type="link"
-            />
-            <Button className={styles.buttonSimple}>
-              <GlobalOutlined style={{ fontSize: "16px", fontWeight: 900 }} />
+        <div className="flex flex-col basis-1/5 grow">
+          <div className="flex mb-2 gap-2 items-center">
+            <button className="w-12 h-12 text-BACKGROUND_COLOR"> <WhatsAppOutlined
+              style={{ fontSize: "16px", fontWeight: 900 }}
+            /></button>
+            <button className="flex flex-col py-2 justify-strech items-center rounded-xl w-12 h-12 bg-BACKGROUND_COLOR">
+              <HiGlobeAlt className="text-xl" />
               USD
-            </Button>
-            <LangageSettings className={styles.buttonSimple} />
-            {/* <Button className={styles.buttonSimple}>
-              <GlobalOutlined style={{ fontSize: "16px",  fontWeight: 900 }}/>
-              EN
-            </Button> */}
-            <Button
-              className={styles.buttonTrans}
-              icon={
-                <SearchOutlined style={{ fontSize: "16px", fontWeight: 900 }} />
-              }
-              type="link"
-            />
-            <Button className={styles.buttonDouble}>
+            </button>
+            <LangageSettings/>
+
+
+          </div>
+          <div className="flex grow gap-2 items-center">
+            <button className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR">
+              <HiSearch className="text-xl" />
+            </button>
+            <button className="p-2 items-center rounded-xl w-28 h-12 bg-BACKGROUND_COLOR">
+
               {t.header.enquireNow}
-            </Button>
-            <Button className={styles.buttonLogin} type="link">
+            </button>
+          </div>
+          <div className="flex grow gap-2 items-center justify-evenly my-2">
+
+            <a className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR" >
               {t.header.login}
-            </Button>
-            <Button className={styles.buttonLogin} type="link">
+            </a>
+            <a className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR" >
               {t.header.register}
-            </Button>
+            </a>
           </div>
         </div>
 

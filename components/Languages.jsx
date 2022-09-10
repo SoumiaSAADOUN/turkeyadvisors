@@ -13,6 +13,7 @@ import styles from "../styles/Header.module.css";
 import { useRouter } from "next/router";
 import en from "../locales/en";
 import fr from "../locales/fr";
+import { HiOutlineTranslate } from "react-icons/hi";
 
 const LangageSettings = () => {
   // const { Option } = Select;
@@ -57,10 +58,10 @@ const LangageSettings = () => {
           </Menu>
         }
       >
-        <Button className={styles.buttonSimple}>
-          <GlobalOutlined style={{ fontSize: "16px", fontWeight: 900, padding:0, margin:0 }} />
+        <button className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 bg-BACKGROUND_COLOR">
+          <HiOutlineTranslate className="text-xl"/>
           <span>{locale.toUpperCase()}</span>
-        </Button>
+        </button>
       </Dropdown>
     </>
   );
