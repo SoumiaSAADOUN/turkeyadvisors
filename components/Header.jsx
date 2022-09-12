@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Header.module.css";
 import {
   WhatsAppOutlined,
 } from "@ant-design/icons";
@@ -15,8 +14,8 @@ const Header = () => {
   const { locale } = router;
   const t = locale === "en" ? en : fr;
   const navs = [
-    { text: "Home", href: "#" },
-    { text: " About Us", href: "#" },
+    { text: "Home", href: "/" },
+    { text: " About Us", href: "aboutUs" },
     { text: "Projects", href: "#" },
     { text: "Services", href: "#" },
     { text: "Turkish Citizenship", href: "#" },
