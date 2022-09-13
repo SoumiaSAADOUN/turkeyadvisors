@@ -1,6 +1,8 @@
 import React from "react";
 import { HiHome, HiOutlineChevronDoubleRight } from "react-icons/hi";
+import GetInTouch from "../components/AboutUs/GetInTouche";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const AboutUsPage = () => {
 
@@ -10,13 +12,24 @@ const AboutUsPage = () => {
             name: "AHMED",
             title: "SALES RESPRESENTATIVE",
             message: " He was born in Lebanon, studied at Lebanese University, Department of Political Philosophy also did several courses about Economy, and IT - After graduation, he worked in the sales staff in Turkey Advisors. That way, he obtained experience in international real estate sales. He speaks Arabic, English, French, and Turkish. - Ahmad Favorite subjects to talk about: are politics, history, and Economy; in consequence, you are in safe hands, while he likes to call himself a moveable open social book, who believes that the minor details make all the difference, meanwhile, the perfection in his attitude is an endless admiration, he will always seek for obtain. Ahmad's hobbies: in the morning, Ahamd likes to listen to metal music but with a cup of coffee. We think Ahmad would give you all the knowledge you deserve to obtain."
+        },
+        {
+            image: "http://turkeyadvisors.com/storage/img/testimonials/rxjFMyFwybbnw5LoPcfh.jpg",
+            name: "AHMED",
+            title: "SALES RESPRESENTATIVE",
+            message: " He was born in Lebanon, studied at Lebanese University, Department of Political Philosophy also did several courses about Economy, and IT - After graduation, he worked in the sales staff in Turkey Advisors. That way, he obtained experience in international real estate sales. He speaks Arabic, English, French, and Turkish. - Ahmad Favorite subjects to talk about: are politics, history, and Economy; in consequence, you are in safe hands, while he likes to call himself a moveable open social book, who believes that the minor details make all the difference, meanwhile, the perfection in his attitude is an endless admiration, he will always seek for obtain. Ahmad's hobbies: in the morning, Ahamd likes to listen to metal music but with a cup of coffee. We think Ahmad would give you all the knowledge you deserve to obtain."
+        },
+        {
+            image: "http://turkeyadvisors.com/storage/img/testimonials/rxjFMyFwybbnw5LoPcfh.jpg",
+            name: "AHMED",
+            title: "SALES RESPRESENTATIVE",
+            message: " He was born in Lebanon, studied at Lebanese University, Department of Political Philosophy also did several courses about Economy, and IT - After graduation, he worked in the sales staff in Turkey Advisors. That way, he obtained experience in international real estate sales. He speaks Arabic, English, French, and Turkish. - Ahmad Favorite subjects to talk about: are politics, history, and Economy; in consequence, you are in safe hands, while he likes to call himself a moveable open social book, who believes that the minor details make all the difference, meanwhile, the perfection in his attitude is an endless admiration, he will always seek for obtain. Ahmad's hobbies: in the morning, Ahamd likes to listen to metal music but with a cup of coffee. We think Ahmad would give you all the knowledge you deserve to obtain."
         }
     ]
     return <>
         <Header />
-
         <div
-            className="bg-PRIMARY_COLOR/70 px-32 py-12 w-full  relative h-[200px]">
+            className="bg-PRIMARY_COLOR/70 py-12 w-full  relative h-[200px]">
             <img
                 className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "
                 src="http://turkeyadvisors.com/sites/img/background.jpg" />
@@ -32,9 +45,8 @@ const AboutUsPage = () => {
 
         </div>
 
-        <section className="px-20 flex flex-col items-center">
-
-            <div className="flex gap-8 items-center justify-between flex-wrap mt-8">
+        <section className="flex flex-col items-center">
+            <div className="flex gap-8 items-center justify-between flex-wrap mt-8 px-20">
                 <div className="text-TEXT_COLOR grow basis-1/3">
                     <h1 className="text-PRIMARY_COLOR text-4xl font-bold">About Us</h1>
                     <p >
@@ -49,11 +61,8 @@ const AboutUsPage = () => {
                 <img className="grow basis-1/3" src="http://turkeyadvisors.com/storage/img/aboutPage/mhBC2yMHmL57WTp6Tfss.png" alrt='about us' />
 
             </div>
-
-            <img src="http://turkeyadvisors.com/sites/img/about-icons.png" className="w-[80%] my-12" />
-
-
-            <div className="flex flex-col gap-4">
+            <img src="http://turkeyadvisors.com/sites/img/about-icons.png" className="w-[80%] my-12 px-20" />
+            <div className="flex flex-col gap-4 px-20">
 
                 <div className="flex gap-40 items-center flex-wrap my-8">
                     <div className="basis-1/3 grow text-TEXT_COLOR">
@@ -115,14 +124,11 @@ const AboutUsPage = () => {
                 </div>
 
             </div>
-
-            <div >
-                <h1 className="text-5xl text-PRIMARY_COLOR font-bold">Our team</h1>
-
-
+            <div className="px-20 flex flex-col gap-8 mt-16" >
+                <h1 className="text-5xl text-PRIMARY_COLOR font-bold my-4">Our team</h1>
                 {team.map((member, index) => (
-                    <div className="flex flex-wrap gap-8 items-center" key={index}>
-                        <div className="flex flex-col justify-center  items-center">
+                    <div className="flex flex-wrap gap-16 items-center my-4" key={index}>
+                        <div className="flex flex-col justify-center items-center gap-4">
                             <img className="basis-1/4 grow" src={member.image} />
                             <h1>{member.name}</h1>
                             <p>{member.title}</p>
@@ -137,8 +143,8 @@ const AboutUsPage = () => {
 
 
             </div>
-
-
+            <GetInTouch />
+            <Footer/>
 
         </section>
 
