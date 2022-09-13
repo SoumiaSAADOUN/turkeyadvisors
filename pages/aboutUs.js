@@ -27,7 +27,6 @@ const AboutUsPage = () => {
         }
     ]
     return <>
-        <Header />
         <div
             className="bg-PRIMARY_COLOR/70 py-12 w-full  relative h-[200px]">
             <img
@@ -144,7 +143,7 @@ const AboutUsPage = () => {
 
             </div>
             <GetInTouch />
-            <Footer/>
+           
 
         </section>
 
