@@ -25,7 +25,7 @@ const AboutUsPage = () => {
         }
     ]
     return <>
-        <PagesHeader title='About Us' />
+        <PagesHeader title='About Us' link='aboutus' />
 
         <section className="flex flex-col items-center">
             <div className="flex gap-8 items-center justify-between flex-wrap mt-8 px-20">

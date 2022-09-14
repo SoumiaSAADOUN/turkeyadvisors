@@ -4,7 +4,7 @@ import GetInTouch from '../components/AboutUs/GetInTouche';
 import PagesHeader from '../components/PagesHeader';
 const Services = () => {
     return <>
-        <PagesHeader title='Services' />
+        <PagesHeader title='Services' link='services'/>
         <section className='flex flex-col m-16 items-center'>
             <p className='text-lg font-semibold text-PRIMARY_COLOR '>
                 The purchasing process goes beyond the buy-sell process with Turkey advisors company, but a lifetime partnership because we start guiding the buyers from scratch and build the knowledge and figures together to make sure that the buyer is reaching the safe port of the next destination. Thereafter you will get what you deserve with our integrated team of Turkey advisors.

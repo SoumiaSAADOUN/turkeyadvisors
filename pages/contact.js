@@ -5,7 +5,7 @@ import PagesHeader from "../components/PagesHeader";
 
 const Contact = () => {
     return <>
-        <PagesHeader title='Contact Us' />
+        <PagesHeader title='Contact Us' link='contact'/>
         <div className="flex gap-32 text-PRIMARY_COLOR flex-wrap mx-20 my-12">
             <div className="basis-1/3 grow flex flex-col gap-12">
                 <h1 className="text-4xl font-bold text-PRIMARY_COLOR">LET'S CHAT !</h1>

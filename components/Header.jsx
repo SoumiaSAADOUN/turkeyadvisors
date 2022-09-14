@@ -16,12 +16,12 @@ const Header = () => {
   const navs = [
     { text: "Home", href: "/" },
     { text: " About Us", href: "aboutUs" },
-    { text: "Projects", href: "#" },
-    { text: "Services", href: "#" },
-    { text: "Turkish Citizenship", href: "#" },
-    { text: "Blog", href: "#" },
-    { text: "Articles", href: "#" },
-    { text: "Contact Us", href: "#" },
+    { text: "Projects", href: "projects" },
+    { text: "Services", href: "services" },
+    { text: "Turkish Citizenship", href: "citizenship" },
+    { text: "Blog", href: "blog" },
+    { text: "Articles", href: "articles" },
+    { text: "Contact Us", href: "contact" },
   ];
   return (
     <>

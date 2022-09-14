@@ -1,5 +1,5 @@
 import React from "react";
-import { HiHome, HiOutlineChevronDoubleRight } from "react-icons/hi";
+import Breadcrumbs from "./Breadcrumbs";
 
 const PagesHeader = (props) => {
     return <div
@@ -9,11 +9,7 @@ const PagesHeader = (props) => {
             src="http://turkeyadvisors.com/sites/img/background.jpg" />
 
         <div className="relative flex flex-col gap-4 justify-center items-center">
-            <div className="flex gap-4 ">
-                <HiHome className="text-SECONDARY_COLOR text-2xl font-bold" />
-                <HiOutlineChevronDoubleRight className="text-BACKGROUND_COLOR font-bold text-2xl" />
-                <span className="text-xl text-SECONDARY_COLOR"> {props.title}</span>
-            </div>
+            <Breadcrumbs title={props.title} link={props.link} />
             <h1 className="text-3xl font-semibold text-BACKGROUND_COLOR">{props.title.toUpperCase()}</h1>
         </div>
 
