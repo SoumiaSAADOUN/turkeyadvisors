@@ -20,6 +20,11 @@ module.exports = {
       RED:"#D32F2F",
       transparent: 'transparent',
       PURPLE:'#1F2B50',
+      FACEBOOK:"#4267B2",
+      YOUTUBE:"#FF0000",
+      TWITTER:"#1DA1F2",
+      INSTAGRAM:"#E1306C",
+      LINKEDIN:"#0A66C2"
     },
     screens: {
       'sm': '640px',

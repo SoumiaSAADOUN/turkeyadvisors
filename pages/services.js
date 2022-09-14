@@ -72,8 +72,6 @@ const Services = () => {
                 </div>
                 <img src='https://turkeyadvisors.com/storage/img/servicesPage/Qb7rdV7peW4M4Vspnykj.jpg'
                     alt='A message from the owners image' className='grow basis-1/3' />
-
-
             </div>
             <div className='flex gap-40 flax-wrap items-center'>
                 <img src='https://turkeyadvisors.com/storage/img/servicesPage/NCetnNHV0sdtXpIrxmcu.jpg'
@@ -93,12 +91,8 @@ const Services = () => {
                     <p>
                         The last step will depend on the buyer's acceptance and satisfaction. If his requirements are compatible with a specific project, we will work on concluding an initial deal to take an offer of the purchasing value in the project.
                     </p>
-                  
                 </div>
-
             </div>
-
-
         </section>
         <GetInTouch />
 

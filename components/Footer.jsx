@@ -1,4 +1,5 @@
 import React from "react";
+import FollowUs from "./FollowUs";
 
 const Footer = () => {
   const lastArticles = [
@@ -46,13 +47,7 @@ const Footer = () => {
       href: "https://www.turkeyadvisors.com/blog/buying-a-property-in-turkey-by-using-cryptocurrency",
     },
   ];
-  const socialMedia = [
-    { href: "https://www.facebook.com/turkeyadvisors/", icon: "" },
-    { href: "https://www.instagram.com/turkey__advisors/", icon: "" },
-    { href: "#", icon: "" },
-    { href: "https://www.youtube.com/", icon: "" },
-    { href: "https://www.linkedin.com/company/turkey-advisors", icon: "" },
-  ];
+ 
   const SectionTitle = (title) => (
     <h2 className="my-2 text-xl font-semibold text-BACKGROUND_COLOR">
       {title}
@@ -69,13 +64,7 @@ const Footer = () => {
               Turkey Advisors is an independent Turkish real estate agent. We
               have the finest selection of luxury properties in the market.
             </p>
-            <ul className="flex gap-2 my-2">
-              {socialMedia.map((item, index) => (
-                <li key={`social-media-${index}`}>
-                  <a href={item.href}></a>
-                </li>
-              ))}
-            </ul>
+           <FollowUs color='BACKGROUND_COLOR'/>
           </div>
 
           <div className="flex flex-col basis-1/4 grow">
