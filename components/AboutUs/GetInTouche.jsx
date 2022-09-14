@@ -2,7 +2,7 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const GetInTouch = () => {
-    return <section className="bg-PRIMARY_COLOR/70 px-20 py-4 w-full mt-10 relative  min-h-[200px]">
+    return <section className="bg-PRIMARY_COLOR/90 px-20 py-4 w-full mt-10 relative  min-h-[200px]">
         <img
             src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
             className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "

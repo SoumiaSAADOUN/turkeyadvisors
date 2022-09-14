@@ -3,7 +3,7 @@ import { HiHome, HiOutlineChevronDoubleRight } from "react-icons/hi";
 
 const PagesHeader = (props) => {
     return <div
-        className="bg-PRIMARY_COLOR/70 py-12 w-full  relative h-[200px]">
+        className="bg-PRIMARY_COLOR/90 py-12 w-full  relative h-[200px]">
         <img
             className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "
             src="http://turkeyadvisors.com/sites/img/background.jpg" />
