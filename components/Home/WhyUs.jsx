@@ -22,7 +22,7 @@ const WhyUs = () => {
     },
   ];
   return (
-    <div className="px-8">
+    <div className="">
       <div className="flex justify-between w-full lg:flex-row flex-col ">
         <h1 className="font-bold text-3xl text-PRIMARY_COLOR">
           Why Turkey Advisors?!
@@ -34,15 +34,15 @@ const WhyUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap h-fit">
         {values.map((value, index) => (
           <div className="lg:basis-1/4 sm:basis-1/2 ">
-            <div className="relative mr-4 flex px-8 py-8 mt-12 cursor-pointer rounded-xl border border-LIGHT_GREY overflow-hidden transition-all bg-BACKGROUND_COLOR rounded px-4  hover:text-SECONDARY_COLOR group">
-              <div className="w-0 h-full  rounded bg-DARK_PRIMARY_COLOR absolute top-0 left-0 ease-out duration-200 transition-all group-hover:w-full group-hover:text-SECONDARY_COLOR  ">
+            <div className="relative mr-4 flex px-8 py-0 pt-8 h-full mt-12 cursor-pointer rounded-xl border border-LIGHT_GREY overflow-hidden transition-all bg-BACKGROUND_COLOR rounded  hover:text-SECONDARY_COLOR group">
+              <div className="w-0 h-full rounded bg-DARK_PRIMARY_COLOR absolute top-0 left-0 ease-out duration-300 transition-all group-hover:w-full group-hover:text-SECONDARY_COLOR  ">
               </div>
               <div
                 key={`value-${index}`}
-                className="flex gap-4 flex-col transition-colors duration-200 ease-in-out group-hover:text-SECONDARY_COLOR z-10 "
+                className="flex gap-2 p-0 flex-col transition-colors duration-300 ease-in-out group-hover:text-SECONDARY_COLOR z-10 "
               >
                 <div className="rounded-xl border border-LIGHT_GREY group-hover:border-SECONDARY_COLOR p-2 flex flex-col w-fit group-hover:text-SECONDARY_COLOR ">
                   <svg
@@ -115,7 +115,7 @@ const WhyUs = () => {
                 <h4 className="text-xl font-bold text-DARK_PRIMARY_COLOR group-hover:text-SECONDARY_COLOR">
                   {value.title}
                 </h4>
-                <p className="text-DARK_PRIMARY_COLOR text-lg group-hover:text-SECONDARY_COLOR">
+                <p className="text-DARK_PRIMARY_COLOR text-base group-hover:text-SECONDARY_COLOR m-0">
                   {value.text}
                 </p>
               </div>

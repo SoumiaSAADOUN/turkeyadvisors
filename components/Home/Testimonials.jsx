@@ -8,45 +8,52 @@ const Testimonials = () => {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active: true
         },
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
         
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
+            active:false
         },
     ]
 
-    return <section className="flex flex-col gap-8 px-8 ">
+    return <section className="flex flex-col px-8 mt-16 ">
          <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
           Gossips about us
         </h1>
-        <div className="flex justtify-center mx-32 items-center gap-2  scroll-auto snap-x overscroll-contain overflow-x-scroll">
+        <div className="flex flex-col md:flex-row md:basis-1/2 lg:basis-1/2 justtify-center  items-center  scroll-auto snap-x overscroll-contain overflow-x-scroll">
         {testimonials.map((testimonial, index) => (
             <TestimonialCard testimonial={testimonial} key={index} />
         ))}

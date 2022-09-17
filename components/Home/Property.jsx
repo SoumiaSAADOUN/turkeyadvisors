@@ -5,7 +5,7 @@ import CardButton from "../Buttons/CardButton";
 const Property = (props) => {
   return (
     <div className="lg:basis-1/3  md:basis-1/2  ">
-      <div className="relative flex flex-col border border-solid rounded-md basis-1/4 grow mr-4 my-4 ">
+      <div className="relative flex flex-col border border-solid rounded-md lg:basis-1/4 md:basis-1/2  mr-4 my-4 ">
         <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
           <HiOutlineHeart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR" />
           {/* <Heart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR"/> */}

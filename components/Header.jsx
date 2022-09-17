@@ -8,6 +8,7 @@ import fr from "../locales/fr";
 import LangageSettings from "./Languages.jsx";
 import Image from "next/image";
 import { HiGlobeAlt, HiSearch } from "react-icons/hi";
+//mport Navbar from "./Navbar";
 
 
 const Header = () => {
