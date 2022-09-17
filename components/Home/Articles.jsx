@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import SectionButton from "../Buttons/SectionButton";
 import Article from "./Article";
 
 const Articles = () => {
@@ -36,17 +37,13 @@ const Articles = () => {
   ];
   return (
     <>
-      <section className="flex justify-between mt-10">
-        <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
+      <section className="flex justify-between mt-10 flex-wrap ">
+        <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow basis-4/5">
           Recently Added Articles
         </h1>
-        <button className="flex items-center justify-between w-1/6 px-4 text-lg font-bold rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-PRIMARY_COLOR hover:text-BACKGROUND_COLOR">
-          Articles
-          <HiOutlineArrowNarrowRight className="w-6 h-6 mx-4 text-xl font-bold" />
-        
-        </button>
+        <SectionButton title='Articles' icon={<HiOutlineArrowNarrowRight className="w-6 h-6 mx-4 text-xl font-bold" />} />
       </section>
-      <section className="flex flex-wrap gap-6 my-10">
+      <section className="flex flex-wrap justify-center my-10">
         {articles.map((article, index) => (
           <Article data={article} key={`article-${index}`} />
         ))}

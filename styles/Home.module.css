@@ -116,53 +116,77 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
 }
 
-.buttonsCarousel{
+.buttonsCarousel {
   display: flex;
   justify-content: space-between !important;
   width: 100vw;
   position: absolute;
-  top:90%;
+  top: 90%;
   padding-inline: 50px;
 
 }
-.buttonsCarouselItem{
+
+.buttonsCarouselItem {
   background-color: hsla(1, 1%, 10%, .7);
   color: white;
   font-size: 1.3rem;
   font-weight: 600;
   border-radius: 25px;
   border: none;
-  padding:10px;
-  height: 50px;  
+  padding: 10px;
+  height: 50px;
   /* transition: position 2s,  background-color 1s, transform 1s; */
   position: relative;
   animation: mymove 3s infinite;
   /* animation-delay: 3s ; */
-  
+
 }
+
 @keyframes mymove {
-  from {bottom: 0px;}
-  to {bottom: 100px;}
-  100% {box-shadow: -2px -5px 5px 5px  hsla(1, 1%, 10%, .7);}
+  from {
+    bottom: 0px;
+  }
+
+  to {
+    bottom: 100px;
+  }
+
+  100% {
+    box-shadow: -2px -5px 5px 5px hsla(1, 1%, 10%, .7);
+  }
 }
-.buttonsCarouselItem:hover{
+
+.buttonsCarouselItem:hover {
   color: hsla(1, 1%, 10%, .7);
   border: 1px solid hsla(1, 1%, 10%, .7);
 }
 
-.carouselContainer{
+.carouselContainer {
   position: relative;
+
+}
+
+.buttonTrans {
+  background: linear-gradient(to left, red 34%, blue 65%) right;
+  background-size: 300% 100%;
+}
+
+.buttonTrans:hover {
+  background-position: left;
 
 }

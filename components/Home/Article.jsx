@@ -3,8 +3,8 @@ import { HiOutlineCalendar, HiOutlineEye } from "react-icons/hi";
 
 const Article = (props) => {
   return (
-    <>
-      <article className="relative flex flex-col border border-LIGHT_GREY rounded-lg grow basis-1/4 flex-wrap group hover:cursor-pointer hover:bg-SECONDARY_COLOR ">
+    <div className="lg:basis-1/3  md:basis-1/2  ">
+      <article className="relative flex flex-col border border-LIGHT_GREY rounded-lg   flex-wrap group hover:cursor-pointer hover:bg-SECONDARY_COLOR mr-4 my-4">
         <img className="h-60 rounded-lg " alt={props.data.title} src={props.data.image} />
         <div className="relative  mt-20 border-transparent rounded-md border-y-2  ">
           <div className="absolute bottom-0 transition transform  text-PRIMARY_COLOR">
@@ -32,7 +32,7 @@ const Article = (props) => {
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 };
 

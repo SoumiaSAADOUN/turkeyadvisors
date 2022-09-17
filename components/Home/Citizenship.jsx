@@ -3,7 +3,7 @@ import React from "react";
 const Citizenship = () => {
   return (
     <>
-      <section className="bg-PRIMARY_COLOR/70 px-32 py-24 w-full mt-10  relative min-h-[500px]">
+      <section className="bg-PRIMARY_COLOR/70 px-[10%] py-24 w-full mt-10  relative min-h-[500px]">
         <img
           src="https://www.turkeyadvisors.com/sites/img/citizenship-bg.jpg"
           className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "
@@ -24,7 +24,7 @@ const Citizenship = () => {
           </p>
           <a
             href="https://www.turkeyadvisors.com/citizenship-by-investment"
-            className="bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR px-5 py-2 rounded"
+            className="bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR px-5 py-2 rounded hover:text-PRIMARY_COLOR hover:bg-SECONDARY_COLOR/90"
           >
             Learn More...
           </a>
