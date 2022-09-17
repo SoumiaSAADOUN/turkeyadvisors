@@ -13,7 +13,7 @@ export default function Home() {
     "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
   ];
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-full">
       <div>
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active relative float-left w-full">

@@ -11,10 +11,10 @@ const Filter = () => {
   const t = locale === "en" ? en : fr;
   return (
     <>
-      <section className="flex flex-wrap justify-between">
+      <section className="flex flex-wrap justify-between mt-4 ml-4">
         <h1 className="text-2xl font-semibold md:basis-2/6 sm:basis-full ">{t.home.dreamHome}</h1>
-        <div className="flex flex-wrap md:basis-4/6 sm:basis-full justify-end">
-          <select className=" lg:basis-1/5 sm:basis-full grow md:basis-1/3 mb-2 mr-2 h-[40px] rounded-lg shadow-md caret-yellow-100"
+        <div className="flex flex-wrap md:basis-4/6 sm:basis-full w-full justify-center md:justify-end">
+          <select className=" lg:basis-1/5 sm:basis-full w-full grow md:basis-1/3 mb-2 mr-2 h-[40px] rounded-lg shadow-md caret-yellow-100"
             placeholder={
               <div>
                 <FaMapMarkerAlt />

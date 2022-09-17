@@ -9,6 +9,7 @@ import LangageSettings from "./Languages.jsx";
 import Image from "next/image";
 import { HiGlobeAlt, HiSearch } from "react-icons/hi";
 
+
 const Header = () => {
   const router = useRouter();
   const { locale } = router;
@@ -47,6 +48,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
+          
         </div>
         <div className="flex flex-col basis-1/5 grow">
           <div className="flex mb-2 gap-2 items-center">

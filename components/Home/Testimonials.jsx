@@ -48,7 +48,7 @@ const Testimonials = () => {
         </h1>
         <div className="flex justtify-center mx-32 items-center gap-2  scroll-auto snap-x overscroll-contain overflow-x-scroll">
         {testimonials.map((testimonial, index) => (
-            <TestimonialCard testimonial={testimonial} />
+            <TestimonialCard testimonial={testimonial} key={index} />
         ))}
         </div>
       
