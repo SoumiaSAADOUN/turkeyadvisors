@@ -3,10 +3,11 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import { HiGlobeAlt, HiSearch } from 'react-icons/hi'
-import LangageSettings from "./Languages.jsx";
 import {
     WhatsAppOutlined
 } from "@ant-design/icons";
+import SetLanguages from './SetLanguages.jsx'
+import Currencies from './Currencies.jsx'
 
 const navigation = [
     { name: "Home", href: "/", current: true },
@@ -25,18 +26,19 @@ function classNames(...classes) {
 
 export default function Navigation() {
     return (
-        <Disclosure as="nav" className="bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full py-[50px] px-[5%] min-h-[130px]">
+        <Disclosure as="nav" className="bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full py-[40px] px-[5%] min-h-[130px]">
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                        <div className="relative flex h-16 items-center justify-between">
+                    <div className="mx-auto w-full px-2 sm:px-6 lg:px-8 ">
+                        <div className="relative flex h-16 items-center ">
                             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
                                 <div className='flex flex-col lg:hidden '>
-                                    <button className="w-12 h-12 text-BACKGROUND_COLOR">
-                                        <WhatsAppOutlined
-                                            style={{ fontSize: "16px", fontWeight: 900 }}
-                                        />
-                                    </button>
+                                <a className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR" href='https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0'>
+                                                <WhatsAppOutlined
+                                                    style={{ fontSize: "16px", fontWeight: 900 }}
+                                               />
+                                            </a>
+                                            
                                     <button className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR">
                                         <HiSearch className="text-xl" />
                                     </button>
@@ -50,8 +52,8 @@ export default function Navigation() {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className='flex items-center'>
-                                <div className="flex items-center justify-between md:items-stretch md:justify-start">
+                            <div className='flex items-center lg:justify-center w-full'>
+                                <div className="flex items-center justify-center md:items-stretch md:justify-start">
                                     <div className="flex items-center">
                                         <img
                                             className="block w-auto h-14 lg:hidden"
@@ -67,11 +69,11 @@ export default function Navigation() {
                                     </div>
 
                                 </div>
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between w-fit">
 
                                     <div className="hidden flex sm:ml-6 lg:block">
 
-                                        <div className="flex space-x-4 items-center text-base pt-4">
+                                        <div className="flex justify-between xl:space-x-8 lg:space-x-4 items-center text-base pt-4">
                                             {navigation.map((item) => (
                                                 <a
                                                     key={item.name}
@@ -89,18 +91,16 @@ export default function Navigation() {
 
                                     </div>
 
-                                    <div className="hidden flex flex-col py-2 lg:block">
-                                        <div className="flex mb-2 gap-2 items-center">
-                                            <button className="w-12 h-12 text-BACKGROUND_COLOR">
+                                    <div className="hidden flex flex-col mx-4 py-2 lg:block">
+                                        <div className="flex mb-2 gap-2 items-center"  >
+                                            <a className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR" href='https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0'>
                                                 <WhatsAppOutlined
                                                     style={{ fontSize: "16px", fontWeight: 900 }}
-                                                />
-                                            </button>
-                                            <button className="flex flex-col py-2 justify-strech items-center rounded-xl w-12 h-12 bg-BACKGROUND_COLOR">
-                                                <HiGlobeAlt className="text-xl" />
-                                                USD
-                                            </button>
-                                            <LangageSettings />
+                                               />
+                                            </a>
+                                            
+                                            <Currencies/>
+                                            <SetLanguages />
 
 
                                         </div>
@@ -128,7 +128,7 @@ export default function Navigation() {
                         </div>
                     </div>
 
-                    <Disclosure.Panel className="xl:hidden scroll-auto snap-y overscroll-contain overflow-y-scroll max-h-screen ">
+                    <Disclosure.Panel className="xl:hidden scroll-auto snap-y overscroll-contain overflow-y-scroll h-[60vh] ">
                         <div className="space-y-1 px-2 pt-2 pb-3">
 
                             {navigation.map((item) => (

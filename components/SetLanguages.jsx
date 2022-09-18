@@ -1,40 +1,36 @@
 import React from "react";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import { HiGlobeAlt, HiOutlineTranslate } from "react-icons/hi";
+import { useRouter } from "next/router";
+import { HiOutlineTranslate } from "react-icons/hi";
 
-const currencies = [
+const languages = [
   {
     id: 1,
-    currency: "USD",
-    icon:'https://www.turkeyadvisors.com/sites/img/flags/us.png'
+    lang: "en",
   },
   {
     id: 2,
-    currency: "EUR",
-    icon:'https://www.turkeyadvisors.com/sites/img/flags/eu.png'
-},
-  {
-    id: 3,
-    currency: "TRY",
-    icon:'https://www.turkeyadvisors.com/sites/img/flags/tr.png'
+    lang: "fr",
   },
   {
-    id: 4,
-    currency: "GBP",
-    icon:'https://www.turkeyadvisors.com/sites/img/flags/gb.png'
+    id: 3,
+    lang: "tr",
   },
 ];
 
-const Currencies = () => {
+const SetLanguages = () => {
+  const router = useRouter();
+  const { locale } = router;
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
   const handleChange = (value) => {
-   
+    const locale = value;
+    router.push("/", "/", { locale });
   };
-  const [selected, setSelected] = useState(currencies[0]);
+  const [selected, setSelected] = useState(locale);
   return (
     <>
       <Listbox value={selected} onChange={setSelected}>
@@ -43,9 +39,9 @@ const Currencies = () => {
             <div className="relative ">
               <Listbox.Button className="relative rounded-xl w-fit h-12 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
                 <span className="flex items-center">
-                  <HiGlobeAlt className="text-base ml-1" />
+                  <HiOutlineTranslate className="text-base ml-1" />
 
-                  <span className="mx-1 block">{selected.currency.toUpperCase()}</span>
+                  <span className="ml-1 block">{selected.toUpperCase()}</span>
                 </span>
               </Listbox.Button>
 
@@ -56,33 +52,31 @@ const Currencies = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-fit overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                  {currencies.map((currency) => (
+                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                  {languages.map((language) => (
                     <Listbox.Option
-                      key={currency.id}
+                      key={language.id}
                       className={({ active }) =>
                         classNames(
                           active ? "text-white bg-indigo-600" : "text-gray-900",
                           "relative cursor-default select-none py-2 pl-3 pr-9"
                         )
                       }
-                      value={currency}
-                      onClick={() => handleChange(currency)}
+                      value={language.lang}
+                      onClick={() => handleChange(language.lang)}
                     >
                       {({ selected, active }) => (
                         <>
                           <div className="flex items-center">
-                          <img src={currency.icon} alt="" className="h-6 w-6 flex-shrink-0 rounded-full mr-2" />
                             <span
                               className={classNames(
                                 selected ? "font-semibold" : "font-normal",
                                 "block"
                               )}
                             >
-                              {currency.currency.toUpperCase()}
+                              {language.lang.toUpperCase()}
                             </span>
                           </div>
-                          
                         </>
                       )}
                     </Listbox.Option>
@@ -97,4 +91,4 @@ const Currencies = () => {
   );
 };
 
-export default Currencies;
+export default SetLanguages;

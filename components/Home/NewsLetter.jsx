@@ -29,7 +29,7 @@ const NewsLetter = () => {
             />
           </div>
 
-          <button className="flex items-center w-fit py-1 justify-between w-1/6 px-4 font-md rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-SECONDARY_COLOR/90 ">
+          <button className="flex items-center w-fit py-1 justify-between  px-4 font-md rounded text-PRIMARY_COLOR bg-SECONDARY_COLOR hover:bg-SECONDARY_COLOR/90 ">
             SUBSCRIBE
           </button>
         </div>

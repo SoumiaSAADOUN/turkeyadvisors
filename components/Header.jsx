@@ -5,9 +5,10 @@ import {
 import { useRouter } from "next/router";
 import en from "../locales/en";
 import fr from "../locales/fr";
-import LangageSettings from "./Languages.jsx";
 import Image from "next/image";
 import { HiGlobeAlt, HiSearch } from "react-icons/hi";
+import Currencies from "./Currencies";
+import SetLanguages from "./SetLanguages";
 
 
 
@@ -57,11 +58,9 @@ const Header = () => {
             <button className="w-12 h-12 text-BACKGROUND_COLOR"> <WhatsAppOutlined
               style={{ fontSize: "16px", fontWeight: 900 }}
             /></button>
-            <button className="flex flex-col py-2 justify-strech items-center rounded-xl w-12 h-12 bg-BACKGROUND_COLOR">
-              <HiGlobeAlt className="text-xl" />
-              USD
-            </button>
-            <LangageSettings/>
+            
+            <Currencies/>
+            <SetLanguages/>
 
 
           </div>

@@ -50,7 +50,7 @@ const HomeContent = () => {
   ];
   return (
     <>
-      <div className="lg:px-2 md:mx-12 md:pl-6  md:p-6 mt-20 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl ">
+      <div className="lg:px-2 md:mx-[12%] mx-3 md:pl-6  md:p-6 mt-20 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl ">
         <Filter />
         <Properties title="Recently added properties." propertiesList={properties} />
 
@@ -58,17 +58,17 @@ const HomeContent = () => {
         <Articles />
       </div>
       <Citizenship />
-      <div className="lg:px-12 w-full md:pl-6 h-4/5">
+      <div className="md:pl-[12%] md:pr-[12%] px-3 w-full md:pl-6 h-4/5">
         <Properties title="Projects Conform To Obtaining Turkish Citizenship" propertiesList={properties} />
         <Properties title="Bargain Properties | Own What you deserve." propertiesList={properties} />
         <Divider />
       </div>
       <AboutUs />
-      <div className="lg:px-12 w-full md:pl-6 h-4/5">
+      <div className="md:pl-[12%] md:pr-[12%] px-3  w-full md:pl-6 h-4/5">
         <Properties title="Sea View Properties | Own What you deserve." propertiesList={properties} />
       </div>
       <SomeOffers />
-      <div className="lg:px-12 w-full md:pl-6 h-4/5">
+      <div className="md:pl-[12%] md:pr-[12%]  px-3 w-full md:pl-6 h-4/5">
         <Properties title="Hot properties | Own What you deserve." propertiesList={properties} />
         <NewsLetter />
         <WhyUs />

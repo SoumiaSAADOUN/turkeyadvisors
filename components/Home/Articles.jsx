@@ -37,12 +37,15 @@ const Articles = () => {
   ];
   return (
     <>
-      <section className="flex justify-between mt-10 flex-wrap ">
-        <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow basis-4/5">
+      <section className="flex justify-between mt-20 lg:flex-row flex-col ">
+        <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3">
           Recently Added Articles
         </h1>
-        <SectionButton title='Articles' icon={<HiOutlineArrowNarrowRight className="w-6 h-6 mx-4 text-xl font-bold" />} />
-      </section>
+        <div>
+        <SectionButton title='Articles' icon={<HiOutlineArrowNarrowRight className="w-6 h-6 mx-2 text-xl font-extrabold" />} />
+      
+        </div>
+       </section>
       <section className="flex flex-wrap justify-center my-10">
         {articles.map((article, index) => (
           <Article data={article} key={`article-${index}`} />
