@@ -79,7 +79,7 @@ export default function Navigation() {
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
-                                                        item.current ? 'bg-gray-900 text-white' : 'text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR'
+                                                        item.current ? 'text-SECONDARY_COLOR' : 'text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR'
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >

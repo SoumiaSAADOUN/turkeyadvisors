@@ -41,7 +41,7 @@ const SetLanguages = () => {
                 <span className="flex items-center">
                   <HiOutlineTranslate className="text-base ml-1" />
 
-                  <span className="ml-1 block">{selected.toUpperCase()}</span>
+                  <span className="mx-1 block">{selected.toUpperCase()}</span>
                 </span>
               </Listbox.Button>
 
