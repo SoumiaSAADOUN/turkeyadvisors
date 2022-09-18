@@ -3,17 +3,18 @@ import React from "react";
 const Citizenship = () => {
   return (
     <>
-      <section className="bg-PRIMARY_COLOR/70 px-[10%] py-24 w-full mt-10  relative min-h-[500px]">
+      <section className="bg-PRIMARY_COLOR/40 px-[10%] md:py-24 py-[10%] w-full mt-10  relative min-h-[600px]">
         <img
           src="https://www.turkeyadvisors.com/sites/img/citizenship-bg.jpg"
-          className="absolute top-0 left-0 w-full object-cover mix-blend-overlay min-h-full "
+          className="absolute top-0 left-0 object-cover w-full min-h-full mix-blend-overlay "
         />
-        <div className="absolute">
-          <h1 className="text-4xl text-RED  font-bold">Turkish Citisenship</h1>
-          <h3 className="text-xl text-BACKGROUND_COLOR">
+        <div className="z-10 flex flex-col justify-center">
+          <h1 className="z-20 mb-4 text-[2.5rem] font-bold text-RED ">Turkish Citizenship</h1>
+          <h3 className="mb-2 text-2xl font-md text-BACKGROUND_COLOR">
             By Investment Program
           </h3>
-          <p className=" text-BACKGROUND_COLOR max-w-lg text-base">
+          <div className="flex-grow w-[150px] mb-4 border-t-4 border-BACKGROUND_COLOR"></div>
+          <p className="w-full py-4 text-lg md:w-1/2 text-BACKGROUND_COLOR">
             You can apply for Turkish citizenship by speculation whenever you
             have put at least $250,000 in private or business property in
             Turkey. Your companion and your childern younger than 18 will
@@ -24,7 +25,7 @@ const Citizenship = () => {
           </p>
           <a
             href="https://www.turkeyadvisors.com/citizenship-by-investment"
-            className="bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR px-5 py-2 rounded hover:text-PRIMARY_COLOR hover:bg-SECONDARY_COLOR/90"
+            className="z-10 px-5 py-2 rounded max-w-[150px] bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR hover:text-PRIMARY_COLOR hover:bg-SECONDARY_COLOR/90"
           >
             Learn More...
           </a>

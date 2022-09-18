@@ -18,6 +18,7 @@ module.exports = {
       DARK_GREY: "#474B66",
       GREY: "#000066",
       RED:"#D32F2F",
+      REDISH:'#FF0000',
       transparent: 'transparent',
       PURPLE:'#1F2B50',
       FACEBOOK:"#4267B2",

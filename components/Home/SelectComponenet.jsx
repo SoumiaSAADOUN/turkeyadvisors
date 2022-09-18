@@ -12,13 +12,13 @@ const SelectComponenet =(props)=>{
       <Listbox value={selected} onChange={setSelected}>
         {({ open }) => (
           <>
-           <div className="relative mt-1">
-              <Listbox.Button key='bedrooms' className="relative w-full cursor-default rounded-md border border-LIGHT_GREY bg-BACKGROUND_COLOR py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+           <div className="relative">
+              <Listbox.Button key='bedrooms' className="relative w-full h-[40px] py-2 pl-3 pr-10 text-left border rounded-md shadow-md cursor-default border-LIGHT_GREY bg-BACKGROUND_COLOR focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
                 <span className="flex items-center">
-                 <span className="ml-3 block truncate">{selected.title}</span>
+                 <span className="block ml-3 truncate">{selected.title}</span>
                 </span>
-                <span className="pointer-events-none absolute bottom-3 right-0 ml-3 flex items-center pr-2">
-                  <FaSortDown className="h-5 w-5 text-SECONDARY_COLOR" aria-hidden="true" />
+                <span className="absolute right-0 flex items-center pr-2 ml-3 pointer-events-none bottom-3">
+                  <FaSortDown className="w-5 h-5 text-SECONDARY_COLOR" aria-hidden="true" />
                 </span>
               </Listbox.Button>
   
@@ -29,7 +29,7 @@ const SelectComponenet =(props)=>{
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options key='bedrooms1' className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options key='bedrooms1' className="absolute z-10 w-full py-1 mt-1 overflow-auto text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {props.data.map((item) => (
                     <Listbox.Option
                       key={`${item.name} - ${item.id}`}

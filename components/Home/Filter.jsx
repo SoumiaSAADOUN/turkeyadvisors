@@ -35,27 +35,27 @@ const Filter = () => {
         <h1 className="text-2xl font-semibold md:basis-2/6 sm:basis-full ">
           {t.home.dreamHome}
         </h1>
-        <div className="flex flex-wrap md:basis-4/6 sm:basis-full w-full justify-center md:justify-end">
+        <div className="flex flex-wrap justify-center w-full md:basis-4/6 sm:basis-full md:justify-end">
           <button className="flex items-center justify-between lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md caret-yellow-100">
             <span className="flex items-center ">
               <FaMapMarkerAlt
-                className="h-4 w-4 mr-2 text-SECONDARY_COLOR"
+                className="w-4 h-4 mr-2 text-SECONDARY_COLOR"
                 aria-hidden="true"
               />
               City
             </span>
-            <span className="pointer-events-none ml-3 pb-2 flex ">
+            <span className="flex pb-2 ml-3 pointer-events-none ">
               <FaSortDown
-                className="h-5 w-5 text-SECONDARY_COLOR"
+                className="w-5 h-5 text-SECONDARY_COLOR"
                 aria-hidden="true"
               />
             </span>
           </button>
 
-          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md caret-yellow-100">
+          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] ">
             <SelectComponenet data={propertyType} />
           </div>
-          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md caret-yellow-100">
+          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px]   ">
             <SelectComponenet data={badrooms} />
           </div>
 
