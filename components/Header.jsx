@@ -8,7 +8,7 @@ import fr from "../locales/fr";
 import LangageSettings from "./Languages.jsx";
 import Image from "next/image";
 import { HiGlobeAlt, HiSearch } from "react-icons/hi";
-//mport Navbar from "./Navbar";
+
 
 
 const Header = () => {
@@ -27,6 +27,7 @@ const Header = () => {
   ];
   return (
     <>
+   
       <div className="flex justify-around items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-12">
         <div className="basis-1/5 grow">
           <Image

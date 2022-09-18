@@ -4,42 +4,12 @@ import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
 
     const testimonials = [
+      
         {
             name: 'Dr. Alaam',
             message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
             avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active: true
-        },
-        {
-            name: 'Dr. Alaam',
-            message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
-            avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active:false
-        },
-        {
-            name: 'Dr. Alaam',
-            message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
-            avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active:false
-        },
-        {
-            name: 'Dr. Alaam',
-            message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
-            avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active:false
-        },
-        {
-            name: 'Dr. Alaam',
-            message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
-            avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active:false
-        },
-        
-        {
-            name: 'Dr. Alaam',
-            message: 'Excellent team..hardworking and helpful..follows no pressure advice and gives great recommendations on location and respect budget..highly recommended',
-            avatar: 'http://turkeyadvisors.com/storage/img/testimonials/G1IAopJ2E7gTqshLoW31.jpg',
-            active:false
+            active:true
         },
         {
             name: 'Dr. Alaam',

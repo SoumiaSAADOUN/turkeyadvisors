@@ -2,15 +2,25 @@ import { useRouter } from "next/router";
 import en from "../locales/en";
 import fr from "../locales/fr";
 import HomeContent from "../components/Home/Content";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : fr;
   const imagesCarousel = [
-    "/assets/images/u7HPicVLZyPaYyq6V3bK.jpg",
-    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
-    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
-    "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg",
+    {src:"/assets/images/u7HPicVLZyPaYyq6V3bK.jpg"},
+    {src:"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"},
+    {src:"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"},
+    {src:"/assets/images/UI9XdW5dbARVEXQgzXhF.jpg"},
   ];
   return (
     <div className="flex flex-col items-center justify-center w-full">
@@ -35,7 +45,7 @@ export default function Home() {
             />
           </div>
         </div>
-
+       
         {/* <Row
           className={styles.buttonsCarousel}
           justify="space-between"

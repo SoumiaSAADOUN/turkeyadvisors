@@ -3,6 +3,7 @@ import React from "react";
 import { HiOutlineChat, HiOutlineChevronUp } from "react-icons/hi";
 import Footer from "./Footer";
 import Header from "./Header";
+import Navigation from "./Navigation";
 
 const Layout = ({ children }) => {
     return <>
@@ -14,6 +15,10 @@ const Layout = ({ children }) => {
                 type="image/png"
                 href="https://www.turkeyadvisors.com/favicon-192x192.ico"
             ></link>
+             <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+          /> 
             <link rel="preconnect" href="https://fonts.googleapis.com"></link>
             <link
                 rel="preconnect"
@@ -29,7 +34,8 @@ const Layout = ({ children }) => {
                 Turkey Advisors | Real estate & Investment advisors In Turkey
             </title>
         </Head>
-        <Header />
+        
+        <Navigation/>
         {children}
         <a
             href={`mailto:${"soum.saadoun@gmail.com"}`}

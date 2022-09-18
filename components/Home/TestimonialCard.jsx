@@ -8,13 +8,13 @@ const TestimonialCard = (props) => {
 
         </div>
 
-        <p className={`text-center text-center ${props.testimonial.active ? 'block' : 'hidden'} ${props.testimonial.active && 'w-48'} group-hover:w-48 group-hover:block `}>
+        <div className={`text-center text-center ${props.testimonial.active ? 'block' : 'hidden'} ${props.testimonial.active && 'w-48'} group-hover:w-48 group-hover:block `}>
             <div className="flex justify-between w-full text-SECONDARY_COLOR mb-4">
                 <FaQuoteLeft className="text-xs" />
                 <FaQuoteRight className="text-xs" />
             </div>
             {props.testimonial.message}
-        </p>
+        </div>
     </div>
 }
 
