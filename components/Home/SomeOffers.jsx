@@ -1,7 +1,7 @@
 import React from "react";
 const SomeOffers = () => {
   return (
-    <section className="bg-PRIMARY_COLOR/90 px-[10%] py-[10%] w-full my-10 relative  min-h-[200px]">
+    <section className="bg-PRIMARY_COLOR/90 px-[10%] md:py-12 py-[10%] w-full my-10 relative  min-h-[220px]">
       <img
         src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
         className="absolute top-0 left-0 object-cover w-full min-h-full mix-blend-overlay "

@@ -68,7 +68,7 @@ const Header = () => {
             <button className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR">
               <HiSearch className="text-xl" />
             </button>
-            <button className="p-2 items-center rounded-xl w-28 h-12 bg-BACKGROUND_COLOR">
+            <button className="p-2 rounded-md w-28 h-12 bg-BACKGROUND_COLOR text-base">
 
               {t.header.enquireNow}
             </button>

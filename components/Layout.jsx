@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
 
         <a
             href="#"
-            className="bg-SECONDARY_COLOR rounded fixed -bottom-1 text-PRIMARY_COLOR right-2 group hover:bg-PRIMARY_COLOR"
+            className="z-10 bg-SECONDARY_COLOR rounded fixed -bottom-1 text-PRIMARY_COLOR right-2 group hover:bg-PRIMARY_COLOR"
         >
             <HiOutlineChevronUp className="w-6 h-6 m-4 group-hover:text-BACKGROUND_COLOR text-PRIMARY_COLOR" />
         </a>

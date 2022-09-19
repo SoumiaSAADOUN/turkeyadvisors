@@ -50,7 +50,7 @@ const HomeContent = () => {
   ];
   return (
     <>
-      <div className="lg:px-2 md:mx-[12%] mx-3 md:pl-6  md:p-6 mt-20 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl ">
+      <div className="lg:px-2 md:mx-[12%] mx-3 md:pl-6  md:p-6 mt-10 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl ">
         <Filter />
         <Properties title="Recently added properties." propertiesList={properties} />
 
