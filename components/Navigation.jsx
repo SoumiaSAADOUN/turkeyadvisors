@@ -107,7 +107,7 @@ export default function Navigation() {
               <div className="hidden flex flex-col mx-4 py-2 lg:block">
                 <div className="flex mb-2 gap-2 items-center">
                   <a
-                    className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR"
+                    className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR"
                     href="https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0"
                   >
                     <WhatsAppOutlined
@@ -119,18 +119,18 @@ export default function Navigation() {
                   <SetLanguages />
                 </div>
                 <div className="flex grow gap-2 items-center">
-                  <button className=" py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR">
+                  <button className=" py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR">
                     <HiSearch className="text-xl" />
                   </button>
-                  <button onClick={()=>   setShowEnquireModal(true)} className="p-[1px] rounded-md w-28 h-12 bg-BACKGROUND_COLOR text-sm">
+                  <button onClick={()=>   setShowEnquireModal(true)} className="p-[.5px] rounded-md w-28 h-10 bg-BACKGROUND_COLOR text-sm">
                     Enquire Now
                   </button>
                 </div>
-                <div className="flex grow gap-2 items-center justify-evenly my-2">
-                  <button onClick={()=>   setShowLoginModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer">
+                <div className="flex grow gap-4 items-center justify-evenly my-2">
+                  <button onClick={()=>   setShowLoginModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer text-sm">
                     Login
                   </button>
-                  <button  onClick={()=>   setShowRegisterModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer">
+                  <button  onClick={()=>   setShowRegisterModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer text-sm">
                     Register
                   </button>
                 </div>

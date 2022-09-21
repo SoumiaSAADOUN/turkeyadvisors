@@ -37,7 +37,7 @@ const SetLanguages = () => {
         {({ open }) => (
           <>
             <div className="relative ">
-              <Listbox.Button className="relative rounded-xl w-fit h-12 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+              <Listbox.Button className="relative rounded-xl w-fit h-10 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
                 <span className="flex items-center">
                   <HiOutlineTranslate className="text-base ml-1" />
 

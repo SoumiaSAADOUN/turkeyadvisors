@@ -42,7 +42,7 @@ const Filter = () => {
           <div className=" relative flex flex-wrap lg:basis-2/3">
             <button
               onClick={() => setShowCityFilter(!showCityFilter)}
-              className=" flex items-center justify-between lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md "
+              className=" flex items-center justify-between lg:basis-1/4 basis-full grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px] rounded-lg shadow-md "
             >
               <span className="flex items-center ">
                 <FaMapMarkerAlt
@@ -59,23 +59,27 @@ const Filter = () => {
               </span>
             </button>
 
-            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] ">
+            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px] ">
               <SelectComponenet data={propertyType} />
             </div>
-            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px]   ">
+            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px]   ">
               <SelectComponenet data={bedrooms} />
             </div>
+            <button className="xl:hidden basis-full md:basis-1/4 grow mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
+              <HiOutlineSearch className="w-4 h-4 mr-2 text-xl font-bold" />
+              {t.home.search}
+            </button>
+
             <CityFilter
-            visibility={showCityFilter}
-            onCancel={() => setShowCityFilter(false)}
-          />
+              visibility={showCityFilter}
+              onCancel={() => setShowCityFilter(false)}
+            />
           </div>
 
-          <button className=" lg:basis-1/4 basis-full  md:basis-1/3 mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
+          <button className="mr-2 mb-2 xl:flex px-4 py-2 h-[40px] xl:basis-1/4 hidden  justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
             <HiOutlineSearch className="w-4 h-4 mr-2 text-xl font-bold" />
-            {t.home.search}
+            {t.home.search}dd
           </button>
-          
         </div>
       </section>
     </>

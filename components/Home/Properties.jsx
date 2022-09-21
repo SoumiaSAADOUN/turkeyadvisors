@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import SectionButton from "../Buttons/SectionButton";
 import Property from "./Property";
+import { FaCircle } from "react-icons/fa";
 
 const Properties = (props) => {
   const isBigScreen = useMediaQuery({ query: "(min-width: 1280px )" });
@@ -70,11 +71,11 @@ const Properties = (props) => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="flex justify-around"
+         
         >
           {props.propertiesList.map((property, index) => (
             <SwiperSlide key={`property-${index}`}>
-              <HiDotsCircleHorizontal key={`property-${index}`} />
+              <FaCircle key={`property-${index}`} />
             </SwiperSlide>
           ))}
         </Swiper>
