@@ -16,7 +16,7 @@ module.exports = {
       BACKGROUND_COLOR: "#FFFFFF",
       LIGHT_GREY: "#eeeeee",
       DARK_GREY: "#474B66",
-      GREY: "#000066",
+      GREY: "#cfd8dc",
       RED:"#D32F2F",
       REDISH:'#FF0000',
       transparent: 'transparent',

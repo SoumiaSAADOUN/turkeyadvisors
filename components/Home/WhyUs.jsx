@@ -29,17 +29,20 @@ const WhyUs = () => {
         </h1>
 
         <div>
-          <SectionButton title="Services" icon={<HiOutlineArrowNarrowRight className="w-6 h-6 mx-2 text-xl font-bold" />} />
-
+          <SectionButton
+            title="Services"
+            icon={
+              <HiOutlineArrowNarrowRight className="w-6 h-6 mx-2 text-xl font-bold" />
+            }
+          />
         </div>
       </div>
 
       <div className="flex flex-wrap h-fit justify-center  ">
         {values.map((value, index) => (
-          <div className="lg:basis-1/4 sm:basis-1/2  mb-4" key={index}>
+          <div className="xl:basis-1/4 sm:basis-1/2  mb-4" key={index}>
             <div className="relative md:mr-4 flex px-8 py-0 pt-8 h-full mt-12 cursor-pointer rounded-xl border border-LIGHT_GREY overflow-hidden transition-all bg-BACKGROUND_COLOR rounded  hover:text-SECONDARY_COLOR group">
-              <div className="w-0 h-full rounded bg-DARK_PRIMARY_COLOR absolute top-0 left-0 ease-out duration-300 transition-all group-hover:w-full group-hover:text-SECONDARY_COLOR  ">
-              </div>
+              <div className="w-0 h-full rounded bg-DARK_PRIMARY_COLOR absolute top-0 left-0 ease-out duration-300 transition-all group-hover:w-full group-hover:text-SECONDARY_COLOR  "></div>
               <div
                 key={`value-${index}`}
                 className="flex gap-2 p-0 flex-col transition-colors duration-300 ease-in-out group-hover:text-SECONDARY_COLOR z-10 "
@@ -120,9 +123,7 @@ const WhyUs = () => {
                 </p>
               </div>
             </div>
-
           </div>
-
         ))}
       </div>
     </div>

@@ -6,11 +6,14 @@ import fr from "../../locales/fr";
 import { FaMapMarkerAlt, FaSortDown } from "react-icons/fa";
 import { HiOutlineSearch } from "react-icons/hi";
 import SelectComponenet from "./SelectComponenet";
+import { useState } from "react";
+import CityFilter from "./CityFilter";
 const Filter = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : fr;
-  const badrooms = [
+  const [showCityFilter, setShowCityFilter] = useState(false);
+  const bedrooms = [
     { title: "Bedrooms" },
     { title: "1+0" },
     { title: "1+1" },
@@ -35,37 +38,44 @@ const Filter = () => {
         <h1 className="text-2xl font-semibold md:basis-2/6 sm:basis-full ">
           {t.home.dreamHome}
         </h1>
-        <div className="flex flex-wrap justify-center w-full md:basis-4/6 sm:basis-full md:justify-end">
-          <button className="flex items-center justify-between lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md caret-yellow-100">
-            <span className="flex items-center ">
-              <FaMapMarkerAlt
-                className="w-4 h-4 mr-2 text-SECONDARY_COLOR"
-                aria-hidden="true"
-              />
-              City
-            </span>
-            <span className="flex pb-2 ml-3 pointer-events-none ">
-              <FaSortDown
-                className="w-5 h-5 text-SECONDARY_COLOR"
-                aria-hidden="true"
-              />
-            </span>
-          </button>
+        <div className=" flex flex-wrap justify-center w-full md:basis-4/6 sm:basis-full md:justify-end">
+          <div className=" relative flex flex-wrap lg:basis-2/3">
+            <button
+              onClick={() => setShowCityFilter(!showCityFilter)}
+              className=" flex items-center justify-between lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] rounded-lg shadow-md "
+            >
+              <span className="flex items-center ">
+                <FaMapMarkerAlt
+                  className="w-4 h-4 mr-2 text-SECONDARY_COLOR"
+                  aria-hidden="true"
+                />
+                City
+              </span>
+              <span className="flex pb-2 ml-3 pointer-events-none ">
+                <FaSortDown
+                  className="w-5 h-5 text-SECONDARY_COLOR"
+                  aria-hidden="true"
+                />
+              </span>
+            </button>
 
-          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] ">
-            <SelectComponenet data={propertyType} />
-          </div>
-          <div className=" lg:basis-1/5 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px]   ">
-            <SelectComponenet data={badrooms} />
+            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px] ">
+              <SelectComponenet data={propertyType} />
+            </div>
+            <div className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/3 mb-2  px-1 h-[40px]   ">
+              <SelectComponenet data={bedrooms} />
+            </div>
+            <CityFilter
+            visibility={showCityFilter}
+            onCancel={() => setShowCityFilter(false)}
+          />
           </div>
 
-          {/* <select className="lg:basis-1/5 basis-full grow md:basis-1/3 mr-2 mb-2 px-1 h-[40px] rounded-lg shadow-md caret-yellow-100">
-            <option value={t.home.city}>{t.home.city}</option>
-          </select> */}
-          <button className=" lg:basis-1/5 basis-full grow md:basis-1/3 mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
+          <button className=" lg:basis-1/4 basis-full  md:basis-1/3 mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
             <HiOutlineSearch className="w-4 h-4 mr-2 text-xl font-bold" />
             {t.home.search}
           </button>
+          
         </div>
       </section>
     </>

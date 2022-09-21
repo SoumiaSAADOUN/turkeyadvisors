@@ -4,13 +4,13 @@ import CardButton from "../Buttons/CardButton";
 
 const Property = (props) => {
   return (
-    <div className="lg:basis-1/3  md:basis-1/2  ">
-      <div className="relative flex flex-col border border-LIGHT_GREY shadow-lg rounded lg:basis-1/4 md:basis-1/2  md:mr-8 my-4 ">
+ 
+      <div className="relative flex flex-col border border-GREY shadow-lg rounded  md:mr-8 mb-20 ">
         <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
           <HiOutlineHeart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR" />
           {/* <Heart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR"/> */}
         </button>
-        <img className="h-[30vh] rounded" alt={props.data.title} src={props.data.img} />
+        <img className="h-[240px] rounded" alt={props.data.title} src={props.data.img} />
 
         <h1 className="mx-4 mt-8 text-xl font-bold text-PRIMARY_COLOR">
           {props.data.title}
@@ -53,7 +53,7 @@ const Property = (props) => {
           <CardButton title="Quick Enquire"/>
         </div>
       </div>
-    </div>
+  
   );
 };
 

@@ -32,7 +32,7 @@ const SelectComponenet =(props)=>{
                 <Listbox.Options key='bedrooms1' className="absolute z-10 w-full py-1 mt-1 overflow-auto text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {props.data.map((item) => (
                     <Listbox.Option
-                      key={`${item.name} - ${item.id}`}
+                      key={`- ${item.title} - `}
                       className={({ active }) =>
                         classNames(
                           active ? 'text-white bg-BACKGROUND_COLOR' : 'text-gray-900',
