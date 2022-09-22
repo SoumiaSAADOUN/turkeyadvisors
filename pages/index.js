@@ -23,23 +23,23 @@ export default function Home() {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : fr;
-  const [showEnquireModal, setShowEnquireModal] = useState(false)
+  const [showEnquireModal, setShowEnquireModal] = useState(false);
   const imagesCarousel = [
     { src: "/assets/images/u7HPicVLZyPaYyq6V3bK.jpg" },
     { src: "/assets/images/UI9XdW5dbARVEXQgzXhF.jpg" },
   ];
   SwiperCore.use([Autoplay]);
 
-  const handleShowEnquireModal =()=>{
-    setShowEnquireModal(true)
-  }
+  const handleShowEnquireModal = () => {
+    setShowEnquireModal(true);
+  };
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <Swiper
-       style={{
-        "--swiper-navigation-color": "#fff",
-        "--swiper-pagination-color": "#fff",
-      }}
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
         className="h-full w-full -z-10"
         effect={"fade"}
         rewind={true}
@@ -63,17 +63,31 @@ export default function Home() {
           className=" flex justify-between w-full px-24 "
           slot="container-end"
         >
-           <button onClick={()=>   setShowEnquireModal(true)} className="z-10 delay-300 transform shadow-md  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] transition -translate-y-24  bg-TEXT_COLOR/80 border border-TEXT_COLOR text-BACKGROUND_COLOR rounded-full px-8 py-2">
-              Enquire Now
-            </button>
-          
-
-          <button>More Information</button>
+          <button
+            onClick={() => setShowEnquireModal(true)}
+            className=" flex items-center justify-center relative z-10 -translate-y-24 font-base  bg-BLACK/30  border border-BLACK text-BACKGROUND_COLOR rounded-full px-4 py-2"
+          >
+            <span>Enquire Now</span>
+            <span class=" z-5">
+              <span class="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
+              <span class="relative inline-flex rounded-full  bg-BLACK"></span>
+            </span>
+          </button>
+          <button
+            onClick={() => setShowEnquireModal(true)}
+            className=" flex items-center justify-center relative z-10 -translate-y-24 font-base  bg-BLACK/30  border border-BLACK text-BACKGROUND_COLOR rounded-full px-4 py-2"
+          >
+            <span>More Information</span>
+            <span class=" z-5">
+              <span class="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
+              <span class="relative inline-flex rounded-full  bg-BLACK"></span>
+            </span>
+          </button>
         </div>
       </Swiper>
 
       <HomeContent />
-      <EnquireModal visibility={showEnquireModal}/>
+      <EnquireModal visibility={showEnquireModal} />
     </div>
   );
 }

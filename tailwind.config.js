@@ -13,6 +13,7 @@ module.exports = {
       DARK_PRIMARY_COLOR: "#22223B",
       SECONDARY_COLOR: "#E3BA32",
       TEXT_COLOR: "#333333",
+      BLACK:'#000000',
       BACKGROUND_COLOR: "#FFFFFF",
       LIGHT_GREY: "#eeeeee",
       DARK_GREY: "#474B66",
