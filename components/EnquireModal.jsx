@@ -54,7 +54,7 @@ const EnquireModal = (props) => {
                   <textarea
                     rows="4"
                     cols="50"
-                    className="appearance-none bg-transparent border-b-PRIMARY_COLOR border-b-[1px]  py-4 w-full text-lg text-PRIMARY_COLOR mr-3  px-4 leading-tight focus:outline-none focus:border-b-SECONDARY_COLOR my-6"
+                    className="appearance-none bg-transparent border-b-PRIMARY_COLOR border-b-[1px]  py-4 w-full text-lg text-PRIMARY_COLOR mr-3  px-4 leading-tight focus:outline-none focus:border-b-SECONDARY_COLOR mt-4"
                     type="textArea"
                     placeholder={`Your Message`}
                   />

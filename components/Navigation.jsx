@@ -9,6 +9,7 @@ import Currencies from "./Currencies.jsx";
 import EnquireModal from "./EnquireModal.jsx";
 import RegisterModal from "./RegisterModel.jsx";
 import LoginModal from "./LoginModal.jsx";
+import SearchModal from "./SearchModal.jsx";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -29,6 +30,7 @@ export default function Navigation() {
   const [showEnquireModal, setShowEnquireModal] = useState(false)
   const [showRegisterModal, setShowRegisterModal] = useState(false)
   const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showSearchModal, setShowSearchModal] = useState(false)
   
   return (
   <><Disclosure
@@ -119,7 +121,7 @@ export default function Navigation() {
                   <SetLanguages />
                 </div>
                 <div className="flex grow gap-2 items-center">
-                  <button className=" py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR">
+                  <button onClick={()=>   setShowSearchModal(true)} className=" py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR">
                     <HiSearch className="text-xl" />
                   </button>
                   <button onClick={()=>   setShowEnquireModal(true)} className="p-[.5px] rounded-md w-28 h-10 bg-BACKGROUND_COLOR text-sm">
@@ -227,6 +229,7 @@ export default function Navigation() {
 <EnquireModal visibility={showEnquireModal} onCancel={()=> setShowEnquireModal(false)}/>
 <RegisterModal visibility={showRegisterModal} onCancel={()=> setShowRegisterModal(false)}/>
 <LoginModal visibility={showLoginModal} onCancel={()=> setShowLoginModal(false)}/>
+<SearchModal visibility={showSearchModal} onCancel={()=> setShowSearchModal(false)}/>
 </>  
   );
 }
