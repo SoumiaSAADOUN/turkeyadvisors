@@ -12,7 +12,7 @@ const CityFilter = (props) => {
             </span>
           </h1>
           <div className="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-2">
-            {filters.map((item, inedx) => (
+            {filters.map((item, index) => (
               <div className="flex my-4" key={`${item}-${index}`}>
                 <div className="mr-3 flex items-center">
                   <input

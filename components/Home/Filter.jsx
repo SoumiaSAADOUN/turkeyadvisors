@@ -78,7 +78,7 @@ const Filter = () => {
 
           <button className="mr-2 mb-2 xl:flex px-4 py-2 h-[40px] xl:basis-1/4 hidden  justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">
             <HiOutlineSearch className="w-4 h-4 mr-2 text-xl font-bold" />
-            {t.home.search}dd
+            {t.home.search}
           </button>
         </div>
       </section>

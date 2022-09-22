@@ -2,7 +2,6 @@ import Head from "next/head";
 import React from "react";
 import { HiOutlineChat, HiOutlineChevronUp } from "react-icons/hi";
 import Footer from "./Footer";
-import Header from "./Header";
 import Navigation from "./Navigation";
 
 const Layout = ({ children }) => {

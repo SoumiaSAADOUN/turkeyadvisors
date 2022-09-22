@@ -23,7 +23,7 @@ const Properties = (props) => {
 
   return (
     <>
-      <section className="flex justify-between mt-20 lg:flex-row flex-col">
+      <section className="flex justify-between mt-20 lg:flex-row flex-col ease-in duration-300 transition delay-300">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
         </h1>

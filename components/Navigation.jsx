@@ -35,7 +35,7 @@ export default function Navigation() {
   return (
   <><Disclosure
   as="nav"
-  className="bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full py-[40px] px-[5%] min-h-[130px]"
+  className="bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full py-[40px] px-[5%] min-h-[130px] border-b-4 border-SECONDARY_COLOR"
 >
   {({ open }) => (
     <>
@@ -194,7 +194,7 @@ export default function Navigation() {
           <Disclosure.Button
             key={"register"}
             as="a"
-            href={"#"}
+            href={"/contact"}
             className={classNames(
               "text-gray-300 text-BACKGROUND_COLOR hover:bg-gray-700 hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR block px-3 py-2  text-xl font-bold border-b-2"
             )}
@@ -212,7 +212,7 @@ export default function Navigation() {
             $ £
           </Disclosure.Button>
           <Disclosure.Button
-            key={"11"}
+            key={"language"}
             as="a"
             href={"#"}
             className={classNames(
@@ -220,6 +220,16 @@ export default function Navigation() {
             )}
           >
             EN
+          </Disclosure.Button>
+          <Disclosure.Button
+            key={"enquire"}
+            as="button"
+            onClick={()=>   setShowEnquireModal(true)}
+            className={classNames(
+              "text-center w-full text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR block px-3 py-2  text-xl font-bold border-b-2"
+            )}
+          >
+            ENQUIRE NOW
           </Disclosure.Button>
         </div>
       </Disclosure.Panel>
