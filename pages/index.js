@@ -40,7 +40,7 @@ export default function Home() {
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
         }}
-        className="h-full w-full -z-10"
+        className="w-full h-full -z-10"
         effect={"fade"}
         rewind={true}
         slidesPerView={1}
@@ -60,12 +60,12 @@ export default function Home() {
         ))}
 
         <div
-          className=" flex justify-between w-full px-24 "
+          className="flex justify-between w-full px-24 "
           slot="container-end"
         >
           <button
             onClick={() => setShowEnquireModal(true)}
-            className=" flex items-center justify-center relative z-10 -translate-y-24 font-base  bg-BLACK/30  border border-BLACK text-BACKGROUND_COLOR rounded-full px-4 py-2"
+            className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
           >
             <span>Enquire Now</span>
             <span class=" z-5">
@@ -75,7 +75,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setShowEnquireModal(true)}
-            className=" flex items-center justify-center relative z-10 -translate-y-24 font-base  bg-BLACK/30  border border-BLACK text-BACKGROUND_COLOR rounded-full px-4 py-2"
+            className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
           >
             <span>More Information</span>
             <span class=" z-5">
@@ -87,7 +87,7 @@ export default function Home() {
       </Swiper>
 
       <HomeContent />
-      <EnquireModal visibility={showEnquireModal} />
+      <EnquireModal visibility={showEnquireModal} onCancel={()=> setShowEnquireModal(false)} />
     </div>
   );
 }

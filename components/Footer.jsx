@@ -57,7 +57,7 @@ const Footer = () => {
     <>
       <div className="flex flex-col w-full min-h-[400px] wrap  border-t-4 border-SECONDARY_COLOR">
         <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-36 w-full h-full bg-cover flex items-center py-12 gap-20 flex-wrap">
-          <div className="flex flex-col basis-1/4 grow">
+          <div className="flex flex-col gap-4 basis-1/4 grow">
             {SectionTitle("Turkey Advisors".toUpperCase())}
 
             <p className="text-BACKGROUND_COLOR">
@@ -127,7 +127,7 @@ const Footer = () => {
           <p>
             Your experience on this site will be improved by allowing cookies.
             <a
-              className="px-2 mx-2 m-t-2 rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR"
+              className="px-2 mx-2 rounded m-t-2 bg-SECONDARY_COLOR text-PRIMARY_COLOR"
               href="#"
             >
               Allow cookies
