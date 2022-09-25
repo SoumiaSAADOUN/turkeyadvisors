@@ -14,9 +14,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import SectionButton from "../Buttons/SectionButton";
 import Property from "./Property";
-import { FaCircle } from "react-icons/fa";
+//import  "../../styles/Properties.css";
 import "owl.carousel/dist/assets/owl.carousel.css";
-
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 const Properties = (props) => {
@@ -29,7 +28,7 @@ const Properties = (props) => {
 
   return (
     <>
-      <section className="flex justify-between mt-20 lg:flex-row flex-col ease-in duration-300 transition delay-300">
+      <section className="flex flex-col justify-between mt-20 transition duration-300 ease-in delay-300 lg:flex-row">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
         </h1>
@@ -44,50 +43,31 @@ const Properties = (props) => {
       </section>
       <OwlCarousel
         items={3}
-        className="owl-carousel owl-theme projects mt-3 owl-loaded owl-drag"
-        loop
+        className="mt-8 owl-carousel owl-theme owl-loaded owl-drag"
+        loop={true}
         lazyLoad
-        
-        // nav
+        nav
+        navText={[
+          `<img src='assets/images/leftArrow.png'/>`,
+          `<img src='assets/images/rightArrow.png'/>`,
+        ]}
         animateIn="true"
-        responsive={
-          {0:{
-              items:1,
-              nav:true
+        responsive={{
+          0: {
+            items: 1,
           },
-          1024:{
-              items:2,
-              nav:false
+          1024: {
+            items: 2,
           },
-          1280:{
-              items:3,
-              nav:true,
-              loop:false
-          }}
-      }
+          1280: {
+            items: 3,
+          },
+        }}
       >
         {props.propertiesList.map((property, index) => (
           <Property data={property} key={`property-${index}`} />
         ))}
       </OwlCarousel>
-
-      
-      <div className="owl-dots">
-        <button role="button" className="owl-dot active">
-          <span></span>
-        </button>
-        <button role="button" className="owl-dot">
-          <span></span>
-        </button>
-      </div>
-      <div className="owl-nav">
-        <button type="button" role="presentation" className="owl-prev">
-          <HiArrowLeft />
-        </button>
-        <button type="button" role="presentation" className="owl-next">
-          <HiArrowRight />
-        </button>
-      </div>
     </>
   );
 };

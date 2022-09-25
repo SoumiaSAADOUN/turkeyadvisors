@@ -5,7 +5,7 @@ import CardButton from "../Buttons/CardButton";
 const Property = (props) => {
   return (
  
-      <div className=" item relative flex flex-col border border-GREY shadow-lg rounded  md:mr-8 mb-20 ">
+      <div className="relative flex flex-col border rounded shadow-lg item border-GREY md:mr-8">
         <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
           <HiOutlineHeart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR" />
           {/* <Heart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR"/> */}
@@ -45,7 +45,7 @@ const Property = (props) => {
           Overview:
         </h4>
         <p className="mx-4 text-TEXT_COLOR text-md ">{props.data.overview}</p>
-        <div className="flex justify-between m-4 flex-wrap items-center">
+        <div className="flex flex-wrap items-center justify-between m-4">
           <h1 className="text-xl font-bold text-PRIMARY_COLOR">
             {props.data.price}
           </h1>

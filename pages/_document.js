@@ -27,7 +27,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
           rel="stylesheet"
         />
-        <script src="https:code.jquery.com/jquery-3.4.1min.js"/>
+        {/* <script src="https:code.jquery.com/jquery-3.4.1min.js"/> */}
        
       </Head>
 

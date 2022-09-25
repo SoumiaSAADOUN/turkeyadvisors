@@ -1,0 +1,48 @@
+.owl-stage {
+  display: flex;
+}
+.owl-dots .owl-dot {
+  border: 2px solid #fff !important;
+  border-radius: 50%;
+  margin: 0 2px;
+  padding:0px !important;
+  width: 40px;
+  height: 40px;
+  text-align:center
+}
+.owl-dot.active,
+.owl-dot:hover {
+  border: 2px solid #0d0b1a !important;
+  color: #0d0b1a !important;
+}
+.owl-dot.active span {
+  background: #0d0b1a !important;
+}
+.owl-dot span:hover {
+  background: #0d0b1a;
+}
+.owl-dot span {
+  width: 8px !important;
+  height: 8px !important;
+  margin: auto !important;
+  border-radius: 50%;
+  background-color: #0d0b1a;
+}
+.owl-nav {
+  margin-top: 30px !important;
+}
+
+.owl-nav button {
+  position: absolute;
+}
+.owl-nav button:hover {
+  background-color: unset !important;
+}
+
+.owl-prev {
+  left: 34%;
+}
+
+.owl-next {
+  right: 34%;
+}
