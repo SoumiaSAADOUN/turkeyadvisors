@@ -67,6 +67,7 @@ const HomeContent = () => {
       surface: "53 Sq. m",
     },
   ];
+   
   return (
     <>
       <div className="w-full ">

@@ -19,6 +19,17 @@ import SwiperCore, {
 } from "swiper";
 import EnquireModal from "../components/EnquireModal";
 import { useState } from "react";
+
+// import OwlCarousel from 'react-owl-carousel';
+
+import "owl.carousel/dist/assets/owl.carousel.css";
+
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+  ssr: false,
+});
+
 export default function Home() {
   const router = useRouter();
   const { locale } = router;
@@ -30,11 +41,10 @@ export default function Home() {
   ];
   SwiperCore.use([Autoplay]);
 
-  const handleShowEnquireModal = () => {
-    setShowEnquireModal(true);
-  };
   return (
     <div className="flex flex-col items-center justify-center w-full">
+
+
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -68,9 +78,9 @@ export default function Home() {
             className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
           >
             <span>Enquire Now</span>
-            <span class=" z-5">
-              <span class="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
-              <span class="relative inline-flex rounded-full  bg-BLACK"></span>
+            <span className=" z-5">
+              <span className="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
+              <span className="relative inline-flex rounded-full  bg-BLACK"></span>
             </span>
           </button>
           <button
@@ -78,16 +88,19 @@ export default function Home() {
             className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
           >
             <span>More Information</span>
-            <span class=" z-5">
-              <span class="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
-              <span class="relative inline-flex rounded-full  bg-BLACK"></span>
+            <span className=" z-5">
+              <span className="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
+              <span className="relative inline-flex rounded-full  bg-BLACK"></span>
             </span>
           </button>
         </div>
       </Swiper>
 
       <HomeContent />
-      <EnquireModal visibility={showEnquireModal} onCancel={()=> setShowEnquireModal(false)} />
+      <EnquireModal
+        visibility={showEnquireModal}
+        onCancel={() => setShowEnquireModal(false)}
+      />
     </div>
   );
 }

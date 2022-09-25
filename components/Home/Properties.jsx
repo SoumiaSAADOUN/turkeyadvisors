@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import {
-  HiDotsCircleHorizontal,
+  HiArrowLeft,
+  HiArrowRight,
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination, Thumbs, Navigation } from "swiper";
+import { FreeMode, Thumbs, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -14,11 +15,16 @@ import "swiper/css/thumbs";
 import SectionButton from "../Buttons/SectionButton";
 import Property from "./Property";
 import { FaCircle } from "react-icons/fa";
+import "owl.carousel/dist/assets/owl.carousel.css";
 
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
 const Properties = (props) => {
   const isBigScreen = useMediaQuery({ query: "(min-width: 1280px )" });
   const isMidScreen = useMediaQuery({ query: "(min-width: 1024px )" });
-
+  const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+    ssr: false,
+  });
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -36,49 +42,52 @@ const Properties = (props) => {
           />
         </div>
       </section>
-
-      <section className="mt-10 ">
-        <Swiper
-          slidesPerView={isBigScreen ? 3 : isMidScreen ? 2 : 1}
-          loop={true}
-          rewind={true}
-          freeMode={true}
-          watchSlidesProgress={true}
-          thumbs={{
-            swiper:
-              thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-          }}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          modules={[Navigation, FreeMode, Thumbs]}
-        >
-          {props.propertiesList.map((property, index) => (
-            <SwiperSlide key={`property-${index}`}>
-              <Property data={property} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
+      <OwlCarousel
+        items={3}
+        className="owl-carousel owl-theme projects mt-3 owl-loaded owl-drag"
+        loop
+        lazyLoad
         
-      </section>
-      <Swiper
-          onSwiper={setThumbsSwiper}
-          loop={true}
-          rewind={true}
-          spaceBetween={10}
-          slidesPerView={4}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-         
-        >
-          {props.propertiesList.map((property, index) => (
-            <SwiperSlide key={`property-${index}`}>
-              <FaCircle key={`property-${index}`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        // nav
+        animateIn="true"
+        responsive={
+          {0:{
+              items:1,
+              nav:true
+          },
+          1024:{
+              items:2,
+              nav:false
+          },
+          1280:{
+              items:3,
+              nav:true,
+              loop:false
+          }}
+      }
+      >
+        {props.propertiesList.map((property, index) => (
+          <Property data={property} key={`property-${index}`} />
+        ))}
+      </OwlCarousel>
+
+      
+      <div className="owl-dots">
+        <button role="button" className="owl-dot active">
+          <span></span>
+        </button>
+        <button role="button" className="owl-dot">
+          <span></span>
+        </button>
+      </div>
+      <div className="owl-nav">
+        <button type="button" role="presentation" className="owl-prev">
+          <HiArrowLeft />
+        </button>
+        <button type="button" role="presentation" className="owl-next">
+          <HiArrowRight />
+        </button>
+      </div>
     </>
   );
 };

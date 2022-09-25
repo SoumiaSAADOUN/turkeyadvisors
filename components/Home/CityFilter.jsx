@@ -1,10 +1,11 @@
 import React from "react";
 const CityFilter = (props) => {
   const filters = ["Istanbul", "Bodrum", "Çeşme", "Alaçatı"];
+ 
   return (
     <>
       {props.visibility ? (
-        <div className="z-10 absolute left-0 top-11 bg-BACKGROUND_COLOR flex flex-col w-full  px-8 py-4 rounded-lg shadow-md">
+        <div className="z-10  absolute left-0 top-11 bg-BACKGROUND_COLOR flex flex-col w-full  px-8 py-4 rounded-lg shadow-md">
           <h1 className="w-fit">
             <span className="font-bold">
               City

@@ -13,7 +13,7 @@ const SelectComponenet =(props)=>{
         {({ open }) => (
           <>
            <div className="relative z-20">
-              <Listbox.Button key='bedrooms' className="relative w-full h-[40px] py-2 pl-3 pr-10 text-left border rounded-md shadow-md cursor-default border-LIGHT_GREY bg-BACKGROUND_COLOR focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+              <Listbox.Button key='bedrooms' className="relative w-full h-[40px] py-2 pl-3 pr-10 text-left border rounded-md shadow-md cursor-default border-LIGHT_GREY bg-BACKGROUND_COLOR focus:outline-none focus:ring-1  sm:text-sm">
                 <span className="flex items-center">
                  <span className="block ml-3 truncate">{selected.title}</span>
                 </span>

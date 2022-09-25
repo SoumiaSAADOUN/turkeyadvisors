@@ -37,7 +37,7 @@ const SetLanguages = () => {
         {({ open }) => (
           <>
             <div className="relative ">
-              <Listbox.Button className="relative rounded-xl w-fit h-10 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+              <Listbox.Button className="relative rounded w-fit h-8 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm  focus:outline-none focus:ring-1  text-xs">
                 <span className="flex items-center">
                   <HiOutlineTranslate className="text-base ml-1" />
 
@@ -52,14 +52,14 @@ const SetLanguages = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-fit overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {languages.map((language) => (
                     <Listbox.Option
                       key={language.id}
                       className={({ active }) =>
                         classNames(
-                          active ? "text-white bg-indigo-600" : "text-gray-900",
-                          "relative cursor-default select-none py-2 pl-3 pr-9"
+                          active && "text-white" ,
+                          "relative cursor-default select-none py-2 pl-3 pr-9 w-full overflow-auto"
                         )
                       }
                       value={language.lang}

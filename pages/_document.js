@@ -19,14 +19,15 @@ export default function Document() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossorigin
+          
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
           rel="stylesheet"
         />
+        <script src="https:code.jquery.com/jquery-3.4.1min.js"/>
        
       </Head>
 

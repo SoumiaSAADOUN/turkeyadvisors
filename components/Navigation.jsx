@@ -35,7 +35,7 @@ export default function Navigation() {
   return (
   <><Disclosure
   as="nav"
-  className="bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full py-[40px] px-[5%] min-h-[130px] border-b-4 border-SECONDARY_COLOR"
+  className="flex items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-[5%] h-[130px] border-b-4 border-SECONDARY_COLOR"
 >
   {({ open }) => (
     <>
@@ -107,9 +107,9 @@ export default function Navigation() {
               </div>
 
               <div className="hidden flex flex-col mx-4 py-2 lg:block">
-                <div className="flex mb-2 gap-2 items-center">
+                <div className="flex mb-2 gap-1 items-center">
                   <a
-                    className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR"
+                    className="flex py-2 flex-col justify-strech items-center rounded-xl w-8 h-8 text-BACKGROUND_COLOR"
                     href="https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0"
                   >
                     <WhatsAppOutlined
@@ -121,14 +121,14 @@ export default function Navigation() {
                   <SetLanguages />
                 </div>
                 <div className="flex grow gap-2 items-center">
-                  <button onClick={()=>   setShowSearchModal(true)} className=" py-2 flex-col justify-strech items-center rounded-xl w-12 h-10 text-BACKGROUND_COLOR">
+                  <button onClick={()=>   setShowSearchModal(true)} className=" py-2 flex-col justify-strech items-center rounded-xl w-8 h-8 text-BACKGROUND_COLOR">
                     <HiSearch className="text-xl" />
                   </button>
-                  <button onClick={()=>   setShowEnquireModal(true)} className="p-[.5px] rounded-md w-28 h-10 bg-BACKGROUND_COLOR text-sm">
+                  <button onClick={()=>   setShowEnquireModal(true)} className="p-[.3px] rounded-md w-full h-8 bg-BACKGROUND_COLOR text-xs">
                     Enquire Now
                   </button>
                 </div>
-                <div className="flex grow gap-4 items-center justify-evenly my-2">
+                <div className="flex  gap-4 items-center justify-evenly my-1">
                   <button onClick={()=>   setShowLoginModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer text-sm">
                     Login
                   </button>
