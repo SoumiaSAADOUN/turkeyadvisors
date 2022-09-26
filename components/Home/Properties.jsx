@@ -1,30 +1,14 @@
-import React, { useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import {
-  HiArrowLeft,
-  HiArrowRight,
-  HiOutlineArrowNarrowRight,
-} from "react-icons/hi";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Thumbs, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import React from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import SectionButton from "../Buttons/SectionButton";
 import Property from "./Property";
-//import  "../../styles/Properties.css";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 const Properties = (props) => {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 1280px )" });
-  const isMidScreen = useMediaQuery({ query: "(min-width: 1024px )" });
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
   });
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <>

@@ -29,14 +29,14 @@ const SelectComponenet =(props)=>{
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options key='bedrooms1' className="absolute z-10 w-full py-1 mt-1 overflow-auto text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options key='bedrooms1' className="absolute z-10 py-1 mt-1 overflow-auto text-xs text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none">
                   {props.data.map((item) => (
                     <Listbox.Option
                       key={`- ${item.title} - `}
                       className={({ active }) =>
                         classNames(
-                          active ? 'text-white bg-BACKGROUND_COLOR' : 'text-gray-900',
-                          'relative cursor-default select-none py-2 pl-3 pr-9'
+                          active && ' bg-BACKGROUND_COLOR',
+                          'relative cursor-default select-none py-2 pl-3 pr-9 w-full overflow-auto '
                         )
                       }
                       value={item}
