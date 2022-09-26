@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react'
 import GetInTouch from '../components/AboutUs/GetInTouche';
-import PagesHeader from '../components/PagesHeader';
+import PagesHeader from '../components/Commun/PagesHeader';
 const Services = () => {
     return <>
         <PagesHeader title='Services' link='services'/>
-        <section className='flex flex-col m-16 items-center'>
+        <section className='flex flex-col items-center m-16'>
             <p className='text-lg font-semibold text-PRIMARY_COLOR '>
                 The purchasing process goes beyond the buy-sell process with Turkey advisors company, but a lifetime partnership because we start guiding the buyers from scratch and build the knowledge and figures together to make sure that the buyer is reaching the safe port of the next destination. Thereafter you will get what you deserve with our integrated team of Turkey advisors.
             </p>
@@ -18,9 +18,9 @@ const Services = () => {
 
             />
         </section>
-        <section className='flex flax-col flex-wrap m-16 gap-20 '>
-            <div className='flex gap-40 flax-wrap items-center'>
-                <div className='grow basis-1/3 text-lg'>
+        <section className='flex flex-wrap gap-20 m-16 flax-col '>
+            <div className='flex items-center gap-40 flax-wrap'>
+                <div className='text-lg grow basis-1/3'>
                     <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>We reach you, before you reaching Turkey</h1>
                     <p>Our team will contact you by phone or by
                         making a zoom call to give you all the required information and details, about
@@ -42,11 +42,11 @@ const Services = () => {
 
             </div>
 
-            <div className='flex gap-40 flax-wrap items-center'>
+            <div className='flex items-center gap-40 flax-wrap'>
                 <img src='https://turkeyadvisors.com/storage/img/servicesPage/79b0NN7QgPHca7lObaDZ.jpg'
                     alt='A message from the owners image' className='grow basis-1/3' />
 
-                <div className='grow basis-1/3 text-lg'>
+                <div className='text-lg grow basis-1/3'>
                     <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>We’ll be waiting for you in the airport</h1>
                     <p>
 
@@ -59,9 +59,9 @@ const Services = () => {
                 </div>
 
             </div>
-            <div className='flex gap-40 flax-wrap items-center'>
+            <div className='flex items-center gap-40 flax-wrap'>
 
-                <div className='grow basis-1/3 text-lg'>
+                <div className='text-lg grow basis-1/3'>
                     <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>Presentation in our office</h1>
                     <p>
 
@@ -73,11 +73,11 @@ const Services = () => {
                 <img src='https://turkeyadvisors.com/storage/img/servicesPage/Qb7rdV7peW4M4Vspnykj.jpg'
                     alt='A message from the owners image' className='grow basis-1/3' />
             </div>
-            <div className='flex gap-40 flax-wrap items-center'>
+            <div className='flex items-center gap-40 flax-wrap'>
                 <img src='https://turkeyadvisors.com/storage/img/servicesPage/NCetnNHV0sdtXpIrxmcu.jpg'
                     alt='A message from the owners image' className='grow basis-1/3' />
 
-                <div className='grow basis-1/3 text-lg'>
+                <div className='text-lg grow basis-1/3'>
                     <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>Projects tour:</h1>
                     <p>After all the details become apparent to
                         the buyer, from the point of purchase and the purpose of the buying, we can

@@ -4,12 +4,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { HiGlobeAlt, HiSearch } from "react-icons/hi";
 import { WhatsAppOutlined } from "@ant-design/icons";
-import SetLanguages from "./SetLanguages.jsx";
-import Currencies from "./Currencies.jsx";
-import EnquireModal from "./EnquireModal.jsx";
-import RegisterModal from "./RegisterModel.jsx";
-import LoginModal from "./LoginModal.jsx";
-import SearchModal from "./SearchModal.jsx";
+import SetLanguages from "./Buttons/SetLanguages.jsx";
+import Currencies from "./Buttons/Currencies.jsx";
+import EnquireModal from "./Modals/EnquireModal.jsx";
+import RegisterModal from "./Modals/RegisterModel.jsx";
+import LoginModal from "./Modals/LoginModal.jsx";
+import SearchModal from "./Modals/SearchModal.jsx";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -39,12 +39,12 @@ export default function Navigation() {
 >
   {({ open }) => (
     <>
-      <div className="mx-auto w-full px-2 sm:px-6 lg:px-8 ">
-        <div className="relative flex h-16 items-center ">
+      <div className="w-full px-2 mx-auto sm:px-6 lg:px-8 ">
+        <div className="relative flex items-center h-16 ">
           <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
             <div className="flex flex-col lg:hidden ">
               <a
-                className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR"
+                className="flex flex-col items-center w-12 h-12 py-2 justify-strech rounded-xl text-BACKGROUND_COLOR"
                 href="https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0"
               >
                 <WhatsAppOutlined
@@ -52,26 +52,26 @@ export default function Navigation() {
                 />
               </a>
 
-              <button className="flex py-2 flex-col justify-strech items-center rounded-xl w-12 h-12 text-BACKGROUND_COLOR">
+              <button className="flex flex-col items-center w-12 h-12 py-2 justify-strech rounded-xl text-BACKGROUND_COLOR">
                 <HiSearch className="text-xl" />
               </button>
             </div>
-            <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 
               {open ? (
                 <Bars3Icon
-                  className="block h-6 w-6 text-BACKGROUND_COLOR"
+                  className="block w-6 h-6 text-BACKGROUND_COLOR"
                   aria-hidden="true"
                 />
               ) : (
                 <Bars3Icon
-                  className="block h-6 w-6 text-BACKGROUND_COLOR"
+                  className="block w-6 h-6 text-BACKGROUND_COLOR"
                   aria-hidden="true"
                 />
               )}
             </Disclosure.Button>
           </div>
-          <div className="flex items-center lg:justify-center w-full">
+          <div className="flex items-center w-full lg:justify-center">
             <div className="flex items-center justify-center md:items-stretch md:justify-start">
               <div className="flex items-center">
                 <img
@@ -80,15 +80,15 @@ export default function Navigation() {
                   alt="Turkey advisores"
                 />
                 <img
-                  className="hidden h-16 w-auto lg:block"
+                  className="hidden w-auto h-16 lg:block"
                   src="/assets/images/logo.png"
                   alt="Turkey advisores"
                 />
               </div>
             </div>
             <div className="flex items-center justify-between w-fit">
-              <div className="hidden flex sm:ml-6 lg:block">
-                <div className="flex justify-between xl:space-x-8 lg:space-x-4 items-center text-base pt-4">
+              <div className="flex hidden sm:ml-6 lg:block">
+                <div className="flex items-center justify-between pt-4 text-base xl:space-x-8 lg:space-x-4">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -106,10 +106,10 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <div className="hidden flex flex-col mx-4 py-2 lg:block">
-                <div className="flex mb-2 gap-1 items-center">
+              <div className="flex flex-col hidden py-2 mx-4 lg:block">
+                <div className="flex items-center gap-1 mb-2">
                   <a
-                    className="flex py-2 flex-col justify-strech items-center rounded-xl w-8 h-8 text-BACKGROUND_COLOR"
+                    className="flex flex-col items-center w-8 h-8 py-2 justify-strech rounded-xl text-BACKGROUND_COLOR"
                     href="https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0"
                   >
                     <WhatsAppOutlined
@@ -120,19 +120,19 @@ export default function Navigation() {
                   <Currencies />
                   <SetLanguages />
                 </div>
-                <div className="flex grow gap-2 items-center">
-                  <button onClick={()=>   setShowSearchModal(true)} className=" py-2 flex-col justify-strech items-center rounded-xl w-8 h-8 text-BACKGROUND_COLOR">
+                <div className="flex items-center gap-2 grow">
+                  <button onClick={()=>   setShowSearchModal(true)} className="flex-col items-center w-8 h-8 py-2 justify-strech rounded-xl text-BACKGROUND_COLOR">
                     <HiSearch className="text-xl" />
                   </button>
                   <button onClick={()=>   setShowEnquireModal(true)} className="p-[.3px] rounded-md w-full h-8 bg-BACKGROUND_COLOR text-xs">
                     Enquire Now
                   </button>
                 </div>
-                <div className="flex  gap-4 items-center justify-evenly my-1">
-                  <button onClick={()=>   setShowLoginModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer text-sm">
+                <div className="flex items-center gap-4 my-1 justify-evenly">
+                  <button onClick={()=>   setShowLoginModal(true)} className="text-sm cursor-pointer text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR">
                     Login
                   </button>
-                  <button  onClick={()=>   setShowRegisterModal(true)} className="text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer text-sm">
+                  <button  onClick={()=>   setShowRegisterModal(true)} className="text-sm cursor-pointer text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR">
                     Register
                   </button>
                 </div>
@@ -143,7 +143,7 @@ export default function Navigation() {
       </div>
 
       <Disclosure.Panel className="xl:hidden scroll-auto snap-y overscroll-contain overflow-y-scroll h-[60vh] ">
-        <div className="space-y-1 px-2 pt-2 pb-3">
+        <div className="px-2 pt-2 pb-3 space-y-1">
           {navigation.map((item) => (
             <Disclosure.Button
               key={item.name}

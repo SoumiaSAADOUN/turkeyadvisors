@@ -9,24 +9,24 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  color: #0d0b1a !important;
+  color: #22223B !important;
 }
 .owl-dot.active,
 .owl-dot:hover {
-  border: 2px solid #0d0b1a !important;
+  border: 2px solid #22223B !important;
 }
 .owl-dot.active span {
-  background: #0d0b1a !important;
+  background: #22223B !important;
 }
 .owl-dot span:hover {
-  background: #0d0b1a;
+  background: #22223B;
 }
 .owl-dot span {
   width: 8px !important;
   height: 8px !important;
   margin: auto !important;
   border-radius: 50%;
-  background-color: #0d0b1a !important;
+  background-color: #22223B !important;
 }
 .owl-nav {
   margin-top: 30px !important;
@@ -46,31 +46,73 @@
 .owl-next {
   right: 30%;
 }
+
+.testimonials-section .owl-stage {
+  display: flex;
+  align-items: center;
+}
+.testimonials-section .testimonialCard {
+  border: none;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 9%);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 9%);
+ 
+  /* padding-block:50px; */
+  /* width:200px */
+}
+.testimonials-section .owl-item.center .testimonialCard {
+  background-color: #22223B !important;
+  color: white;
+  /* width:100% */
+   /* width:380px; */
+  /*padding:50px; */
+}
 .owl-item .description {
   display: none;
+  font-size: 1rem;
+  font-weight:500
+  /* width:100% */
 }
+.owl-item.center .description {
+  display: block;
+}
+.owl-item .avatar {
+  height: 100px;
+  width: 100px !important;
+}
+.owl-item.center .testimonialTitle {
+  color: white;
+}
+.slider-container .slide tp-mask-wrap {
+  overflow: visible !important;
+}
+/*
+
 /* .owl-item.active {
   width:360px !important
 } */
 
-.owl-item.active .description {
+/* .owl-item.active .description {
   display: block;
-  width:240px
+  width: 240px;
 }
 .owl-item .avatar {
   height: 80px;
   width: 80px !important;
 }
 .owl-item .testimonialCard {
-  color: #0d0b1a;
+  color: #22223B;
   /* width:180px;  */
-}
-.owl-item.active  .testimonialCard {
-  background: #0d0b1a;
-  color: white;
-  /* width:300px */
+/*
 }
 
-.owl-item.active .testimonialTitle{
-  color: white
+.owl-item.active .testimonialCard {
+  background: #22223B;
+  color: white;
+  /* width:300px */
+/*
 }
+
+.owl-item.active .testimonialTitle {
+  color: white;
+} */

@@ -3,7 +3,7 @@ import { HiSearch } from 'react-icons/hi';
 import Article from '../components/Home/Article';
 import Property from '../components/Home/Property';
 import SomeOffers from '../components/Home/SomeOffers';
-import PagesHeader from '../components/PagesHeader';
+import PagesHeader from '../components/Commun/PagesHeader';
 
 const Articles = () => {
     const articles = [
@@ -89,8 +89,8 @@ const Articles = () => {
     }
     return <>
         <PagesHeader title='Articles' link='articles' />
-        <div className='p-8 flex flex-wrap flex-col-reverse md:flex-row'>
-            <div className='basis-2/4 grow flex flex-col m-8 '>
+        <div className='flex flex-col-reverse flex-wrap p-8 md:flex-row'>
+            <div className='flex flex-col m-8 basis-2/4 grow '>
                 <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>
                     All Articles About Real Estate
                 </h1>
@@ -103,22 +103,22 @@ const Articles = () => {
                     ))}
                 </div>
             </div>
-            <div className='basis-1/4 grow flex flex-col my-8'>
-                <h1 className='border-l-2 border-SECONDARY_COLOR px-4 text-2xl'>Search for something</h1>
-                <div className='flex border rounded border-PRIMARY_COLOR items-center py-2 text-xl my-2'>
-                    <HiSearch className=' mx-4 font-extrabold text-SECONDARY_COLOR' />
+            <div className='flex flex-col my-8 basis-1/4 grow'>
+                <h1 className='px-4 text-2xl border-l-2 border-SECONDARY_COLOR'>Search for something</h1>
+                <div className='flex items-center py-2 my-2 text-xl border rounded border-PRIMARY_COLOR'>
+                    <HiSearch className='mx-4 font-extrabold  text-SECONDARY_COLOR' />
                     <input type='text' placeholder='Search' />
                 </div>
 
-                <h1 className='border-l-2 border-SECONDARY_COLOR px-4 my-8 text-2xl'>Special Offers</h1>
+                <h1 className='px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR'>Special Offers</h1>
                 <div className='px-8'>
                 <Property data={property}/>
                 </div>
 
                 <SomeOffers />
 
-                <h1 className='border-l-2 border-SECONDARY_COLOR px-4 my-8 text-2xl'>Last Articles</h1>
-                <div className='flex flex-col px-8 gap-8'>
+                <h1 className='px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR'>Last Articles</h1>
+                <div className='flex flex-col gap-8 px-8'>
                     {articles.map((article, index) => (
                         <Article data={article} key={`article-${index}`} />
                     ))}

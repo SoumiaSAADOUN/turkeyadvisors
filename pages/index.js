@@ -17,7 +17,7 @@ import SwiperCore, {
   Mousewheel,
   EffectFade,
 } from "swiper";
-import EnquireModal from "../components/EnquireModal";
+import EnquireModal from "../components/Modals/EnquireModal";
 import { useState } from "react";
 
 // import OwlCarousel from 'react-owl-carousel';
@@ -80,7 +80,7 @@ export default function Home() {
             <span>Enquire Now</span>
             <span className=" z-5">
               <span className="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
-              <span className="relative inline-flex rounded-full  bg-BLACK"></span>
+              <span className="relative inline-flex rounded-full bg-BLACK"></span>
             </span>
           </button>
           <button
@@ -90,7 +90,7 @@ export default function Home() {
             <span>More Information</span>
             <span className=" z-5">
               <span className="delay-200 animate-ping absolute top-0 left-5 h-[90%] w-[70%] rounded-full bg-BLACK opacity-60"></span>
-              <span className="relative inline-flex rounded-full  bg-BLACK"></span>
+              <span className="relative inline-flex rounded-full bg-BLACK"></span>
             </span>
           </button>
         </div>

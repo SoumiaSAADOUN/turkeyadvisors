@@ -1,5 +1,5 @@
 import React from "react";
-import Divider from "../Divider.jsx";
+import Divider from "../Commun/Divider.jsx";
 import AboutUs from "./AboutUs.jsx";
 // import Articles from "./Articles.jsx";
 import Citizenship from "./Citizenship.jsx";

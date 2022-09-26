@@ -1,5 +1,5 @@
 import React from "react";
-import FollowUs from "./FollowUs";
+import FollowUs from "./Commun/FollowUs";
 
 const Footer = () => {
   const lastArticles = [

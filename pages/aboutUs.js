@@ -1,6 +1,6 @@
 import React from "react";
 import GetInTouch from "../components/AboutUs/GetInTouche";
-import PagesHeader from "../components/PagesHeader";
+import PagesHeader from "../components/Commun/PagesHeader";
 
 const AboutUsPage = () => {
 
@@ -28,9 +28,9 @@ const AboutUsPage = () => {
         <PagesHeader title='About Us' link='aboutus' />
 
         <section className="flex flex-col items-center">
-            <div className="flex gap-8 items-center justify-between flex-wrap mt-8 px-20">
+            <div className="flex flex-wrap items-center justify-between gap-8 px-20 mt-8">
                 <div className="text-TEXT_COLOR grow basis-1/3">
-                    <h1 className="text-PRIMARY_COLOR text-4xl font-bold">About Us</h1>
+                    <h1 className="text-4xl font-bold text-PRIMARY_COLOR">About Us</h1>
                     <p >
                         Turkey Advisors company has been built based on offering what our buyers deserve and owning what they deserve; we have been functioning in the real estate sector since 2015. Meanwhile, we created a long-lasting experience that adopts the mentality of sharing with you the advice, knowledge, seven years of vast experience, not only a property but a lifetime experience.</p>
 
@@ -46,9 +46,9 @@ const AboutUsPage = () => {
             <img src="http://turkeyadvisors.com/sites/img/about-icons.png" className="w-[80%] my-12 px-20" />
             <div className="flex flex-col gap-4 px-20">
 
-                <div className="flex gap-40 items-center flex-wrap my-8">
+                <div className="flex flex-wrap items-center gap-40 my-8">
                     <div className="basis-1/3 grow text-TEXT_COLOR">
-                        <h1 className="text-5xl text-PRIMARY_COLOR font-bold">A message from the owners</h1>
+                        <h1 className="text-5xl font-bold text-PRIMARY_COLOR">A message from the owners</h1>
                         <p>
                             As real estate agency owners within the Turkish market, we have considered ourselves a bridge between the developer and the international buyer. Meanwhile, we show the exact way you need to go for and share the knowledge you've been seeking. Therefore, you can decide to build a new life and new investment in Turkey.
                         </p>
@@ -64,19 +64,19 @@ const AboutUsPage = () => {
                     </div>
                     <img src="http://turkeyadvisors.com/storage/img/aboutPage/dIYnGA3sIpDSHRdv0MTN.jpg" className="basis-1/3 grow  w-[539]" />
                 </div>
-                <div className="flex gap-40 items-center flex-wrap my-8">
+                <div className="flex flex-wrap items-center gap-40 my-8">
                     <img className="basis-1/3 grow  w-[539]" src="http://turkeyadvisors.com/storage/img/aboutPage/JWTGKbfqQpeYDA3STUfO.jpg" />
                     <div className="basis-1/3 grow text-TEXT_COLOR">
-                        <h1 className="text-5xl text-PRIMARY_COLOR font-bold">Our mission</h1>
+                        <h1 className="text-5xl font-bold text-PRIMARY_COLOR">Our mission</h1>
                         <p>
                             Is to be the trustable legible partner, that you would get along with during your next satisfying journey in Turkey, the partner who you recommend as the best agency in Turkey for your family and colleagues; our mission is to build a bridge of Trust, Transparency between you and the developers, so you would own what you deserve.
                         </p>
 
                     </div>
                 </div>
-                <div className="flex gap-40 items-center flex-wrap my-8">
+                <div className="flex flex-wrap items-center gap-40 my-8">
                     <div className="basis-1/3 grow text-TEXT_COLOR">
-                        <h1 className="text-5xl text-PRIMARY_COLOR font-bold">Our vision</h1>
+                        <h1 className="text-5xl font-bold text-PRIMARY_COLOR">Our vision</h1>
                         <p>
                             We believe that real estate is the best investment in life. Due to our consideration of perfection, We've worked to create a global environment in our company, therefore reaching all the diverse categories of the world, from different languages, various mindsets.
                         </p>
@@ -87,11 +87,11 @@ const AboutUsPage = () => {
                     <img className="basis-1/3 grow w-[539]" src="http://turkeyadvisors.com/storage/img/aboutPage/jl9m8R14sJi2hlqm13uk.jpg" />
                 </div>
 
-                <div className="flex gap-40 items-center flex-wrap my-8">
+                <div className="flex flex-wrap items-center gap-40 my-8">
                     <img src="http://turkeyadvisors.com/storage/img/aboutPage/4bwjLh4CiZAZbYMTtC0Y.jpg" className="basis-1/3 grow  max-w-[539px]" />
 
                     <div className="basis-1/3 grow text-TEXT_COLOR">
-                        <h1 className="text-5xl text-PRIMARY_COLOR font-bold">Team</h1>
+                        <h1 className="text-5xl font-bold text-PRIMARY_COLOR">Team</h1>
                         <p>
                             Due to our vast experience in the Turkish real estate market, we have established an integrated combined team, multinational and multilingual. Because our location is in the core of the world's continents, in Istanbul, our sales team, in particular, was able to keep pace with developments in the world, at the local and global levels.
                         </p>
@@ -106,16 +106,16 @@ const AboutUsPage = () => {
                 </div>
 
             </div>
-            <div className="px-20 flex flex-col gap-8 mt-16" >
-                <h1 className="text-5xl text-PRIMARY_COLOR font-bold my-4">Our team</h1>
+            <div className="flex flex-col gap-8 px-20 mt-16" >
+                <h1 className="my-4 text-5xl font-bold text-PRIMARY_COLOR">Our team</h1>
                 {team.map((member, index) => (
-                    <div className="flex flex-wrap gap-16 items-center my-4" key={index}>
-                        <div className="flex flex-col justify-center items-center gap-4">
+                    <div className="flex flex-wrap items-center gap-16 my-4" key={index}>
+                        <div className="flex flex-col items-center justify-center gap-4">
                             <img className="basis-1/4 grow" src={member.image} />
                             <h1>{member.name}</h1>
                             <p>{member.title}</p>
                         </div>
-                        <p className="basis-1/4 grow text-lg">
+                        <p className="text-lg basis-1/4 grow">
                             {member.message}
                         </p>
                     </div>
