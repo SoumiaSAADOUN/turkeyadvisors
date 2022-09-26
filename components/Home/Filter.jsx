@@ -8,8 +8,6 @@ import { HiOutlineSearch } from "react-icons/hi";
 import SelectComponenet from "./SelectComponenet";
 import { useState } from "react";
 import CityFilter from "./CityFilter";
-import { useRef } from "react";
-import { useEffect } from "react";
 const Filter = () => {
   const router = useRouter();
   const { locale } = router;
@@ -35,26 +33,9 @@ const Filter = () => {
     { title: "Offices" },
   ];
 
-  const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef);
 
-  function useOutsideAlerter(ref) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
-  }
+
+  
 
   return (
     <>
@@ -97,7 +78,7 @@ const Filter = () => {
             <CityFilter
               visibility={showCityFilter}
               onCancel={() => setShowCityFilter(false)}
-              refs={wrapperRef}
+             
             />
           </div>
 

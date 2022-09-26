@@ -54,7 +54,7 @@ const Articles = () => {
   ];
   return (
     <>
-      <section className="flex flex-col justify-between mt-10 lg:flex-row ">
+      <section className="flex flex-col justify-between mt-10 md:flex-row ">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3">
           Recently Added Articles
         </h1>
@@ -82,8 +82,9 @@ const Articles = () => {
         responsive={{
           0: {
             items: 1,
+            nav:false,
           },
-          1024: {
+          768: {
             items: 2,
           },
           1280: {

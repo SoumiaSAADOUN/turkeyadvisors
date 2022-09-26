@@ -9,11 +9,11 @@
   width: 40px;
   height: 40px;
   text-align: center;
+  color: #0d0b1a !important;
 }
 .owl-dot.active,
 .owl-dot:hover {
   border: 2px solid #0d0b1a !important;
-  color: #0d0b1a !important;
 }
 .owl-dot.active span {
   background: #0d0b1a !important;
@@ -26,7 +26,7 @@
   height: 8px !important;
   margin: auto !important;
   border-radius: 50%;
-  background-color: #0d0b1a;
+  background-color: #0d0b1a !important;
 }
 .owl-nav {
   margin-top: 30px !important;
@@ -40,9 +40,37 @@
 }
 
 .owl-prev {
-  left: 34%;
+  left: 30%;
 }
 
 .owl-next {
-  right: 34%;
+  right: 30%;
+}
+.owl-item .description {
+  display: none;
+}
+/* .owl-item.active {
+  width:360px !important
+} */
+
+.owl-item.active .description {
+  display: block;
+  width:240px
+}
+.owl-item .avatar {
+  height: 80px;
+  width: 80px !important;
+}
+.owl-item .testimonialCard {
+  color: #0d0b1a;
+  /* width:180px;  */
+}
+.owl-item.active  .testimonialCard {
+  background: #0d0b1a;
+  color: white;
+  /* width:300px */
+}
+
+.owl-item.active .testimonialTitle{
+  color: white
 }

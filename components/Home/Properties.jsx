@@ -31,6 +31,7 @@ const Properties = (props) => {
         loop={true}
         lazyLoad
         nav
+        stagePadding={0}
         navText={[
           `<img src='assets/images/leftArrow.png'/>`,
           `<img src='assets/images/rightArrow.png'/>`,
@@ -39,8 +40,9 @@ const Properties = (props) => {
         responsive={{
           0: {
             items: 1,
+            nav:false,
           },
-          1024: {
+          768: {
             items: 2,
           },
           1280: {
