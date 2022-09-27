@@ -88,7 +88,7 @@ export default function Navigation() {
             </div>
             <div className="flex items-center justify-between w-fit">
               <div className="flex hidden sm:ml-6 lg:block">
-                <div className="flex items-center justify-between pt-4 text-base xl:space-x-8 lg:space-x-4">
+                <div className="flex items-center justify-between pt-4 xl:text-base md:text-xs xl:space-x-8 lg:space-x-2">
                   {navigation.map((item) => (
                     <a
                       key={item.name}

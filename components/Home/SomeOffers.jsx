@@ -1,10 +1,10 @@
 import React from "react";
 const SomeOffers = () => {
   return (
-    <section className="bg-PRIMARY_COLOR/90 px-[10%] md:py-12 py-[10%] w-full my-10 relative  min-h-[220px]">
+    <section className="bg-PRIMARY_COLOR/90 px-[10%] md:py-12 py-[10%] w-full my-10 relative  h-full">
       <img
         src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
-        className="absolute top-0 left-0 object-cover w-full min-h-full mix-blend-overlay "
+        className="absolute top-0 left-0 object-cover w-full h-full mix-blend-overlay "
       />
       <div className="relative">
         <p className="font-semibold text-SECONDARY_COLOR">Who we are !</p>

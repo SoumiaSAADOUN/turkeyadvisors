@@ -49,21 +49,21 @@ const Testimonials = () => {
       <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
         Gossips about us
       </h1>
-      <section >
-        <div className='flex justify-center'>
-          <div className="w-2/3  xl:w-4/5 testimonials-section" >
+      <section>
+        <div className="flex justify-center">
+          <div className="w-2/3 lg:w-full xl:w-4/5  testimonials-section">
             <OwlCarousel
               className="my-8 owl-carousel owl-theme owl-loaded owl-drag"
               loop={true}
               lazyLoad
               animateIn="fade"
-              center  
+              center
               responsive={{
                 0: {
                   items: 1,
                 },
                 1024: {
-                  items: 3,
+                  items: 2,
                 },
                 1280: {
                   items: 3,

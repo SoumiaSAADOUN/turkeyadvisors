@@ -11,8 +11,8 @@ const Properties = (props) => {
   });
 
   return (
-    <>
-      <section className="flex flex-col justify-between mt-20 transition duration-300 ease-in delay-300 lg:flex-row">
+    <div >
+      <section className="flex flex-col justify-between mt-20 lg:flex-row ">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
         </h1>
@@ -27,10 +27,11 @@ const Properties = (props) => {
       </section>
       <OwlCarousel
         items={3}
-        className="mt-8 owl-carousel owl-theme owl-loaded owl-drag"
+        className="mt-8  owl-carousel owl-theme owl-loaded owl-drag"
         loop={true}
         lazyLoad
         nav
+        center
         stagePadding={0}
         navText={[
           `<img src='assets/images/leftArrow.png'/>`,
@@ -42,8 +43,10 @@ const Properties = (props) => {
             items: 1,
             nav:false,
           },
-          768: {
+          1024: {
             items: 2,
+            nav:false,
+            center:false
           },
           1280: {
             items: 3,
@@ -54,7 +57,7 @@ const Properties = (props) => {
           <Property data={property} key={`property-${index}`} />
         ))}
       </OwlCarousel>
-    </>
+    </div>
   );
 };
 

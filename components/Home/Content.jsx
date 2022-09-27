@@ -71,7 +71,7 @@ const HomeContent = () => {
   return (
     <>
       <div className="w-full ">
-        <div className="md:px-4 lg:mx-[4%] xl:mx-[10%] mt-10 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl">
+        <div className="md:px-4 xl:mx-[10%] mx-[4%] mt-10 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl">
           <Filter />
           <Properties
             title="Recently added properties."
@@ -84,7 +84,7 @@ const HomeContent = () => {
       </div>
       <Citizenship />
       <div className="w-full ">
-        <div className="md:px-4 lg:mx-[10%]  px-3  h-4/5">
+        <div className="md:px-4 xl:mx-[10%] mx-[4%]  px-3  h-4/5">
           <Properties
             title="Projects Conform To Obtaining Turkish Citizenship"
             propertiesList={properties}
@@ -99,7 +99,7 @@ const HomeContent = () => {
 
       <AboutUs />
       <div className="w-full ">
-        <div className="md:px-4 lg:mx-[10%] px-3  h-4/5">
+        <div className="md:px-4 xl:mx-[10%] mx-[4%] px-3  h-4/5">
           <Properties
             title="Sea View Properties | Own What you deserve."
             propertiesList={properties}
@@ -109,7 +109,7 @@ const HomeContent = () => {
 
       <SomeOffers />
       <div className="w-full ">
-        <div className="md:px-4 lg:mx-[10%] px-3  h-4/5">
+        <div className="md:px-4 xl:mx-[10%] mx-[4%] px-3  h-4/5">
           <Properties
             title="Hot properties | Own What you deserve."
             propertiesList={properties}

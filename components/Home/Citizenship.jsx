@@ -3,10 +3,10 @@ import React from "react";
 const Citizenship = () => {
   return (
     <>
-      <section className="bg-PRIMARY_COLOR/40 px-[10%] md:py-24 py-[10%] w-full mt-10  relative min-h-[600px]">
+      <section className="bg-PRIMARY_COLOR/40 px-[10%] md:py-24 py-[10%] w-full mt-10  relative h-full">
         <img
           src="https://www.turkeyadvisors.com/sites/img/citizenship-bg.jpg"
-          className="absolute top-0 left-0 object-cover w-full min-h-full mix-blend-overlay "
+          className="absolute top-0 left-0 object-cover w-full h-full mix-blend-overlay "
         />
         <div className="z-10 flex flex-col justify-center">
           <h1 className="z-20 mb-4 text-[2.5rem] font-bold text-RED ">Turkish Citizenship</h1>

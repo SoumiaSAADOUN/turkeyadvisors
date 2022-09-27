@@ -83,36 +83,3 @@
 .owl-item.center .testimonialTitle {
   color: white;
 }
-.slider-container .slide tp-mask-wrap {
-  overflow: visible !important;
-}
-/*
-
-/* .owl-item.active {
-  width:360px !important
-} */
-
-/* .owl-item.active .description {
-  display: block;
-  width: 240px;
-}
-.owl-item .avatar {
-  height: 80px;
-  width: 80px !important;
-}
-.owl-item .testimonialCard {
-  color: #22223B;
-  /* width:180px;  */
-/*
-}
-
-.owl-item.active .testimonialCard {
-  background: #22223B;
-  color: white;
-  /* width:300px */
-/*
-}
-
-.owl-item.active .testimonialTitle {
-  color: white;
-} */

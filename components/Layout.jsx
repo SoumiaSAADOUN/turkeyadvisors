@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         {children}
         <a
             href={`mailto:${"soum.saadoun@gmail.com"}`}
-            className="animate-bounce rounded-full text-PRIMARY_COLOR bg-SECONDARY_COLOR fixed bottom-5 left-10 group hover:bg-PRIMARY_COLOR"
+            className="z-10 animate-bounce rounded-full text-PRIMARY_COLOR bg-SECONDARY_COLOR fixed bottom-5 left-10 group hover:bg-PRIMARY_COLOR"
         >
 
             <HiOutlineChat className="w-6 h-6 m-2 group-hover:text-BACKGROUND_COLOR text-PRIMARY_COLOR" />
