@@ -35,7 +35,7 @@ export default function Navigation() {
   return (
   <><Disclosure
   as="nav"
-  className="flex items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-[5%] h-[130px] border-b-4 border-SECONDARY_COLOR"
+  className="xl:flex xl:items-center bg-[url('/assets/images/header_bg.jpg')] bg-cover w-full px-[5%] py-[30px] xl:h-[130px]  border-b-4 border-SECONDARY_COLOR"
 >
   {({ open }) => (
     <>
@@ -58,17 +58,11 @@ export default function Navigation() {
             </div>
             <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 
-              {open ? (
+             
                 <Bars3Icon
                   className="block w-6 h-6 text-BACKGROUND_COLOR"
                   aria-hidden="true"
                 />
-              ) : (
-                <Bars3Icon
-                  className="block w-6 h-6 text-BACKGROUND_COLOR"
-                  aria-hidden="true"
-                />
-              )}
             </Disclosure.Button>
           </div>
           <div className="flex items-center w-full lg:justify-center">
@@ -88,7 +82,7 @@ export default function Navigation() {
             </div>
             <div className="flex items-center justify-between w-fit">
               <div className="flex hidden sm:ml-6 lg:block">
-                <div className="flex items-center justify-between pt-4 xl:text-base md:text-xs xl:space-x-8 lg:space-x-2">
+                <div className="flex items-center justify-between pt-4 xl:text-sm 2xl:text-base md:text-xs xl:space-x-8 lg:space-x-2">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
