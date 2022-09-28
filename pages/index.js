@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <OwlCarousel
-        className="owl-carousel owl-theme owl-loaded owl-drag h-full"
+        className="h-full owl-carousel owl-theme owl-loaded owl-drag"
         loop
         lazyLoad
         animateOut="fadeOut"
@@ -46,7 +46,7 @@ export default function Home() {
       <div className="flex justify-between w-full px-24 ">
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-36 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>Enquire Now</span>
           <span className=" z-5">
@@ -56,7 +56,7 @@ export default function Home() {
         </button>
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-36 border rounded-full font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>More Information</span>
           <span className=" z-5">

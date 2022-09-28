@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/owl-swiper.css";
+import "../styles/home.css";
 import Layout from "../components/Layout";
 import Head from "next/head";
 function MyApp({ Component, pageProps }) {

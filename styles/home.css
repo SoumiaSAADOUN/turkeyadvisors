@@ -1,0 +1,15 @@
+.carouselButton {
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 10s;
+}
+
+@keyframes example {
+  0% {
+    bottom: 0px;
+  }
+  70% {
+    bottom: 100px;
+  }
+}
