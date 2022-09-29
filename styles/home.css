@@ -1,11 +1,12 @@
 .carouselButton {
-  animation-name: example;
+  animation-name: carouselButtons;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-delay: 10s;
+  
 }
 
-@keyframes example {
+@keyframes carouselButtons {
   0% {
     bottom: 0px;
   }
@@ -13,3 +14,13 @@
     bottom: 100px;
   }
 }
+.homeCarousel .owl-prev {
+  left: 5%;
+  top:45%;
+  background:grey;
+  font-size:72px
+}
+.homeCarousel .owl-next {
+  top:45%; right:5%
+}
+

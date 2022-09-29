@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <OwlCarousel
-        className="h-full owl-carousel owl-theme owl-loaded owl-drag"
+        className="homeCarousel owl-carousel owl-theme owl-loaded owl-drag"
         loop
         lazyLoad
         animateOut="fadeOut"
@@ -38,15 +38,17 @@ export default function Home() {
         items={1}
         autoplay
         dots={false}
+       
       >
         {imagesCarousel.map((item, index) => (
-          <img key={index} src={item.src} />
+          <img key={index} src={item.src} className='h-[550px] w-full overflow-hidden' />
         ))}
       </OwlCarousel>
-      <div className="flex justify-between w-full px-24 ">
+
+      <div className="flex justify-between w-full px-4 md:px-24 ">
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2  border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>Enquire Now</span>
           <span className=" z-5">
@@ -56,7 +58,7 @@ export default function Home() {
         </button>
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 -translate-y-24 border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2 lg:-translate-y-24 border rounded-full carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>More Information</span>
           <span className=" z-5">

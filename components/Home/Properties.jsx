@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import SectionButton from "../Buttons/SectionButton";
 import Property from "./Property";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Properties = (props) => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
   });
-
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-in-sine",
+      duration: "600",
+      once: false,
+    });
+  }, []);
   return (
-    <div >
+    <div>
       <section className="flex flex-col justify-between mt-20 lg:flex-row ">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
@@ -26,6 +36,7 @@ const Properties = (props) => {
         </div>
       </section>
       <OwlCarousel
+        data-aos="fade-up"
         items={3}
         className="mt-8  owl-carousel owl-theme owl-loaded owl-drag"
         loop={true}
@@ -41,12 +52,12 @@ const Properties = (props) => {
         responsive={{
           0: {
             items: 1,
-            nav:false,
+            nav: false,
           },
           1024: {
             items: 2,
-            nav:false,
-            center:false
+            nav: false,
+            center: false,
           },
           1280: {
             items: 3,

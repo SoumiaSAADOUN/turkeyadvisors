@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.0",
     "@heroicons/react": "^2.0.10",
     "@reduxjs/toolkit": "^1.8.4",
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "heroicons-react": "^1.4.1",
     "moment": "^2.29.4",
@@ -28,6 +29,7 @@
     "tw-elements": "^1.0.0-alpha10"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "autoprefixer": "^10.4.8",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",

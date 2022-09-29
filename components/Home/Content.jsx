@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Divider from "../Commun/Divider.jsx";
 import AboutUs from "./AboutUs.jsx";
 // import Articles from "./Articles.jsx";
@@ -10,12 +10,15 @@ import SomeOffers from "./SomeOffers.jsx";
 import Testimonials from "./Testimonials.jsx";
 import WhyUs from "./WhyUs.jsx";
 import dynamic from "next/dynamic";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Properties = dynamic(() => import("./Properties"), {
   ssr: false,
 });
 const Articles = dynamic(() => import("./Articles"), {
   ssr: false,
 });
+
 const HomeContent = () => {
   const properties = [
     {
@@ -67,32 +70,47 @@ const HomeContent = () => {
       surface: "53 Sq. m",
     },
   ];
-
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-in-sine",
+      duration: "600",
+      once: false,
+    });
+  }, []);
   return (
     <>
       <div className="w-full ">
         <div className="md:px-4 xl:mx-[10%] mx-[4%] mt-10 border-t-4 border-solid  border-SECONDARY_COLOR rounded-t-3xl">
           <Filter />
-          <Properties
-            title="Recently added properties."
-            propertiesList={properties}
-          />
+          <div data-aos="fade-up">
+            <Properties
+              title="Recently added properties."
+              propertiesList={properties}
+            />
+          </div>
 
           <Divider />
-          <Articles />
+          <div data-aos="fade-up">
+            <Articles />
+          </div>
         </div>
       </div>
       <Citizenship />
       <div className="w-full ">
         <div className="md:px-4 xl:mx-[10%] mx-[4%]  px-3  h-4/5">
-          <Properties
-            title="Projects Conform To Obtaining Turkish Citizenship"
-            propertiesList={properties}
-          />
-          <Properties
-            title="Bargain Properties | Own What you deserve."
-            propertiesList={properties}
-          />
+          <div data-aos="fade-up">
+            <Properties
+              title="Projects Conform To Obtaining Turkish Citizenship"
+              propertiesList={properties}
+            />
+          </div>
+          <div data-aos="fade-up">
+            <Properties
+              title="Bargain Properties | Own What you deserve."
+              propertiesList={properties}
+            />
+          </div>
+
           <Divider />
         </div>
       </div>
@@ -100,10 +118,12 @@ const HomeContent = () => {
       <AboutUs />
       <div className="w-full ">
         <div className="md:px-4 xl:mx-[10%] mx-[4%] px-3  h-4/5">
-          <Properties
-            title="Sea View Properties | Own What you deserve."
-            propertiesList={properties}
-          />
+          <div data-aos="fade-up">
+            <Properties
+              title="Sea View Properties | Own What you deserve."
+              propertiesList={properties}
+            />
+          </div>
         </div>
       </div>
 
@@ -114,9 +134,12 @@ const HomeContent = () => {
             title="Hot properties | Own What you deserve."
             propertiesList={properties}
           />
-          <NewsLetter />
-          <WhyUs />
-          <Testimonials />
+            <div data-aos="fade-up"><NewsLetter /></div>
+            <div data-aos="fade-up">  <WhyUs /></div>
+            <div data-aos="fade-up"><Testimonials /></div>
+            
+        
+          
         </div>
       </div>
     </>
