@@ -1,5 +1,5 @@
 import React from "react";
-import Divider from "../components/Commun/DividerDivider";
+import Divider from "../components/Commun/Divider";
 import FiltreProjects from "../components/FiltreProjects";
 import Properties from "../components/Home/Properties";
 import Property from "../components/Home/Property";

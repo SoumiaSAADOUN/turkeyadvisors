@@ -1,6 +1,6 @@
 import React from "react";
 import { HiOutlineMailOpen, HiPhone } from "react-icons/hi";
-import FollowUs from "../components/Commun/FollowUsollowUs";
+import FollowUs from "../components/Commun/FollowUs";
 import PagesHeader from "../components/Commun/PagesHeader";
 
 const Contact = () => {
