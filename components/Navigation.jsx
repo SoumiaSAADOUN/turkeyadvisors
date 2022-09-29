@@ -12,7 +12,7 @@ import LoginModal from "./Modals/LoginModal.jsx";
 import SearchModal from "./Modals/SearchModal.jsx";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "", current: true },
   { name: " About Us", href: "aboutUs", current: false },
   { name: "Projects", href: "projects", current: false },
   { name: "Services", href: "services", current: false },
