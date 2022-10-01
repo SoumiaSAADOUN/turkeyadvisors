@@ -4,14 +4,18 @@
   animation-iteration-count: infinite;
   animation-delay: 10s;
   
+
+  
 }
 
 @keyframes carouselButtons {
   0% {
     bottom: 0px;
+    visiblity:hidden;
   }
   70% {
-    bottom: 100px;
+    bottom: 50px;
+    visiblity:visible;
   }
 }
 .homeCarousel .owl-prev {
