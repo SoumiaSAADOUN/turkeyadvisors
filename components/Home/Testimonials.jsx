@@ -51,7 +51,7 @@ const Testimonials = () => {
       </h1>
       <section>
         <div className="flex justify-center">
-          <div className="w-2/3 lg:w-full xl:w-4/5  testimonials-section">
+          <div className="w-full lg:w-full xl:w-4/5 testimonials-section">
             <OwlCarousel
               className="my-8 owl-carousel owl-theme owl-loaded owl-drag"
               loop={true}
