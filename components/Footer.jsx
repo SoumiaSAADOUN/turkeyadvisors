@@ -56,7 +56,7 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col w-full min-h-[400px] wrap  border-t-4 border-SECONDARY_COLOR">
-        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-36 w-full h-full bg-cover flex items-center py-12 gap-20 flex-wrap">
+        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] w-full h-full bg-cover flex justify-evenly items-center py-12 gap-20 flex-wrap">
           <div className="flex flex-col gap-4 basis-1/4 grow">
             {SectionTitle("Turkey Advisors".toUpperCase())}
 
