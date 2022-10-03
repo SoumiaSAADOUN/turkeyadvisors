@@ -95,8 +95,8 @@ export default function Navigation() {
                             <span
                               className={classNames(
                                 item.current
-                                  ? "text-SECONDARY_COLOR"
-                                  : "text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR"
+                                  ? "text-SECONDARY_COLOR cursor-pointer"
+                                  : "text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer"
                               )}
                             >
                               {item.name}
@@ -188,7 +188,7 @@ export default function Navigation() {
                   as="a"
                   href={"#"}
                   className={classNames(
-                    "text-gray-300 text-BACKGROUND_COLOR hover:bg-gray-700 hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR block px-3 py-2  text-xl font-bold border-b-2"
+                    "text-BACKGROUND_COLOR hover:bg-gray-700 hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR block px-3 py-2  text-xl font-bold border-b-2"
                   )}
                 >
                   CONTACT US
