@@ -41,14 +41,14 @@ export default function Home() {
        
       >
         {imagesCarousel.map((item, index) => (
-          <img key={index} src={item.src} className='h-[550px] w-full overflow-hidden' />
+          <img key={index} src={item.src} className='w-full overflow-x-hidden overflow-x-scroll' />
         ))}
       </OwlCarousel>
 
       <div className="flex justify-between w-full px-4 md:px-24 ">
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 border rounded-full -translate-y-[200%] carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2 border rounded-full -translate-y-[180%] carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>Enquire Now</span>
           <span className=" z-5">
@@ -58,7 +58,7 @@ export default function Home() {
         </button>
         <button
           onClick={() => setShowEnquireModal(true)}
-          className="relative z-10 flex items-center justify-center px-4 py-2 border rounded-full -translate-y-[200%]  carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
+          className="relative z-10 flex items-center justify-center px-4 py-2 border rounded-full -translate-y-[180%]  carouselButton font-base bg-BLACK/30 border-BLACK text-BACKGROUND_COLOR"
         >
           <span>More Information</span>
           <span className=" z-5">

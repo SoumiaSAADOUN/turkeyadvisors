@@ -22,11 +22,11 @@ const Properties = (props) => {
   }, []);
   return (
     <div>
-      <section className="flex flex-col justify-between mt-20 lg:flex-row ">
+      <section className="flex flex-col justify-between mt-10 lg:flex-row ">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
         </h1>
-        <div>
+        <div className="mt-2 md:mt-0">
           <SectionButton
             title="See more "
             icon={

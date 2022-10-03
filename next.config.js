@@ -17,6 +17,9 @@ const nextConfig = {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ['www.turkeyadvisors.com'],
+  },
 };
 
 module.exports = nextConfig;

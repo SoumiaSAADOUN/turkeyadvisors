@@ -14,7 +14,7 @@ const AboutUs = () => {
         <div className="flex flex-col justify-center h-full basis-2/4">
         <div className="md:block hidden">
       <p className="font-semibold text-SECONDARY_COLOR">Who we are !</p>
-      <h1 className="text-3xl font-extrabold ">Turkey Advisors</h1>
+      <h1 className="text-3xl font-extrabold mb-8">Turkey Advisors</h1>
       </div>
           <p className="w-[80%]  my-12 text-2xl">
             At Turkey Advisors, we believe that our clients are our experience is
@@ -29,7 +29,7 @@ const AboutUs = () => {
         <div className="relative basis-2/4">
 
           <img
-            className=" max-w-full"
+            className=" max-w-full mt-4"
             src={"https://www.turkeyadvisors.com/sites/img/about.jpg"}
           />
           <img

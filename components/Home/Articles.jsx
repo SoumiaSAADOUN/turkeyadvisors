@@ -58,7 +58,7 @@ const Articles = () => {
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3">
           Recently Added Articles
         </h1>
-        <div>
+        <div className="mt-2 md:mt-0">
           <SectionButton
             title="Articles"
             icon={

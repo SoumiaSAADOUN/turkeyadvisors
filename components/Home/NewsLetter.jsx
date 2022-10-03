@@ -3,7 +3,7 @@ import { Mail } from "heroicons-react";
 
 const NewsLetter = () => {
   return (
-    <div className="bg-DARK_PRIMARY_COLOR mt-[10%] flex lg:flex-row flex-col items-center rounded-xl border lg:gap-20 py-8 px-[10%]">
+    <div className="bg-DARK_PRIMARY_COLOR mt-[10%] flex lg:flex-row flex-col items-center rounded-xl border lg:gap-20 py-8 px-[10%] mb-12">
       <div className="items-center justify-center md:basis-1/3 basis-full grow ">
         <img
           src="https://www.turkeyadvisors.com/sites/img/newsletter.png"

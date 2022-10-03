@@ -3,21 +3,17 @@
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-delay: 10s;
-  
-
-  
 }
 
-@keyframes carouselButtons {
+/* @keyframes carouselButtons {
+  
   0% {
     bottom: 0px;
-    visiblity:hidden;
   }
   70% {
     bottom: 50px;
-    visiblity:visible;
   }
-}
+} */
 .homeCarousel .owl-prev {
   left: 5%;
   top:45%;

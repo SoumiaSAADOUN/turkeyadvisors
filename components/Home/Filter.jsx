@@ -64,10 +64,10 @@ const Filter = () => {
               </span>
             </button>
 
-            <div onClick={()=> setShowCityFilter(false)}   className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px] ">
+            <div onClick={()=> setShowCityFilter(false)}   className=" lg:basis-1/4 basis-1/3 grow lg:mr-2 md:basis-1/4 mb-2  px-1 h-[40px] ">
               <SelectComponenet data={propertyType} />
             </div>
-            <div onClick={()=> setShowCityFilter(false)} className=" lg:basis-1/4 basis-full grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px]   ">
+            <div onClick={()=> setShowCityFilter(false)} className=" lg:basis-1/4 basis-1/3 grow mr-2 md:basis-1/4 mb-2  px-1 h-[40px]   ">
               <SelectComponenet data={bedrooms}  />
             </div>
             <button onClick={()=> setShowCityFilter(false)} className="xl:hidden basis-full md:basis-1/4 grow mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR">

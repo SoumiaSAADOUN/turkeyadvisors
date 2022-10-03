@@ -9,13 +9,13 @@ const Layout = ({ children }) => {
      
         <Navigation/>
         {children}
-        {/* <a
+        <a
             href={`mailto:${"soum.saadoun@gmail.com"}`}
-            className="fixed z-10 rounded-full animate-bounce text-PRIMARY_COLOR bg-SECONDARY_COLOR bottom-5 left-10 group hover:bg-PRIMARY_COLOR"
+            className="fixed z-20 rounded-full animate-bounce text-PRIMARY_COLOR bg-SECONDARY_COLOR bottom-5 left-10 group hover:bg-PRIMARY_COLOR"
         >
 
             <HiOutlineChat className="w-6 h-6 m-2 group-hover:text-BACKGROUND_COLOR text-PRIMARY_COLOR" />
-        </a> */}
+        </a>
 
         {/* <a
             href="#"

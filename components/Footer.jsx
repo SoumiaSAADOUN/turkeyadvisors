@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import FollowUs from "./Commun/FollowUs";
 
@@ -56,7 +57,7 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col w-full min-h-[400px] wrap  border-t-4 border-SECONDARY_COLOR">
-        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-4 w-full h-full bg-cover flex justify-evenly items-center py-12 gap-20 flex-wrap">
+        <div className="bg-[url('https://www.turkeyadvisors.com/sites/img/footer-backgournd.jpg')] px-[10%] w-full h-full bg-cover flex justify-evenly items-center py-12 gap-20 flex-wrap">
           <div className="flex flex-col gap-4 basis-1/4 grow">
             {SectionTitle("Turkey Advisors".toUpperCase())}
 
@@ -81,8 +82,11 @@ const Footer = () => {
               {socialIcons.map((item, index) => (
                 <li key={`social-icon-${index}`}>
                   <a href={item.href}>
-                    <img
+                    <Image
+                   
                       rel="preload"
+                      height={'30px'}
+                      width={'30px'}
                       className="w-8 h-8"
                       loading="lazy"
                       src={item.img}

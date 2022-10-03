@@ -5,34 +5,34 @@ const FollowUs = (props) => {
         {
             icon: <FaFacebookF />,
             link: "https://www.facebook.com/turkeyadvisors/",
-            color: "FACEBOOK"
+            color: "hover:bg-FACEBOOK"
         },
         {
             icon: <FaInstagram />,
             link: "https://www.instagram.com/turkey__advisors/",
-            color: "INSTAGRAM"
+            color: "hover:bg-INSTAGRAM"
         },
         {
             icon: <FaTwitter />,
             link: "https://twitter.com/?lang=en",
-            color: "TWITTER"
+            color: "hover:bg-TWITTER"
         },
         {
             icon: <FaYoutube />,
             link: "https://www.youtube.com/",
-            color: "YOUTUBE"
+            color: "hover:bg-YOUTUBE"
         },
         {
             icon: <FaLinkedinIn />,
             link: "https://www.linkedin.com/company/turkey-advisors/",
-            color: "LINKEDIN"
+            color: "hover:bg-LINKEDIN"
         }
 
     ]
     return <div className="flex gap-1">
         {
             socialMedia.map((item, index) => (
-                <a key={index} href={item.link} className={`border border-${props.color} text-${props.color} p-2 rounded text-PRIMARY_COLOR hover:bg-${item.color} hover:text-BACKGROUND_COLOR`}>
+                <a key={index} href={item.link} className={`border border-${props.color} text-${props.color} p-2 rounded text-PRIMARY_COLOR ${item.color} hover:text-BACKGROUND_COLOR`}>
                     {item.icon}
                 </a>
             ))

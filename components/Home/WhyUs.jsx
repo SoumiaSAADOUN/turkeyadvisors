@@ -28,7 +28,7 @@ const WhyUs = () => {
           Why Turkey Advisors?!
         </h1>
 
-        <div>
+        <div className="mt-2 md:mt-0">
           <SectionButton
             title="Services"
             icon={
