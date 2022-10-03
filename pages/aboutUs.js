@@ -28,9 +28,9 @@ const AboutUsPage = () => {
         <PagesHeader title='About Us' link='aboutus' />
 
         <section className="flex flex-col items-center">
-            <div className="flex flex-wrap items-center justify-between gap-8 px-20 mt-8">
+            <div className="flex flex-wrap items-center justify-between gap-8 lg:px-20 px-4 mt-8">
                 <div className="text-TEXT_COLOR grow basis-1/3">
-                    <h1 className="text-4xl font-bold text-PRIMARY_COLOR">About Us</h1>
+                    <h1 className="text-4xl font-bold text-DARK_PRIMARY_COLOR mb-4">About Us</h1>
                     <p >
                         Turkey Advisors company has been built based on offering what our buyers deserve and owning what they deserve; we have been functioning in the real estate sector since 2015. Meanwhile, we created a long-lasting experience that adopts the mentality of sharing with you the advice, knowledge, seven years of vast experience, not only a property but a lifetime experience.</p>
 
@@ -43,12 +43,12 @@ const AboutUsPage = () => {
                 <img className="grow basis-1/3" src="http://turkeyadvisors.com/storage/img/aboutPage/mhBC2yMHmL57WTp6Tfss.png" alrt='about us' />
 
             </div>
-            <img src="http://turkeyadvisors.com/sites/img/about-icons.png" className="w-[80%] my-12 px-20" />
+            <img src="http://turkeyadvisors.com/sites/img/about-icons.png" className="w-[80%] my-12 lg:px-20" />
             <div className="flex flex-col gap-4 px-20">
 
-                <div className="flex flex-wrap items-center gap-40 my-8">
-                    <div className="basis-1/3 grow text-TEXT_COLOR">
-                        <h1 className="text-5xl font-bold text-PRIMARY_COLOR">A message from the owners</h1>
+                <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-40 my-8 w-full">
+                    <div className="basis-2/3  text-TEXT_COLOR">
+                        <h1 className="text-5xl mb-4 font-bold text-PRIMARY_COLOR">A message from the owners</h1>
                         <p>
                             As real estate agency owners within the Turkish market, we have considered ourselves a bridge between the developer and the international buyer. Meanwhile, we show the exact way you need to go for and share the knowledge you've been seeking. Therefore, you can decide to build a new life and new investment in Turkey.
                         </p>
@@ -62,11 +62,11 @@ const AboutUsPage = () => {
                             ur company's name, which will always make you own what you deserve.
                         </p>
                     </div>
-                    <img src="http://turkeyadvisors.com/storage/img/aboutPage/dIYnGA3sIpDSHRdv0MTN.jpg" className="basis-1/3 grow  w-[539]" />
+                    <img src="http://turkeyadvisors.com/storage/img/aboutPage/dIYnGA3sIpDSHRdv0MTN.jpg" className="lg:basis-1/3 lg:w-full" />
                 </div>
-                <div className="flex flex-wrap items-center gap-40 my-8">
-                    <img className="basis-1/3 grow  w-[539]" src="http://turkeyadvisors.com/storage/img/aboutPage/JWTGKbfqQpeYDA3STUfO.jpg" />
-                    <div className="basis-1/3 grow text-TEXT_COLOR">
+                <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-40 my-8 w-full">
+                    <img className="basis-1/3  w-full" src="http://turkeyadvisors.com/storage/img/aboutPage/JWTGKbfqQpeYDA3STUfO.jpg" />
+                    <div className="basis-2/3  text-TEXT_COLOR">
                         <h1 className="text-5xl font-bold text-PRIMARY_COLOR">Our mission</h1>
                         <p>
                             Is to be the trustable legible partner, that you would get along with during your next satisfying journey in Turkey, the partner who you recommend as the best agency in Turkey for your family and colleagues; our mission is to build a bridge of Trust, Transparency between you and the developers, so you would own what you deserve.
@@ -74,7 +74,7 @@ const AboutUsPage = () => {
 
                     </div>
                 </div>
-                <div className="flex flex-wrap items-center gap-40 my-8">
+                <div className="flex items-center gap-40 my-8">
                     <div className="basis-1/3 grow text-TEXT_COLOR">
                         <h1 className="text-5xl font-bold text-PRIMARY_COLOR">Our vision</h1>
                         <p>
@@ -109,13 +109,13 @@ const AboutUsPage = () => {
             <div className="flex flex-col gap-8 px-20 mt-16" >
                 <h1 className="my-4 text-5xl font-bold text-PRIMARY_COLOR">Our team</h1>
                 {team.map((member, index) => (
-                    <div className="flex flex-wrap items-center gap-16 my-4" key={index}>
+                    <div className="flex flex-col lg:felx items-center gap-16 my-4" key={index}>
                         <div className="flex flex-col items-center justify-center gap-4">
                             <img className="basis-1/4 grow" src={member.image} />
                             <h1>{member.name}</h1>
-                            <p>{member.title}</p>
+                            <p className="px-4">{member.title}</p>
                         </div>
-                        <p className="text-lg basis-1/4 grow">
+                        <p className="text-lg lg:basis-1/4 px-4">
                             {member.message}
                         </p>
                     </div>
