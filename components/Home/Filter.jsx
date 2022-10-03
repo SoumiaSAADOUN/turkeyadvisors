@@ -43,7 +43,7 @@ const Filter = () => {
         <h1 className="text-2xl font-semibold md:basis-2/6 sm:basis-full ">
           {t.home.dreamHome}
         </h1>
-        <div className="flex flex-wrap justify-center w-full md:basis-4/6 sm:basis-full md:justify-end">
+        <div className="z-10 flex flex-wrap justify-center w-full md:basis-4/6 sm:basis-full md:justify-end">
           <div className="relative flex flex-wrap lg:basis-2/3">
             <button
               onClick={() => setShowCityFilter(!showCityFilter)}

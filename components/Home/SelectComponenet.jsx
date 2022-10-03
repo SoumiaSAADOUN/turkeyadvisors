@@ -12,7 +12,7 @@ const SelectComponenet =(props)=>{
       <Listbox value={selected} onChange={setSelected}>
         {({ open }) => (
           <>
-           <div className="relative z-10">
+           <div className="relative ">
               <Listbox.Button key={props.data[0]} className="relative w-full h-[40px] py-2 pl-3 pr-10 text-left border rounded-md shadow-md cursor-default border-LIGHT_GREY bg-BACKGROUND_COLOR focus:outline-none focus:ring-1  sm:text-sm">
                 <span className="flex items-center">
                  <span className="block ml-3 truncate">{selected.title}</span>
@@ -29,7 +29,7 @@ const SelectComponenet =(props)=>{
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options key='bedrooms1' className="absolute py-1 mt-1 overflow-auto text-xs text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Listbox.Options key='bedrooms1' className="absolute z-50 w-full py-1 mt-1 overflow-auto text-xs text-base rounded-md shadow-lg max-h-56 bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none">
                   {props.data.map((item) => (
                     <Listbox.Option
                       key={`- ${item.title} - `}

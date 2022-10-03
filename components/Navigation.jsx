@@ -14,13 +14,13 @@ import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: " About Us", href: "aboutUs", current: false },
-  { name: "Projects", href: "projects", current: false },
-  { name: "Services", href: "services", current: false },
-  { name: "Turkish Citizenship", href: "citizenship", current: false },
-  { name: "Blog", href: "blog", current: false },
-  { name: "Articles", href: "articles", current: false },
-  { name: "Contact Us", href: "contact", current: false },
+  { name: " About Us", href: "/aboutUs", current: false },
+  { name: "Projects", href: "/projects", current: false },
+  { name: "Services", href: "/services", current: false },
+  { name: "Turkish Citizenship", href: "/citizenship", current: false },
+  { name: "Blog", href: "/blog", current: false },
+  { name: "Articles", href: "/articles", current: false },
+  { name: "Contact Us", href: "/contact", current: false },
 ];
 
 function classNames(...classes) {
