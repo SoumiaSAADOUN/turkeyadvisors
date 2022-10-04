@@ -11,6 +11,7 @@ import RegisterModal from "./Modals/RegisterModel.jsx";
 import LoginModal from "./Modals/LoginModal.jsx";
 import SearchModal from "./Modals/SearchModal.jsx";
 import Link from "next/link";
+import { classNames } from "../utile/utils.js";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
@@ -23,9 +24,6 @@ const navigation = [
   { name: "Contact Us", href: "/contact", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Navigation() {
   const [showEnquireModal, setShowEnquireModal] = useState(false);

@@ -2,9 +2,8 @@ import React from "react"
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { FaSortDown } from "react-icons/fa"
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+import { classNames } from "../../utile/utils"
+
 const SelectComponenet =(props)=>{
     const [selected, setSelected] = useState(props.data[0])
 

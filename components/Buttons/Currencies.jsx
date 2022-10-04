@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { HiGlobeAlt, HiOutlineTranslate } from "react-icons/hi";
+import { classNames } from "../../utile/utils";
 
 const currencies = [
   {
@@ -28,9 +29,7 @@ const currencies = [
 
 const Currencies = () => {
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+ 
   const handleChange = (value) => {
    
   };
@@ -41,11 +40,11 @@ const Currencies = () => {
         {({ open }) => (
           <>
             <div className="relative ">
-              <Listbox.Button className="relative rounded w-fit h-8 cursor-default border  bg-BACKGROUND_COLOR  text-center shadow-sm focus:outline-none focus:ring-1 text-xs">
+              <Listbox.Button className="relative h-8 text-xs text-center border rounded shadow-sm cursor-default w-fit bg-BACKGROUND_COLOR focus:outline-none focus:ring-1">
                 <span className="flex items-center">
-                  <HiGlobeAlt className="text-base ml-1" />
+                  <HiGlobeAlt className="ml-1 text-base" />
 
-                  <span className="mx-1 block">{selected.currency.toUpperCase()}</span>
+                  <span className="block mx-1">{selected.currency.toUpperCase()}</span>
                 </span>
               </Listbox.Button>
 
@@ -56,7 +55,7 @@ const Currencies = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-fit overflow-auto rounded-md bg-BACKGROUND_COLOR py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <Listbox.Options className="absolute z-10 py-1 mt-1 overflow-auto text-base rounded-md shadow-lg max-h-56 w-fit bg-BACKGROUND_COLOR ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {currencies.map((currency) => (
                     <Listbox.Option
                       key={currency.id}
@@ -72,7 +71,7 @@ const Currencies = () => {
                       {({ selected, active }) => (
                         <>
                           <div className="flex items-center">
-                          <img src={currency.icon} alt="" className="h-6 w-6 flex-shrink-0 rounded-full mr-2" />
+                          <img src={currency.icon} alt="" className="flex-shrink-0 w-6 h-6 mr-2 rounded-full" />
                             <span
                               className={classNames(
                                 selected ? "font-semibold" : "font-normal",

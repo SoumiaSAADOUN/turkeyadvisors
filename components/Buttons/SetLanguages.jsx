@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import { HiOutlineTranslate } from "react-icons/hi";
+import { classNames } from "../../utile/utils";
 
 const languages = [
   {
@@ -23,9 +24,7 @@ const SetLanguages = () => {
   const router = useRouter();
   const { locale } = router;
 
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+ 
   const handleChange = (value) => {
     const locale = value;
     router.push("/", "/", { locale });
