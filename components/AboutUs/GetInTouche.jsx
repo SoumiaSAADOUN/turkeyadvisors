@@ -2,10 +2,10 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const GetInTouch = () => {
-    return <section className="bg-PRIMARY_COLOR/90 px-4 md:px-20 py-4 w-full mt-10 relative  min-h-[200px]">
+    return <section className="bg-PRIMARY_COLOR/90 px-4 md:px-20 py-4 w-full mt-10 relative  h-full">
         <img
             src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
-            className="absolute top-0 left-0 object-cover w-full min-h-full mix-blend-overlay "
+            className="absolute top-0 left-0 object-cover w-full h-full mix-blend-overlay "
         />
         <div className="relative flex flex-col w-full gap-4">
             <p className="font-semibold text-SECONDARY_COLOR">Who we are !</p>
