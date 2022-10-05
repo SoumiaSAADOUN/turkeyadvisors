@@ -22,7 +22,7 @@ const GetInTouch = () => {
                     href="/contact"
                     className="flex items-center justify-between w-full px-5 py-2 rounded sm:w-fit bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR"
                 >
-                    <span> Get In Touch </span>
+                    <span> Get In Touch  </span>
                     <HiArrowNarrowRight className="ml-4" />
                 </Link>
             </div>
