@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import Link from "next/link";
 
 const GetInTouch = () => {
     return <section className="relative w-full h-full px-4 py-4 mt-10 bg-PRIMARY_COLOR/90 md:px-20">
@@ -17,13 +18,13 @@ const GetInTouch = () => {
                     Contact Us Now
                 </h3>
 
-                <a
+                <Link
                     href="/contact"
                     className="flex items-center justify-between w-full px-5 py-2 rounded sm:w-fit bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR"
                 >
                     <span> Get In Touch </span>
                     <HiArrowNarrowRight className="ml-4" />
-                </a>
+                </Link>
             </div>
         </div>
 
