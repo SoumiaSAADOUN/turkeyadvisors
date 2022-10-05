@@ -32,7 +32,7 @@ const FiltreProjects = () => {
 
   return (
     <>
-      <div className="flex justify-between w-full px-20 my-12">
+      <div className="flex flex-col justify-between w-full my-12 lg:flex-row lg:px-20">
         <h1 className="text-2xl font-bold text-PRIMARY_COLOR">
           Find Your Dream House
         </h1>
