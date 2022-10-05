@@ -104,11 +104,13 @@ const FiltreProjects = () => {
 
             <CityFilter
               data={cities}
+              title='City'
               visibility={showCityFilter}
               onCancel={() => setShowCityFilter(!showCityFilter)}
             />
             <CityFilter
               data={areas}
+              title='Area'
               visibility={showAreaFilter}
               onCancel={() => setShowAreaFilter(!showCityFilter)}
             />

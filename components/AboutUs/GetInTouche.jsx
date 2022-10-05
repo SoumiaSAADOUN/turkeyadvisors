@@ -2,7 +2,7 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const GetInTouch = () => {
-    return <section className="bg-PRIMARY_COLOR/90 px-4 md:px-20 py-4 w-full mt-10 relative  h-full">
+    return <section className="relative w-full h-full px-4 py-4 mt-10 bg-PRIMARY_COLOR/90 md:px-20">
         <img
             src="https://www.turkeyadvisors.com/sites/img/wwa.jpg"
             className="absolute top-0 left-0 object-cover w-full h-full mix-blend-overlay "
@@ -18,7 +18,7 @@ const GetInTouch = () => {
                 </h3>
 
                 <a
-                    href="https://www.turkeyadvisors.com/citizenship-by-investment"
+                    href="/contact"
                     className="flex items-center justify-between w-full px-5 py-2 rounded sm:w-fit bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR"
                 >
                     <span> Get In Touch </span>

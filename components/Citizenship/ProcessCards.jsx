@@ -25,15 +25,15 @@ const ProcessCards = (props) => {
   ];
   return (
     <>
-      <div className="flex flex-row flex-wrap justify-center items-center w-full my-8">
+      <div className="flex flex-row flex-wrap items-center justify-center w-full my-8">
         {steps.map((step, index) => (
-          <div className=" xl:basis-1/3 md:basis-1/2 basis-full">
-            <div
-              className="relative m-8 text-center px-4 py-12 rounded shadow-md text-PRIMARY_COLOR text-2xl font-semibold"
-              key={`step-${index}`}
-            >
+          <div
+            className=" xl:basis-1/3 md:basis-1/2 basis-full"
+            key={`step-${index}`}
+          >
+            <div className="relative px-4 py-12 m-8 text-2xl font-semibold text-center rounded shadow-md text-PRIMARY_COLOR">
               {step.step}
-              <div className="absolute -top-8 -left-4 font-extrabold text-2xl rounded-full  bg-PRIMARY_COLOR text-SECONDARY_COLOR w-16 h-16 text-center p-4">
+              <div className="absolute w-16 h-16 p-4 text-2xl font-extrabold text-center rounded-full -top-8 -left-4 bg-PRIMARY_COLOR text-SECONDARY_COLOR">
                 {step.num}
               </div>
             </div>

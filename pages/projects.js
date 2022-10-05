@@ -110,7 +110,7 @@ const Projects = () => {
 
         <div className="mx-24 my-12" >
             <h1 className="text-3xl font-bold text-PRIMARY_COLOR">Properties for sale in Istanbul 2022</h1>
-           <div className="grid grid-cols-3 gap-4 my-12">
+           <div className="grid grid-cols-1 gap-4 my-12 xl:grid-cols-3 md:grid-cols-2">
            {properties.map((property, index) => (
                 <Property key={index} data={property} />
             ))}
