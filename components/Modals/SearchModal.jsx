@@ -22,7 +22,7 @@ const SearchModal = (props) => {
                 {/*body*/}
                 <div className="relative pb-4 flex justify-center items-center h-full ">
                   <input
-                    className="w-2/5 appearance-none bg-transparent border-b-BACKGROUND_COLOR border-b-[1px]  py-3 w-full text-lg text-BACKGROUND_COLOR  px-4 leading-tight focus:outline-none focus:border-b-SECONDARY_COLOR "
+                    className="lg:w-2/5 md:w-3/4 w-full appearance-none bg-transparent border-b-BACKGROUND_COLOR border-b-[1px]  py-3 w-full text-lg text-BACKGROUND_COLOR  px-4 leading-tight focus:outline-none focus:border-b-SECONDARY_COLOR "
                     type="text"
                     placeholder={`Example: Appartment Istanbul Sea View`}
                   />
