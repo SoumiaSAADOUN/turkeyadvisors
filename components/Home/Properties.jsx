@@ -22,7 +22,7 @@ const Properties = (props) => {
   }, []);
   return (
     <div>
-      <section className="flex flex-col justify-between mt-10 lg:flex-row ">
+      {props.title && <section className="flex flex-col justify-between mt-10 lg:flex-row ">
         <h1 className="text-3xl font-bold text-PRIMARY_COLOR grow md:basis-2/3 ">
           {props.title}
         </h1>
@@ -34,7 +34,7 @@ const Properties = (props) => {
             }
           />
         </div>
-      </section>
+      </section>}
       <OwlCarousel
         data-aos="fade-up"
         items={3}
