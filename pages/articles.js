@@ -1,133 +1,270 @@
-import React from 'react'
-import { HiSearch } from 'react-icons/hi';
-import Article from '../components/Home/Article';
-import Property from '../components/Home/Property';
-import SomeOffers from '../components/Home/SomeOffers';
-import PagesHeader from '../components/Commun/PagesHeader';
-
+import React from "react";
+import { HiSearch } from "react-icons/hi";
+import Article from "../components/Home/Article";
+import Property from "../components/Home/Property";
+import SomeOffers from "../components/Home/SomeOffers";
+import PagesHeader from "../components/Commun/PagesHeader";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
+import Properties from "../components/Home/Properties";
 const Articles = () => {
-    const articles = [
-        {
-            title: "What Do We Know About International Marmara Road",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
-            date: "13 Jul 2022",
-            views: "292",
+  const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+    ssr: false,
+  });
+  const properties = [
+    {
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
+      title:
+        "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
+      overview:
+        "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
+      price: "$ 2500,000",
+      location: "Istanbul",
+      nbrBedrooms: "3",
+      nbrBathrooms: "2",
+      surface: "53 Sq. m",
+    },
+    {
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      title:
+        "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
+      overview:
+        "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
+      price: "$ 3200,000",
+      location: "Istanbul",
+      nbrBedrooms: "2",
+      nbrBathrooms: "2",
+      surface: "83 Sq. m",
+    },
+    {
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      title:
+        "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
+      overview:
+        "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
+      price: "$ 2800,000",
+      location: "Istanbul",
+      nbrBedrooms: "2",
+      nbrBathrooms: "1",
+      surface: "53 Sq. m",
+    },
+    {
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      title:
+        "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
+      overview:
+        "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
+      price: "$ 2800,000",
+      location: "Istanbul",
+      nbrBedrooms: "2",
+      nbrBathrooms: "1",
+      surface: "53 Sq. m",
+    },
+  ];
+  const owlProperties = (
+    <OwlCarousel
+      data-aos="fade-up"
+      items={3}
+      className="mt-8 owl-carousel owl-theme owl-loaded owl-drag"
+      loop={true}
+      lazyLoad
+      nav
+      center
+      stagePadding={0}
+      navText={[
+        `<img src='assets/images/leftArrow.png'/>`,
+        `<img src='assets/images/rightArrow.png'/>`,
+      ]}
+      animateIn="true"
+      responsive={{
+        0: {
+          items: 1,
+          nav: false,
         },
-        {
-            title:
-                "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
-            date: "20 Jul 2022",
-            views: "162",
+        1024: {
+          items: 2,
+          nav: false,
+          center: false,
         },
-        {
-            title:
-                "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
-            date: "20 Jul 2022",
-            views: "162",
+        1280: {
+          items: 3,
         },
-        {
-            title: "What Do We Know About International Marmara Road",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
-            date: "13 Jul 2022",
-            views: "292",
-        },
-        {
-            title:
-                "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
-            date: "20 Jul 2022",
-            views: "162",
-        },
-        {
-            title: "What Do We Know About International Marmara Road",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
-            date: "13 Jul 2022",
-            views: "292",
-        },
-        {
-            title:
-                "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
-            summary:
-                "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
-            image:
-                "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
-            date: "20 Jul 2022",
-            views: "162",
-        },
-    ];
-    const property = {
-        img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
-        title:
-            "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
-        overview:
-            "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
-        price: "$ 3200,000",
-        location: "Istanbul",
-        nbrBedrooms: "2",
-        nbrBathrooms: "2",
-        surface: "83 Sq. m",
-    }
-    return <>
-        <PagesHeader title='Articles' link='articles' />
-        <div className='flex flex-col-reverse flex-wrap p-8 md:flex-row'>
-            <div className='flex flex-col m-8 basis-2/4 grow '>
-                <h1 className='text-3xl font-bold text-PRIMARY_COLOR'>
-                    All Articles About Real Estate
-                </h1>
-                <p className='py-4'>
-                    Turkey Advisories articles are genuinely created to grant you the feeling as if you are in Turkey yourself by giving you the full comprehension knowledge about the Life, Economy, Politics, and Traditions of Turkey
-                </p>
-                <div className='grid grid-cols-2 gap-8'>
-                    {articles.map((article, index) => (
-                        <Article data={article} key={`article-${index}`} />
-                    ))}
-                </div>
-            </div>
-            <div className='flex flex-col my-8 basis-1/4 grow'>
-                <h1 className='px-4 text-2xl border-l-2 border-SECONDARY_COLOR'>Search for something</h1>
-                <div className='flex items-center py-2 my-2 text-xl border rounded border-PRIMARY_COLOR'>
-                    <HiSearch className='mx-4 font-extrabold  text-SECONDARY_COLOR' />
-                    <input type='text' placeholder='Search' />
-                </div>
-
-                <h1 className='px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR'>Special Offers</h1>
-                <div className='px-8'>
-                <Property data={property}/>
-                </div>
-
-                <SomeOffers />
-
-                <h1 className='px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR'>Last Articles</h1>
-                <div className='flex flex-col gap-8 px-8'>
-                    {articles.map((article, index) => (
-                        <Article data={article} key={`article-${index}`} />
-                    ))}
-                </div>
-
-
-            </div>
+      }}
+    >
+      {properties.map((property, index) => (
+        <Property data={property} key={`property-${index}`} />
+      ))}
+    </OwlCarousel>
+  );
+  const articles = [
+    {
+      title: "What Do We Know About International Marmara Road",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
+      date: "13 Jul 2022",
+      views: "292",
+    },
+    {
+      title:
+        "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
+      date: "20 Jul 2022",
+      views: "162",
+    },
+    {
+      title:
+        "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
+      date: "20 Jul 2022",
+      views: "162",
+    },
+    {
+      title: "What Do We Know About International Marmara Road",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
+      date: "13 Jul 2022",
+      views: "292",
+    },
+    {
+      title:
+        "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
+      date: "20 Jul 2022",
+      views: "162",
+    },
+    {
+      title: "What Do We Know About International Marmara Road",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/6q8swdHMDaIRR6Ge1hXM.jpg",
+      date: "13 Jul 2022",
+      views: "292",
+    },
+    {
+      title:
+        "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
+      summary:
+        "Once upon a time, Fikirtepe was a shabby, messy, and disorganized region, but within 18 years became...",
+      image:
+        "https://www.turkeyadvisors.com/storage/img/posts/zPz6jZJVHsk1mbuC1Zu8.jpg",
+      date: "20 Jul 2022",
+      views: "162",
+    },
+  ];
+  const property = {
+    img:
+      "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+    title:
+      "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
+    overview:
+      "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
+    price: "$ 3200,000",
+    location: "Istanbul",
+    nbrBedrooms: "2",
+    nbrBathrooms: "2",
+    surface: "83 Sq. m",
+  };
+  const Searchbar = () => {
+    return (
+      <div className="relative h-[44px] items-center justify-center ">
+        <div className="m-12 h-[24px] w-[24px] absolute top-[20px] left-4 pl-[3px] font-extrabold  pointer-events-none">
+          <HiSearch className="text-SECONDARY_COLOR" />
+           
         </div>
+        <input
+          type="text"
+          placeholder={"Search"}
+          id="searchInput"
+          className=" w-full my-2 border rounded-md py-[8px] pr-[16px] pl-10 bg-WHITE"
+          name="searchKeyword"
+        />
+             
+      </div>
+    );
+  };
+  return (
+    <>
+      <PagesHeader title="Blog" link="blog" />
+      <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
+        <Searchbar />
+      </div>
+      <div className="flex flex-col my-16  gap-8 xl:ml-36 xl:mr-28 mx-[3%]">
+        <div className="flex flex-col lg:mx-2 lg:w-3/5 ">
+          <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
+            All Articles About Real Estate
+          </h1>
+          <p className="pt-4">
+            Turkey Advisories articles are genuinely created to grant you the
+            feeling as if you are in Turkey yourself by giving you the full
+            comprehension knowledge about the Life, Economy, Politics, and
+            Traditions of Turkey
+          </p>
+        </div>
+        <div className="flex flex-col lg:flex-row">
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit lg:w-3/5">
+            {articles.map((article, index) => (
+              <Article data={article} key={`article-${index}`} />
+            ))}
+          </div>
+          <div className="flex flex-col w-full lg:w-2/5">
+            <div className="hidden mb-8 mr-8 lg:block h-fit">
+              <Searchbar />
+            </div>
+
+            <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
+              Special Offers
+            </h1>
+            <div className="md:px-4 xl:mx-[10%] px-3">
+              <OwlCarousel
+                items={1}
+                className="owl-carousel owl-theme owl-loaded owl-drag"
+                loop={true}
+                lazyLoad
+                nav={false}
+                center
+                stagePadding={0}
+                animateIn="true"
+              >
+                {properties.map((property, index) => (
+                  <Property data={property} key={`property-${index}`} />
+                ))}
+              </OwlCarousel>
+            </div>
+
+            <SomeOffers />
+
+            <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
+              Last Articles
+            </h1>
+            <div className="flex flex-col gap-8 mx-[5%]">
+              {articles.map((article, index) => (
+                <Article data={article} key={`article-${index}`} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-}
+  );
+};
 
 export default Articles;

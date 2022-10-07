@@ -14,7 +14,8 @@ const Articles = () => {
   });
   const properties = [
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -26,7 +27,8 @@ const Articles = () => {
       surface: "53 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -38,7 +40,8 @@ const Articles = () => {
       surface: "83 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -50,7 +53,8 @@ const Articles = () => {
       surface: "53 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -66,7 +70,7 @@ const Articles = () => {
     <OwlCarousel
       data-aos="fade-up"
       items={3}
-      className="mt-8  owl-carousel owl-theme owl-loaded owl-drag"
+      className="mt-8 owl-carousel owl-theme owl-loaded owl-drag"
       loop={true}
       lazyLoad
       nav
@@ -166,29 +170,30 @@ const Articles = () => {
       views: "162",
     },
   ];
-  const property = {
-    img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
-    title:
-      "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
-    overview:
-      "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
-    price: "$ 3200,000",
-    location: "Istanbul",
-    nbrBedrooms: "2",
-    nbrBathrooms: "2",
-    surface: "83 Sq. m",
+
+  const Searchbar = () => {
+    return (
+      <div className="relative h-[44px] items-center justify-center ">
+        <div className="m-12 h-[24px] w-[24px] absolute top-[20px] left-4 pl-[3px] font-extrabold  pointer-events-none">
+          <HiSearch className="text-SECONDARY_COLOR" />
+           
+        </div>
+        <input
+          type="text"
+          placeholder={"Search"}
+          id="searchInput"
+          className=" w-full my-2 border rounded-md py-[8px] pr-[16px] pl-10 bg-WHITE"
+          name="searchKeyword"
+        />
+             
+      </div>
+    );
   };
   return (
     <>
-      <PagesHeader title="Blog" link="blog" />
-      <div className="flex flex-col  grow block lg:hidden w-4/5 mt-16 mx-8">
-        <h1 className="px-4 text-2xl border-l-2 border-SECONDARY_COLOR">
-          Search for something
-        </h1>
-        <div className="flex items-center py-2 my-2 text-xl border rounded border-PRIMARY_COLOR">
-          <HiSearch className="mx-4 font-extrabold  text-SECONDARY_COLOR" />
-          <input type="text" placeholder="Search" />
-        </div>
+      <PagesHeader title="Articles" link="articles" />
+      <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
+        <Searchbar />
       </div>
       <div className="flex flex-col my-16  gap-8 xl:ml-36 xl:mr-28 mx-[3%]">
         <div className="flex flex-col lg:mx-2 lg:w-3/5 ">
@@ -203,20 +208,14 @@ const Articles = () => {
           </p>
         </div>
         <div className="flex flex-col lg:flex-row">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-8 h-fit lg:w-3/5 w-full">
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit lg:w-3/5">
             {articles.map((article, index) => (
               <Article data={article} key={`article-${index}`} />
             ))}
           </div>
-          <div className="flex flex-col lg:w-2/5 w-full">
-            <div className="flex flex-col mb-8 lg:block hidden h-fit mr-8">
-              <h1 className="px-4 text-2xl border-l-2 border-SECONDARY_COLOR">
-                Search for something
-              </h1>
-              <div className="flex items-center py-2 my-2 text-xl border rounded border-PRIMARY_COLOR">
-                <HiSearch className="mx-4 font-extrabold  text-SECONDARY_COLOR" />
-                <input type="text" placeholder="Search" />
-              </div>
+          <div className="flex flex-col w-full lg:w-2/5">
+            <div className="hidden mb-8 mr-8 lg:block h-fit">
+              <Searchbar />
             </div>
 
             <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
