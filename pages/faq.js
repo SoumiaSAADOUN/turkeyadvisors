@@ -43,13 +43,13 @@ const FAQ = () => {
         </h1>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 lg:flex-row w-fit lg:gap-16 lg:mx-[8%] mx-4">
           {faqs.slice(0, 5).map((qst, index) => (
-            <div className="flex flex-col w-full gap-4 ">
-              <details
-                key={`question-${index}`}
-                className="pb-8 m-4 border-b-2"
-              >
+            <div
+              className="flex flex-col w-full gap-4 "
+              key={`question-${index}`}
+            >
+              <details className="pb-8 m-4 border-b-2">
                 <summary className="flex items-start justify-between w-full text-xl font-bold cursor-pointer">
-                  <span className='w-5/6'>{qst.qst}</span>
+                  <span className="w-5/6">{qst.qst}</span>
                   <HiPlusSm className="items-start w-1/6 p-0 ml-8 text-4xl font-extrabold" />
                 </summary>
                 <div className="mt-8 text-lg">
