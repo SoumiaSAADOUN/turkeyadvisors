@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaCheckSquare,
   FaCircle,
@@ -22,6 +22,7 @@ import dynamic from "next/dynamic";
 import Properties from "../../components/Home/Properties";
 import EnquireForm from "../../components/Commun/EnquireForm";
 import GetInTouche from "../../components/AboutUs/GetInTouche";
+import EnquireModal from "../../components/Modals/EnquireModal";
 
 const Project = (props) => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
@@ -29,24 +30,30 @@ const Project = (props) => {
   });
   const imagesCarousel = [
     {
-      src: "https://www.turkeyadvisors.com/storage/img/projects/SJp9TX0o92cZnPwRaE9n.jpeg",
+      src:
+        "https://www.turkeyadvisors.com/storage/img/projects/SJp9TX0o92cZnPwRaE9n.jpeg",
     },
     {
-      src: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      src:
+        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
     },
     {
-      src: "https://www.turkeyadvisors.com/storage/img/projects/w2IrI5zaDpQo5560sbZA.jpeg",
+      src:
+        "https://www.turkeyadvisors.com/storage/img/projects/w2IrI5zaDpQo5560sbZA.jpeg",
     },
     {
-      src: "https://www.turkeyadvisors.com/storage/img/projects/wUs20Qe22YE61ksr7wpI.jpeg",
+      src:
+        "https://www.turkeyadvisors.com/storage/img/projects/wUs20Qe22YE61ksr7wpI.jpeg",
     },
     {
-      src: "https://www.turkeyadvisors.com/storage/img/projects/HLbj96HftQA4aPE8CtVA.jpeg",
+      src:
+        "https://www.turkeyadvisors.com/storage/img/projects/HLbj96HftQA4aPE8CtVA.jpeg",
     },
   ];
   const properties = [
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -58,7 +65,8 @@ const Project = (props) => {
       surface: "53 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -70,7 +78,8 @@ const Project = (props) => {
       surface: "83 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -82,7 +91,8 @@ const Project = (props) => {
       surface: "53 Sq. m",
     },
     {
-      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img:
+        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -129,6 +139,8 @@ const Project = (props) => {
   ];
   const nearby = ["Metro", "Shopping Mall", "School"];
   const nearbyValues = ["3Km", "2Km", "3Km"];
+  const [showEnquireModal, setShowEnquireModal] = useState(false);
+
   return (
     <>
       <div className="flex flex-col md:flex-row gap-8 justify-between mx-[10%] mt-12">
@@ -163,7 +175,10 @@ const Project = (props) => {
             <HiPrinter className="text-SECONDARY_COLOR" />
             <span className="text-sm text-PRIMARY_COLOR">Print</span>
           </div>
-          <button className="px-2 text-xs rounded w-fit bg-SECONDARY_COLOR text-PRIMARY_COLOR">
+          <button
+            onClick={() => setShowEnquireModal(true)}
+            className="px-2 text-xs rounded w-fit bg-SECONDARY_COLOR text-PRIMARY_COLOR"
+          >
             Enquire Now
           </button>
         </div>
@@ -294,7 +309,10 @@ const Project = (props) => {
           dots={false}
         >
           {imagesCarousel.map((item, index) => (
-            <div key={`image-${index}`} className="divCarousel mx-2 lg:mx-12 h-[200px] sm:h-[280px] md:h-[500px] mt-10 rounded-xl relative h-full">
+            <div
+              key={`image-${index}`}
+              className="divCarousel mx-2 lg:mx-12 h-[200px] sm:h-[280px] md:h-[500px] mt-10 rounded-xl relative h-full"
+            >
               <img
                 key={index}
                 src={item.src}
@@ -444,13 +462,11 @@ const Project = (props) => {
             <FaWhatsapp className="mr-4 text-xl" />
             <span>Contact Us On Whatsapp</span>
           </button>
-         <div className="w-full mx-4 my-8">
-           <EnquireForm />
-           <GetInTouche/>
-         </div>
-         <div className="rounded-xl">
-       
-         </div>
+          <div className="w-full mx-4 my-8">
+            <EnquireForm />
+            <GetInTouche />
+          </div>
+          <div className="rounded-xl"></div>
         </div>
       </div>
 
@@ -458,6 +474,10 @@ const Project = (props) => {
         <h2 className="text-2xl font-bold">Similar properties</h2>
         <Properties propertiesList={properties} />
       </div>
+      <EnquireModal
+        visibility={showEnquireModal}
+        onCancel={() => setShowEnquireModal(false)}
+      />
     </>
   );
 };
