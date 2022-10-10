@@ -16,7 +16,7 @@ import { classNames } from "../utile/utils.js";
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: " About Us", href: "/aboutUs", current: false },
-  { name: "Projects", href: "/projects", current: false },
+  { name: "Projects", href: "/projects/", current: false },
   { name: "Services", href: "/services", current: false },
   { name: "Turkish Citizenship", href: "/citizenship", current: false },
   { name: "Blog", href: "/blog", current: false },

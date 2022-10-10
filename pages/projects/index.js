@@ -1,9 +1,7 @@
 import React from "react";
-import Divider from "../components/Commun/Divider";
-import FiltreProjects from "../components/FiltreProjects";
-import Properties from "../components/Home/Properties";
-import Property from "../components/Home/Property";
-import PagesHeader from "../components/Commun/PagesHeader";
+import FiltreProjects from "../../components/FiltreProjects";
+import Property from "../../components/Home/Property";
+import PagesHeader from "../../components/Commun/PagesHeader";
 const Projects = () => {
   const properties = [
     {
