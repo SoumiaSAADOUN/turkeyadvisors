@@ -133,20 +133,20 @@ const Project = (props) => {
     <>
       <div className="flex flex-col md:flex-row gap-8 justify-between mx-[10%] mt-12">
         <div className="flex justify-start gap-4">
-          <span className="py-2 px-2 rounded text-xs bg-DARK_PRIMARY_COLOR text-SECONDARY_COLOR">
+          <span className="px-2 py-2 text-xs rounded bg-DARK_PRIMARY_COLOR text-SECONDARY_COLOR">
             Selling
           </span>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <HiOutlineCalendar className="text-SECONDARY_COLOR" />
             <span className="text-sm text-PRIMARY_COLOR">10 oct 2022</span>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <HiOutlineEye className="text-SECONDARY_COLOR" />
             <span className="text-sm text-PRIMARY_COLOR">423 Views</span>
           </div>
         </div>
         <div className="flex justify-start gap-4">
-          <div className="flex gap-2 items-center justify-end">
+          <div className="flex items-center justify-end gap-2">
             <HiOutlineMailOpen className="text-SECONDARY_COLOR" />
             <a
               href={`mailto:${"soum.saadoun@gmail.com"}`}
@@ -155,15 +155,15 @@ const Project = (props) => {
               Email
             </a>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <HiOutlineShare className="text-SECONDARY_COLOR" />
             <span className="text-sm text-PRIMARY_COLOR">Share</span>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <HiPrinter className="text-SECONDARY_COLOR" />
             <span className="text-sm text-PRIMARY_COLOR">Print</span>
           </div>
-          <button className="w-fit px-2 bg-SECONDARY_COLOR text-PRIMARY_COLOR text-xs rounded">
+          <button className="px-2 text-xs rounded w-fit bg-SECONDARY_COLOR text-PRIMARY_COLOR">
             Enquire Now
           </button>
         </div>
@@ -175,13 +175,13 @@ const Project = (props) => {
           Istanbul
         </h1>
         <div className="flex justify-start gap-4 my-4">
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <FaMapMarkedAlt className="text-SECONDARY_COLOR" />
-            <span className="text-sm text-PRIMARY_COLOR font-semibold">
+            <span className="text-sm font-semibold text-PRIMARY_COLOR">
               Istanbul
             </span>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -248,18 +248,18 @@ const Project = (props) => {
                 ></path>
               </g>
             </svg>
-            <span className="text-sm text-PRIMARY_COLOR font-semibold">
+            <span className="text-sm font-semibold text-PRIMARY_COLOR">
               Installment
             </span>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center gap-2">
             <FaHourglassHalf className="text-SECONDARY_COLOR" />
-            <span className="text-sm text-PRIMARY_COLOR font-semibold">
+            <span className="text-sm font-semibold text-PRIMARY_COLOR">
               Selling
             </span>
           </div>
         </div>
-        <h1 className="font-bold text-3xl">25 000$</h1>
+        <h1 className="text-3xl font-bold">25 000$</h1>
       </div>
       <div className="w-full">
         <OwlCarousel
@@ -294,11 +294,11 @@ const Project = (props) => {
           dots={false}
         >
           {imagesCarousel.map((item, index) => (
-            <div className="divCarousel mx-2 lg:mx-12 h-[200px] sm:h-[280px] md:h-[500px] mt-10 rounded-xl relative h-full">
+            <div key={`image-${index}`} className="divCarousel mx-2 lg:mx-12 h-[200px] sm:h-[280px] md:h-[500px] mt-10 rounded-xl relative h-full">
               <img
                 key={index}
                 src={item.src}
-                className="absolute top-0 left-0 object-cover w-fit h-full mix-blend-overlay rounded-xl "
+                className="absolute top-0 left-0 object-cover h-full w-fit mix-blend-overlay rounded-xl "
               />
             </div>
           ))}
@@ -312,12 +312,12 @@ const Project = (props) => {
                 <u>Overview</u>
               </b>
             </button>
-            <button className="flex justify-center items-center p-2 bg-PRIMARY_COLOR rounded mb-2 text-BACKGROUND_COLOR">
-              <FaCloudDownloadAlt className="text-SECONDARY_COLOR mx-2" />{" "}
+            <button className="flex items-center justify-center p-2 mb-2 rounded bg-PRIMARY_COLOR text-BACKGROUND_COLOR">
+              <FaCloudDownloadAlt className="mx-2 text-SECONDARY_COLOR" />{" "}
               Brochure
             </button>
           </div>
-          <div className="text-PRIMARY_COLOR text-xs my-12 px-8">
+          <div className="px-8 my-12 text-xs text-PRIMARY_COLOR">
             <h3 className="font-semibold">Overview</h3>
             <br />
             <p>
@@ -355,35 +355,35 @@ const Project = (props) => {
           <div className="border-t-2 border-GREY"></div>
 
           <div className="m-8">
-            <h2 className="font-bold text-2xl">Project details</h2>
-            <div className="shadow lg:w-full rounded-xl my-4 py-16 px-8 flex flex-col lg:flex-row gap-2 lg:justify-between">
-              <div className="gap-2 w-full flex flex-col">
+            <h2 className="text-2xl font-bold">Project details</h2>
+            <div className="flex flex-col gap-2 px-8 py-16 my-4 shadow lg:w-full rounded-xl lg:flex-row lg:justify-between">
+              <div className="flex flex-col w-full gap-2">
                 {details.slice(0, 5).map((detail, index) => (
                   <div
-                    className="flex  w-full gap-4 text-sm"
+                    className="flex w-full gap-4 text-sm"
                     key={`detail-${index}`}
                   >
-                    <span className="lg:w-2/3 w-1/5 text-PRIMARY_COLOR font-demibold">
+                    <span className="w-1/5 lg:w-2/3 text-PRIMARY_COLOR font-demibold">
                       {detail}:
                     </span>
 
-                    <span className=" lg:w-2/3  w-1/5 text-SECONDARY_COLOR font-demibold">
+                    <span className="w-1/5 lg:w-2/3 text-SECONDARY_COLOR font-demibold">
                       {detailsValues[index]}
                     </span>
                   </div>
                 ))}
               </div>
-              <div className="gap-2 w-full flex flex-col">
+              <div className="flex flex-col w-full gap-2">
                 {details.slice(5, 10).map((detail, index) => (
                   <div
-                    className="flex  w-full  text-sm gap-8"
+                    className="flex w-full gap-8 text-sm"
                     key={`detail-${index}`}
                   >
-                    <span className="lg:w-2/3 w-1/5 text-PRIMARY_COLOR font-demibold">
+                    <span className="w-1/5 lg:w-2/3 text-PRIMARY_COLOR font-demibold">
                       {detail}:
                     </span>
 
-                    <span className=" lg:w-2/3 w-1/5 text-SECONDARY_COLOR font-demibold">
+                    <span className="w-1/5 lg:w-2/3 text-SECONDARY_COLOR font-demibold">
                       {detailsValues[index + 5]}
                     </span>
                   </div>
@@ -395,15 +395,15 @@ const Project = (props) => {
           <div className="border-t-2 border-GREY"></div>
 
           <div className="m-8">
-            <h2 className="font-bold text-2xl">Project Facilities</h2>
-            <div className="lg:w-full rounded my-4 flex flex-col lg:flex-row gap-2 lg:justify-evenly">
-              <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-between place-items-start  w-full">
+            <h2 className="text-2xl font-bold">Project Facilities</h2>
+            <div className="flex flex-col gap-2 my-4 rounded lg:w-full lg:flex-row lg:justify-evenly">
+              <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3 md:grid-cols-2 place-content-between place-items-start">
                 {facilities.map((facility, index) => (
                   <div
                     className="flex gap-4 text-basic"
                     key={`facility-${index}`}
                   >
-                    <FaRegCheckSquare className="text-SECONDARY_COLOR font-bold" />
+                    <FaRegCheckSquare className="font-bold text-SECONDARY_COLOR" />
                     <spna className="text-PRIMARY_COLOR">{facility}</spna>
                   </div>
                 ))}
@@ -414,11 +414,11 @@ const Project = (props) => {
           <div className="border-t-2 border-GREY"></div>
 
           <div className="m-8">
-            <h2 className="font-bold text-2xl flex items-center gap-2">
+            <h2 className="flex items-center gap-2 text-2xl font-bold">
               <img src="https://www.turkeyadvisors.com/sites/img/project/nearby.svg" />
               What's nearby
             </h2>
-            <div className="my-8 flex flex-col gap-2">
+            <div className="flex flex-col gap-2 my-8">
               <div className="flex flex-col gap-4">
                 {nearby.map((item, index) => (
                   <div className="flex gap-4" key={`nearby-${index}`}>
@@ -436,15 +436,15 @@ const Project = (props) => {
           <div className="border-t-2 border-GREY"></div>
 
           <div className="m-8">
-            <h2 className="font-bold text-2xl">Property type</h2>
+            <h2 className="text-2xl font-bold">Property type</h2>
           </div>
         </div>
         <div className="basis-1/3">
-          <button className="flex rounded items-center justify-center w-full mx-4 py-4 text-center bg-SECONDARY_COLOR text-PRIMARY_COLOR">
+          <button className="flex items-center justify-center w-full py-4 mx-4 text-center rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR">
             <FaWhatsapp className="mr-4 text-xl" />
             <span>Contact Us On Whatsapp</span>
           </button>
-         <div className="mx-4 my-8 w-full">
+         <div className="w-full mx-4 my-8">
            <EnquireForm />
            <GetInTouche/>
          </div>
@@ -455,7 +455,7 @@ const Project = (props) => {
       </div>
 
       <div className="mx-[12%]">
-        <h2 className="font-bold text-2xl">Similar properties</h2>
+        <h2 className="text-2xl font-bold">Similar properties</h2>
         <Properties propertiesList={properties} />
       </div>
     </>
