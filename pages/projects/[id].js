@@ -30,30 +30,24 @@ const Project = (props) => {
   });
   const imagesCarousel = [
     {
-      src:
-        "https://www.turkeyadvisors.com/storage/img/projects/SJp9TX0o92cZnPwRaE9n.jpeg",
+      src: "https://www.turkeyadvisors.com/storage/img/projects/SJp9TX0o92cZnPwRaE9n.jpeg",
     },
     {
-      src:
-        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      src: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
     },
     {
-      src:
-        "https://www.turkeyadvisors.com/storage/img/projects/w2IrI5zaDpQo5560sbZA.jpeg",
+      src: "https://www.turkeyadvisors.com/storage/img/projects/w2IrI5zaDpQo5560sbZA.jpeg",
     },
     {
-      src:
-        "https://www.turkeyadvisors.com/storage/img/projects/wUs20Qe22YE61ksr7wpI.jpeg",
+      src: "https://www.turkeyadvisors.com/storage/img/projects/wUs20Qe22YE61ksr7wpI.jpeg",
     },
     {
-      src:
-        "https://www.turkeyadvisors.com/storage/img/projects/HLbj96HftQA4aPE8CtVA.jpeg",
+      src: "https://www.turkeyadvisors.com/storage/img/projects/HLbj96HftQA4aPE8CtVA.jpeg",
     },
   ];
   const properties = [
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/cFlAvUifLOFMZSOIZwaC.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -65,8 +59,7 @@ const Project = (props) => {
       surface: "53 Sq. m",
     },
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -78,8 +71,7 @@ const Project = (props) => {
       surface: "83 Sq. m",
     },
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -91,8 +83,7 @@ const Project = (props) => {
       surface: "53 Sq. m",
     },
     {
-      img:
-        "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
+      img: "https://www.turkeyadvisors.com/storage/img/projects/xdMHESWws3i6qK6H9OSX.jpg",
       title:
         "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
       overview:
@@ -149,11 +140,11 @@ const Project = (props) => {
             Selling
           </span>
           <div className="flex items-center gap-2">
-            <HiOutlineCalendar className="text-SECONDARY_COLOR" />
+            <HiOutlineCalendar className="text-SECONDARY_COLOR w-[25px] h-[25px]" />
             <span className="text-sm text-PRIMARY_COLOR">10 oct 2022</span>
           </div>
           <div className="flex items-center gap-2">
-            <HiOutlineEye className="text-SECONDARY_COLOR" />
+            <HiOutlineEye className="text-SECONDARY_COLOR w-[25px] h-[25px]" />
             <span className="text-sm text-PRIMARY_COLOR">423 Views</span>
           </div>
         </div>
@@ -191,7 +182,7 @@ const Project = (props) => {
         </h1>
         <div className="flex justify-start gap-4 my-4">
           <div className="flex items-center gap-2">
-            <FaMapMarkedAlt className="text-SECONDARY_COLOR" />
+            <FaMapMarkedAlt className="text-SECONDARY_COLOR w-[25px] h-[25px]" />
             <span className="text-sm font-semibold text-PRIMARY_COLOR">
               Istanbul
             </span>
@@ -202,7 +193,7 @@ const Project = (props) => {
               width="24"
               height="24"
               viewBox="0 0 40 40.305"
-              className="fill-SECONDARY_COLOR"
+              className="fill-SECONDARY_COLOR w-[25px] h-[25px]"
             >
               <defs></defs>
               <g transform="translate(0 -0.003)">
@@ -268,7 +259,7 @@ const Project = (props) => {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <FaHourglassHalf className="text-SECONDARY_COLOR" />
+            <FaHourglassHalf className="text-SECONDARY_COLOR w-[25px] h-[25px]" />
             <span className="text-sm font-semibold text-PRIMARY_COLOR">
               Selling
             </span>
@@ -374,18 +365,18 @@ const Project = (props) => {
 
           <div className="m-8">
             <h2 className="text-2xl font-bold">Project details</h2>
-            <div className="flex flex-col gap-2 px-8 py-16 my-4 shadow lg:w-full rounded-xl lg:flex-row lg:justify-between">
+            <div className="flex flex-col gap-2 px-8 py-12 my-4 shadow-[-5px_5px_30px_1px_rgba(0,0,0,0.3)] md:w-full rounded-lg md:flex-row lg:justify-between">
               <div className="flex flex-col w-full gap-2">
                 {details.slice(0, 5).map((detail, index) => (
                   <div
-                    className="flex w-full gap-4 text-sm"
+                    className="flex w-full gap-8 text-sm"
                     key={`detail-${index}`}
                   >
-                    <span className="w-1/5 lg:w-2/3 text-PRIMARY_COLOR font-demibold">
+                    <span className="w-1/3 text-PRIMARY_COLOR font-demibold">
                       {detail}:
                     </span>
 
-                    <span className="w-1/5 lg:w-2/3 text-SECONDARY_COLOR font-demibold">
+                    <span className="w-1/3 text-SECONDARY_COLOR font-demibold">
                       {detailsValues[index]}
                     </span>
                   </div>
@@ -397,11 +388,11 @@ const Project = (props) => {
                     className="flex w-full gap-8 text-sm"
                     key={`detail-${index}`}
                   >
-                    <span className="w-1/5 lg:w-2/3 text-PRIMARY_COLOR font-demibold">
+                    <span className="w-1/3 text-PRIMARY_COLOR font-demibold">
                       {detail}:
                     </span>
 
-                    <span className="w-1/5 lg:w-2/3 text-SECONDARY_COLOR font-demibold">
+                    <span className="w-1/3 text-SECONDARY_COLOR font-demibold">
                       {detailsValues[index + 5]}
                     </span>
                   </div>
@@ -457,14 +448,19 @@ const Project = (props) => {
             <h2 className="text-2xl font-bold">Property type</h2>
           </div>
         </div>
-        <div className="basis-1/3">
-          <button className="flex items-center justify-center w-full py-4 mx-4 text-center rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR">
+        <div className="basis-1/3 flex flex-col items-center ">
+          <a
+            href="https://api.whatsapp.com/send/?phone=00905431441000&text&app_absent=0"
+            className="flex items-center justify-center lg:w-full sm:w-1/2 w-full  py-4 mx-4 text-center rounded bg-SECONDARY_COLOR text-PRIMARY_COLOR"
+          >
             <FaWhatsapp className="mr-4 text-xl" />
             <span>Contact Us On Whatsapp</span>
-          </button>
-          <div className="w-full mx-4 my-8">
+          </a>
+          <div className="lg:w-full sm:w-1/2 w-full mx-4 my-8 h-fit">
             <EnquireForm />
-            <GetInTouche />
+            <div className="h-fit">
+              <GetInTouche />
+            </div>
           </div>
           <div className="rounded-xl"></div>
         </div>

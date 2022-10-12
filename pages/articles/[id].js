@@ -1,15 +1,13 @@
 import React from "react";
-import { HiSearch } from "react-icons/hi";
-import Article from "../components/Home/Article";
-import Property from "../components/Home/Property";
-import SomeOffers from "../components/Home/SomeOffers";
-import PagesHeader from "../components/Commun/PagesHeader";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-import Properties from "../components/Home/Properties";
-import Searchbar from "../components/Commun/SearchBar";
-const Articles = () => {
+import Article from "../../components/Home/Article";
+import Property from "../../components/Home/Property";
+import Searchbar from "../../components/Commun/SearchBar";
+import SomeOffers from "../../components/Home/SomeOffers";
+
+const ArticlePage = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
   });
@@ -63,7 +61,7 @@ const Articles = () => {
       surface: "53 Sq. m",
     },
   ];
- 
+
   const articles = [
     {
       title: "What Do We Know About International Marmara Road",
@@ -133,65 +131,56 @@ const Articles = () => {
       views: "162",
     },
   ];
-
   return (
     <>
-      <PagesHeader title="Articles" link="articles" />
-      <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
-        <Searchbar />
-      </div>
-      <div className="flex flex-col my-16  gap-8 xl:ml-36 xl:mr-28 mx-[3%]">
-        <div className="flex flex-col lg:mx-2 lg:w-3/5 ">
-          <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
-            All Articles About Real Estate
-          </h1>
-          <p className="pt-4">
-            Turkey Advisories articles are genuinely created to grant you the
-            feeling as if you are in Turkey yourself by giving you the full
-            comprehension knowledge about the Life, Economy, Politics, and
-            Traditions of Turkey
-          </p>
+      <div className="flex flex-col my-12 mx-[10%] ">
+        <h1 className="text-4xl text-PRIMARY_COLOR">
+          Snack your way through Istanbul Stereet food
+        </h1>
+        <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
+          <Searchbar />
         </div>
-        <div className="flex flex-col lg:flex-row">
-          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit lg:w-3/5">
-            {articles.map((article, index) => (
-              <Article data={article} key={`article-${index}`} />
-            ))}
+
+        <div className="flex flex-col lg:flex-row w-full">
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit w-full">
+            dddddddddddddddddd
           </div>
-          <div className="flex flex-col w-full lg:w-2/5">
-            <div className="hidden mb-8 mr-8 lg:block h-fit">
-              <Searchbar />
-            </div>
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full lg:w-2/5">
+              <div className="hidden mb-8 mr-8 lg:block h-fit">
+                <Searchbar />
+              </div>
 
-            <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
-              Special Offers
-            </h1>
-            <div className="md:px-4 xl:mx-[10%] px-3">
-              <OwlCarousel
-                items={1}
-                className="owl-carousel owl-theme owl-loaded owl-drag"
-                loop={true}
-                lazyLoad
-                nav={false}
-                center
-                stagePadding={0}
-                animateIn="true"
-              >
-                {properties.map((property, index) => (
-                  <Property data={property} key={`property-${index}`} />
+              <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
+                Special Offers
+              </h1>
+              <div className="md:px-4 xl:mx-[10%] px-3">
+                <OwlCarousel
+                  items={1}
+                  className="owl-carousel owl-theme owl-loaded owl-drag"
+                  loop={true}
+                  lazyLoad
+                  nav={false}
+                  center
+                  stagePadding={0}
+                  animateIn="true"
+                >
+                  {properties.map((property, index) => (
+                    <Property data={property} key={`property-${index}`} />
+                  ))}
+                </OwlCarousel>
+              </div>
+
+              <SomeOffers />
+
+              <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
+                Last Articles
+              </h1>
+              <div className="flex flex-col gap-8 mx-[5%]">
+                {articles.map((article, index) => (
+                  <Article data={article} key={`article-${index}`} />
                 ))}
-              </OwlCarousel>
-            </div>
-
-            <SomeOffers />
-
-            <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
-              Last Articles
-            </h1>
-            <div className="flex flex-col gap-8 mx-[5%]">
-              {articles.map((article, index) => (
-                <Article data={article} key={`article-${index}`} />
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -200,4 +189,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default ArticlePage;
