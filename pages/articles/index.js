@@ -7,6 +7,7 @@ import PagesHeader from "../../components/Commun/PagesHeader";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
+import Searchbar from "../../components/Commun/SearchBar";
 const Articles = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
@@ -65,41 +66,6 @@ const Articles = () => {
       surface: "53 Sq. m",
     },
   ];
-  const owlProperties = (
-    <OwlCarousel
-      data-aos="fade-up"
-      items={3}
-      className="mt-8 owl-carousel owl-theme owl-loaded owl-drag"
-      loop={true}
-      lazyLoad
-      nav
-      center
-      stagePadding={0}
-      navText={[
-        `<img src='assets/images/leftArrow.png'/>`,
-        `<img src='assets/images/rightArrow.png'/>`,
-      ]}
-      animateIn="true"
-      responsive={{
-        0: {
-          items: 1,
-          nav: false,
-        },
-        1024: {
-          items: 2,
-          nav: false,
-          center: false,
-        },
-        1280: {
-          items: 3,
-        },
-      }}
-    >
-      {properties.map((property, index) => (
-        <Property data={property} key={`property-${index}`} />
-      ))}
-    </OwlCarousel>
-  );
   const articles = [
     {
       title: "What Do We Know About International Marmara Road",
@@ -169,37 +135,6 @@ const Articles = () => {
       views: "162",
     },
   ];
-  const property = {
-    img:
-      "https://www.turkeyadvisors.com/storage/img/projects/HrrN8MnLdd653tRKd1pD.jpeg",
-    title:
-      "Family Friendly Edgy Architectural Design in the Center of European Istanbul",
-    overview:
-      "The project has a unique, edgy architectural design, located in Kagithane municipality, which has been remodel...",
-    price: "$ 3200,000",
-    location: "Istanbul",
-    nbrBedrooms: "2",
-    nbrBathrooms: "2",
-    surface: "83 Sq. m",
-  };
-  const Searchbar = () => {
-    return (
-      <div className="relative h-[44px] items-center justify-center ">
-        <div className="m-12 h-[24px] w-[24px] absolute top-[20px] left-4 pl-[3px] font-extrabold  pointer-events-none">
-          <HiSearch className="text-SECONDARY_COLOR" />
-           
-        </div>
-        <input
-          type="text"
-          placeholder={"Search"}
-          id="searchInput"
-          className=" w-full my-2 border rounded-md py-[8px] pr-[16px] pl-10 bg-WHITE"
-          name="searchKeyword"
-        />
-             
-      </div>
-    );
-  };
   return (
     <>
       <PagesHeader title="Blog" link="blog" />
