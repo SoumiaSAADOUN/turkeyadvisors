@@ -168,7 +168,7 @@ const ArticlePage = () => {
             <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
               Last Articles
             </h1>
-            <div className="flex flex-col gap-8 mx-[5%]">
+            <div className="flex flex-col gap-8 mx-[2%]">
               {articles.map((article, index) => (
                 <Article data={article} key={`article-${index}`} />
               ))}

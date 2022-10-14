@@ -4,11 +4,10 @@ import Article from "../components/Home/Article";
 import Property from "../components/Home/Property";
 import SomeOffers from "../components/Home/SomeOffers";
 import PagesHeader from "../components/Commun/PagesHeader";
+import Searchbar from "../components/Commun/Searchbar";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-import Properties from "../components/Home/Properties";
-import Searchbar from "../components/Commun/SearchBar";
 const Articles = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,

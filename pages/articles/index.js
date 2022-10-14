@@ -141,7 +141,7 @@ const Articles = () => {
       <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
         <Searchbar />
       </div>
-      <div className="flex flex-col my-16  gap-8 xl:ml-36 xl:mr-28 mx-[3%]">
+      <div className="flex flex-col my-16  gap-8 mx-[5%]">
         <div className="flex flex-col lg:mx-2 lg:w-3/5 ">
           <h1 className="text-3xl font-bold text-PRIMARY_COLOR">
             All Articles About Real Estate
@@ -153,13 +153,13 @@ const Articles = () => {
             Traditions of Turkey
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row">
-          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit lg:w-3/5">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 h-fit lg:w-2/3">
             {articles.map((article, index) => (
               <Article data={article} key={`article-${index}`} />
             ))}
           </div>
-          <div className="flex flex-col w-full lg:w-2/5">
+          <div className="flex flex-col w-full lg:w-1/3">
             <div className="hidden mb-8 mr-8 lg:block h-fit">
               <Searchbar />
             </div>
@@ -167,7 +167,7 @@ const Articles = () => {
             <h1 className="px-4 my-8 text-2xl border-l-2 border-SECONDARY_COLOR">
               Special Offers
             </h1>
-            <div className="md:px-4 xl:mx-[10%] px-3">
+            <div className="md:px-4 px-3">
               <OwlCarousel
                 items={1}
                 className="owl-carousel owl-theme owl-loaded owl-drag"
