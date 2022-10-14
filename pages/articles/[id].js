@@ -7,7 +7,6 @@ import Property from "../../components/Home/Property";
 import Searchbar from "../../components/Commun/SearchBar";
 import SomeOffers from "../../components/Home/SomeOffers";
 import PagesHeader from "../../components/Commun/PagesHeader";
-
 import FollowUs from "../../components/Commun/FollowUs";
 import { Eye } from "heroicons-react";
 import { CalendarFilled } from "@ant-design/icons";
@@ -53,11 +52,11 @@ const ArticlePage = () => {
       nbrBathrooms: "1",
       surface: "53 Sq. m",
     },
-    
+
   ];
 
   const articles = [
-   
+
     {
       title:
         "Straightforward talks: Is Fikirtepe District Suitable for Real Estate Investment:",
@@ -110,7 +109,7 @@ const ArticlePage = () => {
               </div>
               <div className="flex gap-2 items-center">
                 <Eye className="text-SECONDARY_COLOR" />
-                <span className="text-base font-semibold text-DARK_PRIMARY_COLOR"> 568 views</span>
+                <span className="text-base font-semibold text-DARK_PRIMARY_COLOR"> 568 Views</span>
               </div>
             </div>
 
