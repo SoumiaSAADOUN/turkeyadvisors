@@ -4,12 +4,12 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 import Article from "../../components/Home/Article";
 import Property from "../../components/Home/Property";
-import Searchbar from "../../components/Commun/SearchBar";
 import SomeOffers from "../../components/Home/SomeOffers";
 import PagesHeader from "../../components/Commun/PagesHeader";
 import FollowUs from "../../components/Commun/FollowUs";
 import { Eye } from "heroicons-react";
 import { CalendarFilled } from "@ant-design/icons";
+import Searchbar from "./Searchbar";
 
 const ArticlePage = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {

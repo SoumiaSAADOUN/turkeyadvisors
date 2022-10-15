@@ -1,12 +1,12 @@
 import React from "react";
-import Article from "../components/Home/Article";
-import Property from "../components/Home/Property";
-import SomeOffers from "../components/Home/SomeOffers";
-import PagesHeader from "../components/Commun/PagesHeader";
+import Article from "../../components/Home/Article";
+import Property from "../../components/Home/Property";
+import SomeOffers from "../../components/Home/SomeOffers";
+import PagesHeader from "../../components/Commun/PagesHeader";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-import Searchbar from "../components/Commun/SearchBar";
+import Searchbar from "./Searchbar";
 const Articles = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
@@ -61,7 +61,7 @@ const Articles = () => {
       surface: "53 Sq. m",
     },
   ];
- 
+
   const articles = [
     {
       title: "What Do We Know About International Marmara Road",
@@ -134,7 +134,7 @@ const Articles = () => {
 
   return (
     <>
-      <PagesHeader title="Articles" link="articles" />
+      <PagesHeader title="Blog" link="blog" />
       <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
         <Searchbar />
       </div>
