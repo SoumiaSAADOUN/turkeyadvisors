@@ -35,7 +35,7 @@ const Filter = () => {
 
 
 
-  
+  const filters = ["Istanbul", "Bodrum", "Çeşme", "Alaçatı"];
 
   return (
     <>
@@ -78,7 +78,7 @@ const Filter = () => {
             <CityFilter
               visibility={showCityFilter}
               onCancel={() => setShowCityFilter(!showCityFilter)}
-             
+             data={filters}
             />
           </div>
 

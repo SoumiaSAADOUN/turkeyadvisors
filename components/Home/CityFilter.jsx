@@ -1,7 +1,7 @@
 import React from "react";
 const CityFilter = (props) => {
-  const filters = ["Istanbul", "Bodrum", "Çeşme", "Alaçatı"];
-console.log(props.title)
+
+
   return (
     <>
       {props.visibility ? (
