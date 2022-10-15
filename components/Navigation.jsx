@@ -19,7 +19,7 @@ const navigation = [
   { name: "Projects", href: "/projects/", current: false },
   { name: "Services", href: "/services", current: false },
   { name: "Turkish Citizenship", href: "/citizenship", current: false },
-  { name: "Blog", href: "/articles/", current: false },
+  { name: "Blog", href: "/blog/", current: false },
   { name: "FAQ", href: "/faq", current: false },
   { name: "Contact Us", href: "/contact", current: false },
 ];
