@@ -9,7 +9,7 @@ import PagesHeader from "../../components/Commun/PagesHeader";
 import FollowUs from "../../components/Commun/FollowUs";
 import { Eye } from "heroicons-react";
 import { CalendarFilled } from "@ant-design/icons";
-import Searchbar from "./Searchbar";
+import Searchbar from "../../components/Home/Searchbar";
 
 const ArticlePage = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {

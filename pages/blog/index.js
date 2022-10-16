@@ -6,7 +6,7 @@ import PagesHeader from "../../components/Commun/PagesHeader";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-import Searchbar from "./Searchbar";
+import Searchbar from "../../components/Home/Searchbar";
 const Articles = () => {
   const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
@@ -136,7 +136,7 @@ const Articles = () => {
     <>
       <PagesHeader title="Blog" link="blog" />
       <div className="block w-4/5 mx-8 mt-16 relaive grow lg:hidden">
-        <Searchbar />
+        <Searchbar  />
       </div>
       <div className="flex flex-col my-16  gap-8 xl:ml-36 xl:mr-28 mx-[3%]">
         <div className="flex flex-col lg:mx-2 lg:w-3/5 ">
