@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import SelectComponenet from "./Home/SelectComponenet";
 import CityFilter from "./Home/CityFilter";
-import { FaMapMarkerAlt, FaSortDown } from "react-icons/fa";
+import AreaFilter from "./Projects/AreaFilter";
 
 const FiltreProjects = () => {
   const [showCityFilter, setShowCityFilter] = useState(false);
   const [showAreaFilter, setShowAreaFilter] = useState(false);
   const cities = ["Istanbul", "Bodrum", "Çeşme", "Alaçatı"];
-  const areas = ["Bagcilar", "Bahcesehir", "Bakirkoy", "Basaksehir","Bayrampasa",'Besiktas',"Beykoz","Beylikduzu","Cekmekoy","Eyup"];
+  const areas = [
+    "Bagcilar",
+    "Bahcesehir",
+    "Bakirkoy",
+    "Basaksehir",
+    "Bayrampasa",
+    "Besiktas",
+    "Beykoz",
+    "Beylikduzu",
+    "Cekmekoy",
+    "Eyup",
+  ];
 
   const bedrooms = [
     { title: "Bedrooms" },
@@ -38,44 +49,8 @@ const FiltreProjects = () => {
         </h1>
         <div className="z-10 flex justify-center w-full grow md:basis-4/6 sm:basis-full md:justify-end">
           <div className="relative flex flex-wrap lg:basis-2/3">
-            <button
-              onClick={() => {setShowCityFilter(!showCityFilter); setShowAreaFilter(false)}}
-              className=" flex items-center justify-between lg:basis-1/5 basis-full grow mr-2 md:basis-1/5 mb-2  px-1 h-[40px] rounded-lg shadow-md "
-            >
-              <span className="flex items-center justify-center ">
-                <FaMapMarkerAlt
-                  className="w-4 h-4 mr-2 text-SECONDARY_COLOR"
-                  aria-hidden="true"
-                />
-                City
-              </span>
-              <span className="flex pb-2 ml-3 pointer-events-none ">
-                <FaSortDown
-                  className="w-5 h-5 text-SECONDARY_COLOR"
-                  aria-hidden="true"
-                />
-              </span>
-            </button>
-
-            <button
-              onClick={() => {setShowAreaFilter(!showAreaFilter); setShowCityFilter(false)}}
-              className=" flex items-center justify-between lg:basis-1/5 basis-full grow mr-2 md:basis-1/5 mb-2  px-1 h-[40px] rounded-lg shadow-md "
-            >
-              <span className="flex items-center justify-center ">
-                <FaMapMarkerAlt
-                  className="w-4 h-4 mr-2 text-SECONDARY_COLOR"
-                  aria-hidden="true"
-                />
-                Area
-              </span>
-              <span className="flex pb-2 ml-3 pointer-events-none ">
-                <FaSortDown
-                  className="w-5 h-5 text-SECONDARY_COLOR"
-                  aria-hidden="true"
-                />
-              </span>
-            </button>
-
+            <AreaFilter data={cities} title="City" />
+            <AreaFilter data={areas} title="Area" />
             <div
               onClick={() => {
                 setShowCityFilter(false);
@@ -85,6 +60,7 @@ const FiltreProjects = () => {
             >
               <SelectComponenet data={propertyType} />
             </div>
+
             <div
               onClick={() => {
                 setShowCityFilter(false);
@@ -94,6 +70,7 @@ const FiltreProjects = () => {
             >
               <SelectComponenet data={bedrooms} />
             </div>
+
             <button
               onClick={() => setShowCityFilter(false)}
               className="xl:hidden basis-full md:basis-1/5 grow mr-2  mb-2 flex px-4 py-2 h-[40px] justify-center items-center font-bold rounded-md text-BACKGROUND_COLOR bg-DARK_PRIMARY_COLOR hover:border-PRIMARY_COLOR hover:border hover:bg-PRIMARY_COLOR"
@@ -104,13 +81,13 @@ const FiltreProjects = () => {
 
             <CityFilter
               data={cities}
-              title='City'
+              title="City"
               visibility={showCityFilter}
               onCancel={() => setShowCityFilter(!showCityFilter)}
             />
             <CityFilter
               data={areas}
-              title='Area'
+              title="Area"
               visibility={showAreaFilter}
               onCancel={() => setShowAreaFilter(!showCityFilter)}
             />

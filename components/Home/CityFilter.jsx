@@ -5,7 +5,7 @@ const CityFilter = (props) => {
   return (
     <>
       {props.visibility ? (
-        <div className="absolute left-0 z-10 flex flex-col w-full px-8 py-4 rounded-lg shadow-md top-11 bg-BACKGROUND_COLOR">
+        <div className={`absolute left-0 z-10 flex flex-col w-full px-8 py-4 rounded-lg shadow-md top-11 ${props.title==='Area' ? '-top-25': 'top-0' } bg-BACKGROUND_COLOR`}>
           <h1 className="w-fit">
             <span className="font-bold">
               {props.title}

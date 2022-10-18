@@ -1,15 +1,16 @@
-
 import Link from "next/link";
 import React from "react";
 import { HiOutlineCalendar, HiOutlineEye } from "react-icons/hi";
 
 const Article = (props) => {
   return (
-
     <article className="relative flex flex-col flex-wrap border rounded-lg border-LIGHT_GREY group hover:cursor-pointer hover:bg-SECONDARY_COLOR md:mr-8">
-
-      <Link href={`/blog/${props.data.title.toLowerCase().replaceAll(' ', '-')}`} >
-        <img className="rounded-lg h-60 " alt={props.data.title} src={props.data.image} />
+      <Link href={`/blog/Snack-your-way-through-Istanbul-Stereet-food`}>
+        <img
+          className="rounded-lg h-60 "
+          alt={props.data.title}
+          src={props.data.image}
+        />
       </Link>
       <div className="relative mt-20 border-transparent rounded-md border-y-2 ">
         <div className="absolute bottom-0 transition transform text-PRIMARY_COLOR">
@@ -27,19 +28,18 @@ const Article = (props) => {
             <h3 className="text-lg text-SECONDARY_COLOR group-hover:text-PRIMARY_COLOR ">
               Articles
             </h3>
-            <h1 className="text-xl">{props.data.title}</h1>
+            <Link href={`/blog/Snack-your-way-through-Istanbul-Stereet-food`}>
+              <h1 className="text-xl">{props.data.title}</h1>
+            </Link>
             <div>
-              <Link href={`/blog/${props.data.title.toLowerCase().replaceAll(' ', '-')}`} >
-                <p className="hidden text-xs group-hover:block ">
-                  {props.data.summary}
-                </p></Link>
+              <p className="hidden text-xs group-hover:block ">
+                {props.data.summary}
+              </p>
             </div>
-
           </div>
         </div>
       </div>
     </article>
-
   );
 };
 

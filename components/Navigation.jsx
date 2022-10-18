@@ -92,9 +92,10 @@ export default function Navigation() {
                           >
                             <span
                               className={classNames(
-                                item.current
-                                  ? "text-SECONDARY_COLOR cursor-pointer"
-                                  : "text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer"
+                                // item.current
+                                //   ? "text-SECONDARY_COLOR cursor-pointer"
+                                //   : 
+                                  "text-BACKGROUND_COLOR hover:text-SECONDARY_COLOR cursor-pointer"
                               )}
                             >
                               {item.name}
@@ -160,9 +161,10 @@ export default function Navigation() {
                     as="a"
                     href={item.href}
                     className={classNames(
-                      item.current
-                        ? "text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR "
-                        : " text-BACKGROUND_COLOR  hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR",
+                      // item.current
+                      //   ? "text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR "
+                      //   : 
+                        " text-BACKGROUND_COLOR  hover:text-SECONDARY_COLOR hover:bg-BACKGROUND_COLOR",
                       "block px-3 py-2  text-xl font-bold border-b-2"
                     )}
                     aria-current={item.current ? "page" : undefined}

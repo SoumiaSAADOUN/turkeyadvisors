@@ -20,7 +20,7 @@ const GetInTouch = () => {
           </h3>
 
           <Link href="/contact">
-            <span className="flex items-center justify-between w-full px-5 py-2 rounded sm:w-fit cursor-pointer bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR">
+            <span className="flex items-center justify-between w-full px-5 py-2 rounded sm:w-[200px] cursor-pointer bg-SECONDARY_COLOR text-md text-PRIMARY_COLOR">
               Get In Touch <HiArrowNarrowRight className="ml-[2%]" />
             </span>
           </Link>

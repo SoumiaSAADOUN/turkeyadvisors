@@ -4,13 +4,14 @@ import CardButton from "../Buttons/CardButton";
 import Link from "next/link";
 
 const Property = (props) => {
+  const theTitle= props.data.title.toString()//.toLowerCase().replaceAll(' ','-')
   return (
     <div className="relative flex flex-col border rounded shadow-lg item border-GREY md:mr-8">
       <button className="absolute w-12 h-12 rounded-full top-5 right-5 bg-PRIMARY_COLOR/50">
         <HiOutlineHeart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR" />
         {/* <Heart className="w-8 h-8 m-2 text-center text-BACKGROUND_COLOR"/> */}
       </button>
-      <Link href={`/projects/${props.data.title.toLowerCase().replaceAll(' ','-')}`} >
+      <Link href={`/projects/${theTitle}`} >
         <img
           className="h-[240px] rounded cursor-pointer"
           alt={props.data.title}
@@ -18,7 +19,7 @@ const Property = (props) => {
         />
       </Link>
 
-      <Link href={`/projects/${props.data.title.toLowerCase().replaceAll(' ','-')}`} >
+      <Link href={`/projects/${theTitle}`} >
         <h1 className="mx-4 mt-8 text-xl font-bold cursor-pointer text-PRIMARY_COLOR">
           {props.data.title}
         </h1>
